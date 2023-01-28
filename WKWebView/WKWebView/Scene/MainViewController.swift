@@ -53,7 +53,7 @@ final class MainViewController: UIViewController {
 
 private extension MainViewController {
     @objc func didTapButton() {
-        
+        presenter.didTapButton()
     }
 }
 
@@ -85,6 +85,9 @@ extension MainViewController: MainViewProtocol {
     }
     
     func didTapSearchButton() {
-        
+        let webView = WebViewController()
+        webView.search = searchTextField.text
+        webView.url = "https://www.google.co.kr/search?q=%s"
+        navigationController?.pushViewController(webView, animated: true)
     }
 }

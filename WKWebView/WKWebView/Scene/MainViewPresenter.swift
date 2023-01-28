@@ -24,4 +24,8 @@ final class MainViewPresenter: NSObject {
         viewController?.setupView()
         viewController?.setupLayout()
     }
+    
+    func didTapButton() {
+        viewController?.didTapSearchButton()
+    }
 }
