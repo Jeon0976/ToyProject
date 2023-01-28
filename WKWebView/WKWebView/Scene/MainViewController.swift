@@ -9,6 +9,12 @@ import UIKit
 
 import SnapKit
 
+// MARK: Naver, Google 검색 변경 기능 추가
+/// 기능 구현간 구조체 및 string 값 presenter에 구현해야하나? 아님 viewController에 구현해야하나
+/// viewPresenter에 적절하게 구현될 것은 무엇일까
+/// alert 설정에서 if, else 구문 대신 쓸수 있는 조건은?? 함수로 구현해서?? 설정??
+/// alert 설정간 클로저에서 순한참조가 일어나지 않는다??
+/// https://nsios.tistory.com/62
 final class MainViewController: UIViewController {
     private lazy var presenter = MainViewPresenter(viewController: self)
     
@@ -38,10 +44,25 @@ final class MainViewController: UIViewController {
         return button
     }()
     
+    /// 검색할 포털사이트 설정하기 구현
+    private lazy var rightBarButtonItem = UIBarButtonItem(
+        image: UIImage(systemName: "globe.central.south.asia.fill"),
+        style: .plain,
+        target: self,
+        action: #selector(didTapRightBarButton))
+    
+    let searchEngine = SearchEngine()
+    var searchAddress: String = SearchEngine().google
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+               
     }
     
     /// 빈 화면 터치시 키보드 내려가기 구현
@@ -55,12 +76,17 @@ private extension MainViewController {
     @objc func didTapButton() {
         presenter.didTapButton()
     }
+    
+    @objc func didTapRightBarButton() {
+        presenter.didTapChangeSearchEngineButton()
+    }
 }
 
 extension MainViewController: MainViewProtocol {
     func setupView() {
         view.backgroundColor = .systemBackground
         navigationItem.title = "Search"
+        navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
     func setupLayout() {
@@ -87,7 +113,32 @@ extension MainViewController: MainViewProtocol {
     func didTapSearchButton() {
         let webView = WebViewController()
         webView.search = searchTextField.text
-        webView.url = "https://www.google.co.kr/search?q=%s"
+        webView.url = searchAddress
         navigationController?.pushViewController(webView, animated: true)
+    }
+    
+    func didTapChangeSearchEngineButton() {
+        let alert = UIAlertController(title: "Search Engine", message: nil, preferredStyle: .alert)
+        let google = UIAlertAction(title: "Google", style: .default) { [weak self] _ in
+            self?.searchLabel.text = "Google Search"
+            self?.changeSearchEngine()
+        }
+        let naver = UIAlertAction(title: "Naver", style: .default) { [weak self] _ in
+            self?.searchLabel.text = "Naver Search"
+            self?.changeSearchEngine()
+        }
+        [google, naver]
+            .forEach {
+                alert.addAction($0)
+            }
+        present(alert, animated: true)
+    }
+    
+    func changeSearchEngine() {
+        if searchLabel.text == "Google Search" {
+            searchAddress = searchEngine.google
+        } else {
+            searchAddress = searchEngine.naver
+        }
     }
 }

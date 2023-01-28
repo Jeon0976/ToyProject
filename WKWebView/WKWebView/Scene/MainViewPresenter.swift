@@ -11,6 +11,7 @@ protocol MainViewProtocol: AnyObject {
     func setupView()
     func setupLayout()
     func didTapSearchButton()
+    func didTapChangeSearchEngineButton()
 }
 
 final class MainViewPresenter: NSObject {
@@ -27,5 +28,9 @@ final class MainViewPresenter: NSObject {
     
     func didTapButton() {
         viewController?.didTapSearchButton()
+    }
+    
+    func didTapChangeSearchEngineButton() {
+        viewController?.didTapChangeSearchEngineButton()
     }
 }
