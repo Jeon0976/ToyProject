@@ -1,0 +1,6 @@
+
+excluded :
+
+
+disabled_rules:
+ - trailing_whitespace
