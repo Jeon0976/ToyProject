@@ -34,9 +34,10 @@ final class MainViewController: UIViewController {
         return textField
     }()
     
+    // "검색" -> 돋보기 아이콘으로 변경
     private lazy var searchButton: UIButton = {
         let button = UIButton()
-        button.setTitle("검색", for: .normal)
+        button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
         button.configuration = .filled()
         button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
@@ -51,8 +52,7 @@ final class MainViewController: UIViewController {
         target: self,
         action: #selector(didTapRightBarButton))
     
-    let searchEngine = SearchEngine()
-    var searchAddress: String = SearchEngine().google
+    var searchAddress = SearchEngine().google
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,13 +100,13 @@ extension MainViewController: MainViewProtocol {
         }
         
         searchTextField.snp.makeConstraints {
-            $0.top.equalTo(searchLabel.snp.bottom).offset(16.0)
-            $0.centerX.equalToSuperview()
+            $0.top.equalTo(searchLabel.snp.bottom).offset(32.0)
+            $0.leading.equalToSuperview().inset(96.0)
         }
         
         searchButton.snp.makeConstraints {
-            $0.top.equalTo(searchTextField.snp.bottom).offset(16.0)
-            $0.centerX.equalToSuperview()
+            $0.top.equalTo(searchLabel.snp.bottom).offset(32.0)
+            $0.leading.equalTo(searchTextField.snp.trailing).offset(16.0)
         }
     }
     
@@ -121,11 +121,11 @@ extension MainViewController: MainViewProtocol {
         let alert = UIAlertController(title: "Search Engine", message: nil, preferredStyle: .alert)
         let google = UIAlertAction(title: "Google", style: .default) { [weak self] _ in
             self?.searchLabel.text = "Google Search"
-            self?.changeSearchEngine()
+            self?.searchAddress = SearchEngine().google
         }
         let naver = UIAlertAction(title: "Naver", style: .default) { [weak self] _ in
             self?.searchLabel.text = "Naver Search"
-            self?.changeSearchEngine()
+            self?.searchAddress = SearchEngine().naver
         }
         [google, naver]
             .forEach {
@@ -133,12 +133,5 @@ extension MainViewController: MainViewProtocol {
             }
         present(alert, animated: true)
     }
-    
-    func changeSearchEngine() {
-        if searchLabel.text == "Google Search" {
-            searchAddress = searchEngine.google
-        } else {
-            searchAddress = searchEngine.naver
-        }
-    }
+
 }
