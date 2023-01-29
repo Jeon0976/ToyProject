@@ -11,12 +11,12 @@
 > 4. URL Component, URL Request 학습 필요
 #### 구현 방식
 <p align="center">
-  <img width="460" height="300" src="./image1.png">
+  <img width="200" height="600" src="./image1.png">
 </p>
 <p align="center">
-  <img width="460" height="300" src="./image2.png">
+  <img width="200" height="600" src="./image2.png">
 </p>
 <p align="center">
-  <img width="460" height="300" src="./image3.png">
+  <img width="200" height="600" src="./image3.png">
 </p>
 
