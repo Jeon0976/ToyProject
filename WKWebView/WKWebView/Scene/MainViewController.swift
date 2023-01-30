@@ -55,14 +55,17 @@ final class MainViewController: UIViewController {
     var searchAddress = SearchEngine().google
     
     override func viewDidLoad() {
+        print("super presenter \(CFGetRetainCount(self))")
+
         super.viewDidLoad()
-        
+        print("before presenter \(CFGetRetainCount(self))")
         presenter.viewDidLoad()
+        print("after presenter \(CFGetRetainCount(self))")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-               
+        print("view will appear \(CFGetRetainCount(self))")
     }
     
     /// 빈 화면 터치시 키보드 내려가기 구현
@@ -118,14 +121,16 @@ extension MainViewController: MainViewProtocol {
     }
     
     func didTapChangeSearchEngineButton() {
-        let alert = UIAlertController(title: "Search Engine", message: nil, preferredStyle: .alert)
-        let google = UIAlertAction(title: "Google", style: .default) { [weak self] _ in
-            self?.searchLabel.text = "Google Search"
-            self?.searchAddress = SearchEngine().google
+        let alert = UIAlertController(title: "Search Engine", message: nil, preferredStyle: .actionSheet)
+        let google = UIAlertAction(title: "Google", style: .default) { _ in
+            print("init \(CFGetRetainCount(self))")
+
+            self.searchLabel.text = "Google Search"
+            self.searchAddress = SearchEngine().google
         }
-        let naver = UIAlertAction(title: "Naver", style: .default) { [weak self] _ in
-            self?.searchLabel.text = "Naver Search"
-            self?.searchAddress = SearchEngine().naver
+        let naver = UIAlertAction(title: "Naver", style: .default) { _ in
+            self.searchLabel.text = "Naver Search"
+            self.searchAddress = SearchEngine().naver
         }
         [google, naver]
             .forEach {

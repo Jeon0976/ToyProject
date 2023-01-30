@@ -18,6 +18,8 @@ final class MainViewPresenter: NSObject {
     private weak var viewController: MainViewProtocol?
     
     init(viewController: MainViewProtocol) {
+//        print("after11 presenter \(CFGetRetainCount(self))")
+
         self.viewController = viewController
     }
     
