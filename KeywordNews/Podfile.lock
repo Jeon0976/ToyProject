@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.6.4)
+  - SnapKit (5.6.0)
+  - TTGTagCollectionView (2.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - SnapKit
+  - TTGTagCollectionView
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SnapKit
+    - TTGTagCollectionView
+
+SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  TTGTagCollectionView: 4104f93281097eae5adbf4444811e32f5e52dc95
+
+PODFILE CHECKSUM: d5c6a3f426458f62d7342cc8523be41a475d27ea
+
+COCOAPODS: 1.11.3
