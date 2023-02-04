@@ -43,15 +43,15 @@ final class NewsListTableViewCell: UITableViewCell {
         return label
     }()
     
-    func setUp() {
+    func setUp(news: News) {
         setupLayout()
         
         accessoryType = .disclosureIndicator
         selectionStyle = .default
         
-        titleLabel.text = "TitleTest"
-        descriptionLabel.text = "DescriptionTest"
-        dateLabel.text = "9999.12.31"
+        titleLabel.text = news.title.htmlToString
+        descriptionLabel.text = news.description.htmlToString
+        dateLabel.text = news.pubDate
     }
 }
 

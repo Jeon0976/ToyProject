@@ -27,6 +27,9 @@
 		C5AA2AA8298E407C00AF8F1C /* TagPlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AA7298E407C00AF8F1C /* TagPlusViewController.swift */; };
 		C5AA2AAA298E409100AF8F1C /* TagPlusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AA9298E409100AF8F1C /* TagPlusPresenter.swift */; };
 		C5AA2AAC298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AAB298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift */; };
+		C5AA2AB0298E86C200AF8F1C /* NewsRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AAF298E86C200AF8F1C /* NewsRequestModel.swift */; };
+		C5AA2AB2298E86D000AF8F1C /* NewsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AB1298E86D000AF8F1C /* NewsResponseModel.swift */; };
+		C5AA2AB4298E875D00AF8F1C /* NewsSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AB3298E875D00AF8F1C /* NewsSearchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		C5AA2AA7298E407C00AF8F1C /* TagPlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPlusViewController.swift; sourceTree = "<group>"; };
 		C5AA2AA9298E409100AF8F1C /* TagPlusPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPlusPresenter.swift; sourceTree = "<group>"; };
 		C5AA2AAB298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPlusCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5AA2AAF298E86C200AF8F1C /* NewsRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequestModel.swift; sourceTree = "<group>"; };
+		C5AA2AB1298E86D000AF8F1C /* NewsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponseModel.swift; sourceTree = "<group>"; };
+		C5AA2AB3298E875D00AF8F1C /* NewsSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchManager.swift; sourceTree = "<group>"; };
 		CA34339C9AFB45818223C468 /* Pods-KeywordNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeywordNews.release.xcconfig"; path = "Target Support Files/Pods-KeywordNews/Pods-KeywordNews.release.xcconfig"; sourceTree = "<group>"; };
 		E06939028D953AD81855F061 /* Pods_KeywordNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeywordNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD7CC3E3FF0872FBD4592EC /* Pods-KeywordNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeywordNewsTests.release.xcconfig"; path = "Target Support Files/Pods-KeywordNewsTests/Pods-KeywordNewsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 		C533DD1E298BAF58007FA92C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C5AA2AB3298E875D00AF8F1C /* NewsSearchManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -196,6 +203,8 @@
 		C533DD1F298BAF5F007FA92C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C5AA2AAF298E86C200AF8F1C /* NewsRequestModel.swift */,
+				C5AA2AB1298E86D000AF8F1C /* NewsResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -500,9 +509,12 @@
 			files = (
 				C5AA2AA8298E407C00AF8F1C /* TagPlusViewController.swift in Sources */,
 				C5AA2AAA298E409100AF8F1C /* TagPlusPresenter.swift in Sources */,
+				C5AA2AB4298E875D00AF8F1C /* NewsSearchManager.swift in Sources */,
 				C533DD31298BCE2A007FA92C /* NewsWebViewController.swift in Sources */,
 				C533DCF3298B9AFF007FA92C /* NewsListViewController.swift in Sources */,
+				C5AA2AB0298E86C200AF8F1C /* NewsRequestModel.swift in Sources */,
 				C533DD2B298BB456007FA92C /* NewsListPresenter.swift in Sources */,
+				C5AA2AB2298E86D000AF8F1C /* NewsResponseModel.swift in Sources */,
 				C533DCEF298B9AFF007FA92C /* AppDelegate.swift in Sources */,
 				C533DD2F298BC678007FA92C /* NewsListTableViewHeaderView.swift in Sources */,
 				C5AA2AAC298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift in Sources */,
