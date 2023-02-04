@@ -12,6 +12,7 @@ protocol NewsListProtocol: AnyObject {
     func setupLayout()
     func endRefreshing()
     func moveToNewsWebViewController()
+    func moveToTagPlusViewController()
 }
 
 final class NewsListPresenter: NSObject {
@@ -28,6 +29,10 @@ final class NewsListPresenter: NSObject {
     
     func didCalledRefresh() {
         viewController?.endRefreshing()
+    }
+    
+    func didCalledPlus() {
+        viewController?.moveToTagPlusViewController()
     }
 }
 
@@ -53,4 +58,13 @@ extension NewsListPresenter: UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(
+            withIdentifier: NewsListTableViewHeaderView.identifier
+        ) as? NewsListTableViewHeaderView
+        
+        header?.setUp()
+        
+        return header
+    }
 }

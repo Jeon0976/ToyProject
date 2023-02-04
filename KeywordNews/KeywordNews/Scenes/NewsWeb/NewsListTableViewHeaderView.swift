@@ -21,12 +21,20 @@ final class NewsListTableViewHeaderView: UITableViewHeaderFooterView {
     func setUp() {
         contentView.backgroundColor = .systemBackground
         
-        
+        setupTagCollectionViewLayout()
+        setupTagCollectionView()
     }
 }
 
 extension NewsListTableViewHeaderView: TTGTextTagCollectionViewDelegate {
-    
+    func textTagCollectionView(
+        _ textTagCollectionView: TTGTextTagCollectionView!,
+        didTap tag: TTGTextTag!,
+        at index: UInt
+    ) {
+        guard tag.selected else {return}
+        print(tags[Int(index)])
+    }
 }
 
 private extension NewsListTableViewHeaderView {
@@ -40,7 +48,7 @@ private extension NewsListTableViewHeaderView {
     
     func setupTagCollectionView() {
         tagCollectionView.delegate = self
-        tagCollectionView.numberOfLines = 2
+        tagCollectionView.numberOfLines = 1
         tagCollectionView.scrollDirection = .horizontal
         tagCollectionView.showsHorizontalScrollIndicator = false
         tagCollectionView.selectionLimit = 1
@@ -73,7 +81,29 @@ private extension NewsListTableViewHeaderView {
         selectedStyle.extraSpace = extraSpaceValue
         
         tags.forEach { tag in
+            let font = UIFont.systemFont(ofSize: 14.0, weight: .semibold)
             
+            let nonSelectedTagContents = TTGTextTagStringContent(
+                text: tag,
+                textFont: font,
+                textColor: .white
+            )
+            
+            let selectedTagContents = TTGTextTagStringContent(
+                text: tag,
+                textFont: font,
+                textColor: .systemOrange
+            )
+            
+            let tag = TTGTextTag(
+                content: nonSelectedTagContents,
+                style: nonSelectedStyle,
+                selectedContent: selectedTagContents,
+                selectedStyle: selectedStyle
+            )
+            
+            tagCollectionView.addTag(tag)
+            tagCollectionView.reload()
         }
     }
 }

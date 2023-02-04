@@ -29,7 +29,14 @@ final class NewsListViewController: UIViewController {
         tableView.delegate = presenter
         tableView.dataSource = presenter
         tableView.refreshControl = refreshControl
-        tableView.register(NewsListTableViewCell.self, forCellReuseIdentifier: NewsListTableViewCell.identifier)
+        tableView.register(
+            NewsListTableViewCell.self,
+            forCellReuseIdentifier: NewsListTableViewCell.identifier
+        )
+        tableView.register(
+            NewsListTableViewHeaderView.self,
+            forHeaderFooterViewReuseIdentifier: NewsListTableViewHeaderView.identifier
+        )
         
         return tableView
     }()
@@ -78,6 +85,14 @@ extension NewsListViewController: NewsListProtocol {
             animated: true
         )
     }
+    
+    func moveToTagPlusViewController() {
+        let tagPlusViewController = TagPlusViewController()
+        navigationController?.pushViewController(
+            tagPlusViewController,
+            animated: true
+        )
+    }
 }
 
 private extension NewsListViewController {
@@ -86,6 +101,6 @@ private extension NewsListViewController {
     }
     
     @objc func didCalledPlus() {
-        
+        presenter.didCalledPlus()
     }
 }

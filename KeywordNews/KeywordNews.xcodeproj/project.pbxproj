@@ -24,6 +24,9 @@
 		C533DD2D298BC66A007FA92C /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533DD2C298BC66A007FA92C /* NewsListTableViewCell.swift */; };
 		C533DD2F298BC678007FA92C /* NewsListTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533DD2E298BC678007FA92C /* NewsListTableViewHeaderView.swift */; };
 		C533DD31298BCE2A007FA92C /* NewsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533DD30298BCE2A007FA92C /* NewsWebViewController.swift */; };
+		C5AA2AA8298E407C00AF8F1C /* TagPlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AA7298E407C00AF8F1C /* TagPlusViewController.swift */; };
+		C5AA2AAA298E409100AF8F1C /* TagPlusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AA9298E409100AF8F1C /* TagPlusPresenter.swift */; };
+		C5AA2AAC298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AAB298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		C533DD2C298BC66A007FA92C /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
 		C533DD2E298BC678007FA92C /* NewsListTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewHeaderView.swift; sourceTree = "<group>"; };
 		C533DD30298BCE2A007FA92C /* NewsWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebViewController.swift; sourceTree = "<group>"; };
+		C5AA2AA7298E407C00AF8F1C /* TagPlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPlusViewController.swift; sourceTree = "<group>"; };
+		C5AA2AA9298E409100AF8F1C /* TagPlusPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPlusPresenter.swift; sourceTree = "<group>"; };
+		C5AA2AAB298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPlusCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA34339C9AFB45818223C468 /* Pods-KeywordNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeywordNews.release.xcconfig"; path = "Target Support Files/Pods-KeywordNews/Pods-KeywordNews.release.xcconfig"; sourceTree = "<group>"; };
 		E06939028D953AD81855F061 /* Pods_KeywordNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeywordNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD7CC3E3FF0872FBD4592EC /* Pods-KeywordNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeywordNewsTests.release.xcconfig"; path = "Target Support Files/Pods-KeywordNewsTests/Pods-KeywordNewsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,9 +159,9 @@
 				C533DCEE298B9AFF007FA92C /* AppDelegate.swift */,
 				C533DCF0298B9AFF007FA92C /* SceneDelegate.swift */,
 				C533DD28298BB086007FA92C /* String+.swift */,
-				C533DD20298BAF63007FA92C /* Scenes */,
-				C533DD1F298BAF5F007FA92C /* Models */,
 				C533DD1E298BAF58007FA92C /* Managers */,
+				C533DD1F298BAF5F007FA92C /* Models */,
+				C533DD20298BAF63007FA92C /* Scenes */,
 				C533DCF7298B9AFF007FA92C /* Assets.xcassets */,
 				C533DCF9298B9AFF007FA92C /* LaunchScreen.storyboard */,
 				C533DCFC298B9AFF007FA92C /* Info.plist */,
@@ -207,6 +213,9 @@
 		C533DD21298BAF6C007FA92C /* TagPlus */ = {
 			isa = PBXGroup;
 			children = (
+				C5AA2AA7298E407C00AF8F1C /* TagPlusViewController.swift */,
+				C5AA2AA9298E409100AF8F1C /* TagPlusPresenter.swift */,
+				C5AA2AAB298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift */,
 			);
 			path = TagPlus;
 			sourceTree = "<group>";
@@ -489,11 +498,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5AA2AA8298E407C00AF8F1C /* TagPlusViewController.swift in Sources */,
+				C5AA2AAA298E409100AF8F1C /* TagPlusPresenter.swift in Sources */,
 				C533DD31298BCE2A007FA92C /* NewsWebViewController.swift in Sources */,
 				C533DCF3298B9AFF007FA92C /* NewsListViewController.swift in Sources */,
 				C533DD2B298BB456007FA92C /* NewsListPresenter.swift in Sources */,
 				C533DCEF298B9AFF007FA92C /* AppDelegate.swift in Sources */,
 				C533DD2F298BC678007FA92C /* NewsListTableViewHeaderView.swift in Sources */,
+				C5AA2AAC298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift in Sources */,
 				C533DD29298BB086007FA92C /* String+.swift in Sources */,
 				C533DD2D298BC66A007FA92C /* NewsListTableViewCell.swift in Sources */,
 				C533DCF1298B9AFF007FA92C /* SceneDelegate.swift in Sources */,
