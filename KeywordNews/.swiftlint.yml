@@ -1,0 +1,6 @@
+excluded:
+ - KeywordNewsTests
+ - KeywordNewsUITests
+ - Pods
+disabled_rules:
+- trailing_whitespace
