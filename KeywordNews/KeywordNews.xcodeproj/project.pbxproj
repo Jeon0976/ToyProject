@@ -24,6 +24,8 @@
 		C533DD2D298BC66A007FA92C /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533DD2C298BC66A007FA92C /* NewsListTableViewCell.swift */; };
 		C533DD2F298BC678007FA92C /* NewsListTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533DD2E298BC678007FA92C /* NewsListTableViewHeaderView.swift */; };
 		C533DD31298BCE2A007FA92C /* NewsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533DD30298BCE2A007FA92C /* NewsWebViewController.swift */; };
+		C5A1B719298F504900892872 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1B718298F504900892872 /* UserDefaultsManager.swift */; };
+		C5A1B71B298F550A00892872 /* TagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1B71A298F550A00892872 /* TagsModel.swift */; };
 		C5AA2AA8298E407C00AF8F1C /* TagPlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AA7298E407C00AF8F1C /* TagPlusViewController.swift */; };
 		C5AA2AAA298E409100AF8F1C /* TagPlusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AA9298E409100AF8F1C /* TagPlusPresenter.swift */; };
 		C5AA2AAC298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AAB298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift */; };
@@ -74,6 +76,8 @@
 		C533DD2C298BC66A007FA92C /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
 		C533DD2E298BC678007FA92C /* NewsListTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewHeaderView.swift; sourceTree = "<group>"; };
 		C533DD30298BCE2A007FA92C /* NewsWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebViewController.swift; sourceTree = "<group>"; };
+		C5A1B718298F504900892872 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		C5A1B71A298F550A00892872 /* TagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsModel.swift; sourceTree = "<group>"; };
 		C5AA2AA7298E407C00AF8F1C /* TagPlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPlusViewController.swift; sourceTree = "<group>"; };
 		C5AA2AA9298E409100AF8F1C /* TagPlusPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPlusPresenter.swift; sourceTree = "<group>"; };
 		C5AA2AAB298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPlusCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				C5AA2AB3298E875D00AF8F1C /* NewsSearchManager.swift */,
+				C5A1B718298F504900892872 /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 			children = (
 				C5AA2AAF298E86C200AF8F1C /* NewsRequestModel.swift */,
 				C5AA2AB1298E86D000AF8F1C /* NewsResponseModel.swift */,
+				C5A1B71A298F550A00892872 /* TagsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				C5AA2AAA298E409100AF8F1C /* TagPlusPresenter.swift in Sources */,
 				C5AA2AB4298E875D00AF8F1C /* NewsSearchManager.swift in Sources */,
 				C533DD31298BCE2A007FA92C /* NewsWebViewController.swift in Sources */,
+				C5A1B71B298F550A00892872 /* TagsModel.swift in Sources */,
 				C533DCF3298B9AFF007FA92C /* NewsListViewController.swift in Sources */,
 				C5AA2AB0298E86C200AF8F1C /* NewsRequestModel.swift in Sources */,
 				C533DD2B298BB456007FA92C /* NewsListPresenter.swift in Sources */,
@@ -518,6 +525,7 @@
 				C533DCEF298B9AFF007FA92C /* AppDelegate.swift in Sources */,
 				C533DD2F298BC678007FA92C /* NewsListTableViewHeaderView.swift in Sources */,
 				C5AA2AAC298E7F8100AF8F1C /* TagPlusCollectionViewCell.swift in Sources */,
+				C5A1B719298F504900892872 /* UserDefaultsManager.swift in Sources */,
 				C533DD29298BB086007FA92C /* String+.swift in Sources */,
 				C533DD2D298BC66A007FA92C /* NewsListTableViewCell.swift in Sources */,
 				C533DCF1298B9AFF007FA92C /* SceneDelegate.swift in Sources */,

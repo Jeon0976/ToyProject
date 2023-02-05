@@ -19,11 +19,11 @@ final class NewsListTableViewHeaderView: UITableViewHeaderFooterView {
     
     private weak var delegate: NewsListTableViewHeaderViewDelegate?
     
-    private var tags: [String] = []
+    private var tags: [Tags] = []
     
     private lazy var tagCollectionView = TTGTextTagCollectionView()
     
-    func setUp(tags: [String], delegate: NewsListTableViewHeaderViewDelegate) {
+    func setUp(tags: [Tags], delegate: NewsListTableViewHeaderViewDelegate) {
         self.tags = tags
         self.delegate = delegate
         
@@ -92,13 +92,13 @@ private extension NewsListTableViewHeaderView {
             let font = UIFont.systemFont(ofSize: 14.0, weight: .semibold)
             
             let nonSelectedTagContents = TTGTextTagStringContent(
-                text: tag,
+                text: tag.tag,
                 textFont: font,
                 textColor: .white
             )
             
             let selectedTagContents = TTGTextTagStringContent(
-                text: tag,
+                text: tag.tag,
                 textFont: font,
                 textColor: .systemOrange
             )

@@ -19,6 +19,7 @@ protocol NewsListProtocol: AnyObject {
 final class NewsListPresenter: NSObject {
     private weak var viewController: NewsListProtocol?
     private let newsSearchManager: NewsSearchManagerProtocol
+    private let userDefalutsManager: UserDefautlsManagerProtocol
     
     /// 임의 변수
     private var currentKeyword = ""
@@ -31,17 +32,18 @@ final class NewsListPresenter: NSObject {
     // 0 : 0*20 +1 = 1
     // 1 : 1*20 +1 = 2
     
-    private let tags: [String] = ["IT", "아이폰", "개발", "개발자",
-                                  "판교", "게임", "앱개발", "스위프트", "스타트업"]
+    private let tags: [Tags] = UserDefaultsManager().getTags()
     
     private var newsList: [News] = []
     
     init(
         viewController: NewsListProtocol,
-        newsSearchManager: NewsSearchManagerProtocol = NewsSearchManager()
+        newsSearchManager: NewsSearchManagerProtocol = NewsSearchManager(),
+        userDefaultsManager: UserDefautlsManagerProtocol = UserDefaultsManager()
     ) {
         self.viewController = viewController
         self.newsSearchManager = newsSearchManager
+        self.userDefalutsManager = userDefaultsManager
     }
     
     func viewDidLoad() {
@@ -62,7 +64,7 @@ final class NewsListPresenter: NSObject {
 
 extension NewsListPresenter: NewsListTableViewHeaderViewDelegate {
     func didSelectTag(_ seletedIndex: Int) {
-        currentKeyword = tags[seletedIndex]
+        currentKeyword = tags[seletedIndex].tag
         
         requestNewsList(isNeededToReset: true)
     }
