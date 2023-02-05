@@ -8,5 +8,5 @@
 import Foundation
 
 struct Tags: Codable, Equatable {
-    var tag: String
+    let tag: String
 }

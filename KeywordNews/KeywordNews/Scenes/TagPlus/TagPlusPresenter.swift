@@ -15,8 +15,15 @@ protocol TagPlusProtocol: AnyObject {
 final class TagPlusPresenter: NSObject {
     private weak var viewController: TagPlusProtocol?
     
-    init(viewController: TagPlusProtocol) {
+    private let userDefaultsManager: UserDefaultsManagerProtocol
+    
+    private var tags: [Tags] = UserDefaultsManager().getTags()
+    
+    init(viewController: TagPlusProtocol,
+         userDefaultsManager: UserDefaultsManagerProtocol = UserDefaultsManager()
+    ) {
         self.viewController = viewController
+        self.userDefaultsManager = userDefaultsManager
     }
     
     func viewDidLoad() {

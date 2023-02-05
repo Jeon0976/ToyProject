@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol UserDefautlsManagerProtocol {
+protocol UserDefaultsManagerProtocol {
     func getTags() -> [Tags]
     func setTags(_ newValues: Tags)
     func deleteTags(_ values: Tags)
 }
 
-struct UserDefaultsManager: UserDefautlsManagerProtocol {
+struct UserDefaultsManager: UserDefaultsManagerProtocol {
     enum Key: String {
         case news
     }

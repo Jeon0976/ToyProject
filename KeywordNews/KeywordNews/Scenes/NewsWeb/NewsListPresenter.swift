@@ -19,7 +19,7 @@ protocol NewsListProtocol: AnyObject {
 final class NewsListPresenter: NSObject {
     private weak var viewController: NewsListProtocol?
     private let newsSearchManager: NewsSearchManagerProtocol
-    private let userDefalutsManager: UserDefautlsManagerProtocol
+    private let userDefaultsManager: UserDefaultsManagerProtocol
     
     /// 임의 변수
     private var currentKeyword = ""
@@ -32,18 +32,18 @@ final class NewsListPresenter: NSObject {
     // 0 : 0*20 +1 = 1
     // 1 : 1*20 +1 = 2
     
-    private let tags: [Tags] = UserDefaultsManager().getTags()
+    private var tags: [String] = ["Test", "Test2"]
     
     private var newsList: [News] = []
     
     init(
         viewController: NewsListProtocol,
         newsSearchManager: NewsSearchManagerProtocol = NewsSearchManager(),
-        userDefaultsManager: UserDefautlsManagerProtocol = UserDefaultsManager()
+        userDefaultsManager: UserDefaultsManagerProtocol = UserDefaultsManager()
     ) {
         self.viewController = viewController
         self.newsSearchManager = newsSearchManager
-        self.userDefalutsManager = userDefaultsManager
+        self.userDefaultsManager = userDefaultsManager
     }
     
     func viewDidLoad() {
@@ -53,8 +53,6 @@ final class NewsListPresenter: NSObject {
     
     func didCalledRefresh() {
         requestNewsList(isNeededToReset: true)
-        self.viewController?.endRefreshing()
-
     }
     
     func didCalledPlus() {
@@ -64,8 +62,9 @@ final class NewsListPresenter: NSObject {
 
 extension NewsListPresenter: NewsListTableViewHeaderViewDelegate {
     func didSelectTag(_ seletedIndex: Int) {
-        currentKeyword = tags[seletedIndex].tag
-        
+
+        currentKeyword = tags[seletedIndex]
+
         requestNewsList(isNeededToReset: true)
     }
     
@@ -114,7 +113,7 @@ extension NewsListPresenter: UITableViewDataSource {
         let header = tableView.dequeueReusableHeaderFooterView(
             withIdentifier: NewsListTableViewHeaderView.identifier
         ) as? NewsListTableViewHeaderView
-        
+
         header?.setUp(tags: tags, delegate: self)
         
         return header
@@ -136,6 +135,7 @@ private extension NewsListPresenter {
             self?.newsList += newValue
             self?.currentPage += 1
             self?.viewController?.reloadTableView()
+            self?.viewController?.endRefreshing()
         }
     }
 }
