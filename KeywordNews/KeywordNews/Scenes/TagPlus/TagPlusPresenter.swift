@@ -19,12 +19,14 @@ final class TagPlusPresenter: NSObject {
     
     private let userDefaultsManager: UserDefaultsManagerProtocol
     
-    private var tags: [Tags] = UserDefaultsManager().getTags()
+    private var tags: [Tags] = []
     
     init(viewController: TagPlusProtocol,
+         tags: [Tags],
          userDefaultsManager: UserDefaultsManagerProtocol = UserDefaultsManager()
     ) {
         self.viewController = viewController
+        self.tags = tags
         self.userDefaultsManager = userDefaultsManager
     }
     
@@ -40,10 +42,23 @@ final class TagPlusPresenter: NSObject {
     func didTapPlusButtonCliked() {
         viewController?.makeAlertController()
     }
+    
+    func tagText(_ value: String) {
+        let tag = Tags(tag: value)
+        userDefaultsManager.setTags(tag)
+        tags = userDefaultsManager.getTags()
+        viewController?.reloadCollectionView()
+    }
+    
 }
 
 extension TagPlusPresenter: UICollectionViewDelegateFlowLayout {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+            let tag = tags[indexPath.row]
+            print(tag)
+
+    }
 }
 
 extension TagPlusPresenter: UICollectionViewDataSource {

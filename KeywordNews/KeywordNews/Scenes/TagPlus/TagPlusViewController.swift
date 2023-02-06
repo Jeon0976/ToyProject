@@ -9,17 +9,29 @@ import UIKit
 
 import SnapKit
 
+/// 선택, 삭제 로직 구현
+enum RightBarButtomMode {
+    case select
+    case delete
+}
+
 final class TagPlusViewController: UIViewController {
     
-    /// 선택, 삭제 로직 구현
-    enum RightBarButtomMode {
-        case select
-        case delete
+    private var mode: RightBarButtomMode = .select
+    
+    private var tags: [Tags] = []
+    
+    private lazy var presenter = TagPlusPresenter(viewController: self, tags: tags)
+    
+    init(tags: [Tags]) {
+        self.tags = tags
+        
+        super.init(nibName: nil, bundle: nil)
     }
-    var mode: RightBarButtomMode = .select
     
-    private lazy var presenter = TagPlusPresenter(viewController: self)
-    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     private lazy var tagCollectionView: UICollectionView = {
        let layout = UICollectionViewFlowLayout()
         
@@ -87,6 +99,7 @@ final class TagPlusViewController: UIViewController {
         
         presenter.viewDidLoad()
     }
+    
 }
 
 extension TagPlusViewController: TagPlusProtocol {
@@ -117,13 +130,16 @@ extension TagPlusViewController: TagPlusProtocol {
     
     func makeAlertController() {
         let alertController = UIAlertController(title: "테그 생성", message: nil, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(alertAction)
-        // MARK: Timer 기능으로 순환참조 테스트 
-        alertController.addTextField { _ in
-            print("ss")
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+            guard let text = alertController.textFields?[0].text else {return}
+            self?.presenter.tagText(text)
+        })
+        // MARK: Timer 기능으로 순환참조 테스트
+        alertController.addTextField { textField in
+            textField.placeholder = "테그값을 입력하세요."
         }
-        
+                                        
+        alertController.addAction(alertAction)
         present(alertController, animated: true)
     }
 }
@@ -139,10 +155,13 @@ private extension TagPlusViewController {
         case.select:
             selectBarButton.title = "취소"
             deleteBarButton.isHidden = false
+            tagCollectionView.allowsMultipleSelection = true
             mode = .delete
+            
         case.delete:
             selectBarButton.title = "선택"
             deleteBarButton.isHidden = true
+            tagCollectionView.allowsMultipleSelection = false
             mode = .select
         }
     }

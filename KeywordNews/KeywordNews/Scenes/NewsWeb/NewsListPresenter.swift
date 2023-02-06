@@ -32,7 +32,7 @@ final class NewsListPresenter: NSObject {
     // 0 : 0*20 +1 = 1
     // 1 : 1*20 +1 = 2
     
-    private let tags: [Tags] = UserDefaultsManager().getTags()
+    var tags: [Tags] = UserDefaultsManager().getTags()
     
     private var newsList: [News] = []
     
