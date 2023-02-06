@@ -10,6 +10,8 @@ import UIKit
 protocol TagPlusProtocol: AnyObject {
     func setupNavigationBar()
     func setupLayout()
+    func reloadCollectionView()
+    func makeAlertController()
 }
 
 final class TagPlusPresenter: NSObject {
@@ -30,6 +32,14 @@ final class TagPlusPresenter: NSObject {
         viewController?.setupNavigationBar()
         viewController?.setupLayout()
     }
+    
+    func didDeleteBarButtonClicked() {
+        
+    }
+    
+    func didTapPlusButtonCliked() {
+        viewController?.makeAlertController()
+    }
 }
 
 extension TagPlusPresenter: UICollectionViewDelegateFlowLayout {
@@ -41,7 +51,7 @@ extension TagPlusPresenter: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        5
+        tags.count
     }
     
     func collectionView(
@@ -53,9 +63,10 @@ extension TagPlusPresenter: UICollectionViewDataSource {
             for: indexPath
         ) as? TagPlusCollectionViewCell
         
-        cell?.setup()
+        let tag = tags[indexPath.row]
+        
+        cell?.setup(tag: tag)
         
         return cell ?? UICollectionViewCell()
     }
-    
 }

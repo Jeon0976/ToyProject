@@ -32,7 +32,7 @@ final class NewsListPresenter: NSObject {
     // 0 : 0*20 +1 = 1
     // 1 : 1*20 +1 = 2
     
-    private var tags: [String] = ["Test", "Test2"]
+    private let tags: [Tags] = UserDefaultsManager().getTags()
     
     private var newsList: [News] = []
     
@@ -63,7 +63,7 @@ final class NewsListPresenter: NSObject {
 extension NewsListPresenter: NewsListTableViewHeaderViewDelegate {
     func didSelectTag(_ seletedIndex: Int) {
 
-        currentKeyword = tags[seletedIndex]
+        currentKeyword = tags[seletedIndex].tag
 
         requestNewsList(isNeededToReset: true)
     }

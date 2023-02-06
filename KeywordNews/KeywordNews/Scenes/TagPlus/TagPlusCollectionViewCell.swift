@@ -16,7 +16,6 @@ final class TagPlusCollectionViewCell: UICollectionViewCell {
        var label = UILabel()
         
         label = PaddingLabel()
-        label.text = "Test"
         label.font = .systemFont(ofSize: 18.0, weight: .semibold)
         label.textColor = .white
         label.layer.backgroundColor = UIColor.systemOrange.cgColor
@@ -26,9 +25,10 @@ final class TagPlusCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    func setup() {
+    func setup(tag: Tags) {
         backgroundColor = .systemBackground
         addSubview(label)
+        label.text = tag.tag
         
         label.snp.makeConstraints {
             $0.edges.equalToSuperview()
