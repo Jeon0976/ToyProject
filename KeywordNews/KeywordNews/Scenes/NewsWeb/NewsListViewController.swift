@@ -87,7 +87,7 @@ extension NewsListViewController: NewsListProtocol {
     }
     
     func moveToTagPlusViewController() {
-        let tagPlusViewController = TagPlusViewController(tags: presenter.tags)
+        let tagPlusViewController = TagPlusViewController()
         navigationController?.pushViewController(
             tagPlusViewController,
             animated: true

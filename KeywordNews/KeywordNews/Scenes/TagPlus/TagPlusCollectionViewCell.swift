@@ -25,14 +25,36 @@ final class TagPlusCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    private lazy var image: UIImageView = {
+       let image = UIImageView()
+        image.image = UIImage(systemName: "checkmark.circle.fill")
+        image.isHidden = true
+        
+        return image
+    }()
+    
     func setup(tag: Tags) {
         backgroundColor = .systemBackground
-        addSubview(label)
+        [label, image].forEach { addSubview($0) }
         label.text = tag.tag
         
         label.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        image.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
+    }
+    
+    func clicked() {
+        label.alpha = 0.5
+        image.isHidden = false
+    }
+    
+    func cancel() {
+        label.alpha = 1
+        image.isHidden = true
     }
 }
 
