@@ -71,10 +71,12 @@
 <p align="center">
   <img width="320" height="580" src="./2.png">
 </p>
+
 #### 추가 구현
 - TagCollectionView 생성
     - flowLayout 설정 (자세히 공부 필요)
     - **Q:** Dynamic Cell 생성을 위해선 FlowLayout 설정?? 
+    
     ``` swift
         private lazy var tagCollectionView: UICollectionView = {
            let layout = UICollectionViewFlowLayout()
@@ -103,7 +105,9 @@
             return collectionView
         }()
     ```
+    
     - UILabel padding 넣기
+    
     ``` swift
     final class PaddingLabel: UILabel {
 
@@ -127,6 +131,7 @@
     }
 }
     ```
+    
 - 추가 버튼 생성 
     - Tag 삭제 버튼 클릭시 비활성화 구현
     - 추가 버튼 클릭시 AlertController 구현
@@ -166,12 +171,14 @@
                 try? PropertyListEncoder().encode(changeTags), forKey: Key.news.rawValue)
         }
     }
-         ```
+    ```
+    
     - **userDefaults 연동을 위한 (News/Tags)Presenter에 데이터 구현**
-- **작은 버그들 수정** 
+- **버그 수정** 
     1. 삭제 tag 선택 후 다시 해제 불가 해결
     2. tag 생성 시 빈 textfield임에도 불구하고 Ok시 빈 값으로 추가되는 버그 해결
     3. trash 버튼 클릭 시 추가 버튼 활성화 안됨 해결
+    
 <p align="center">
   <img width="320" height="580" src="./make.gif">
 </p>
