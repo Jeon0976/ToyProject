@@ -10,7 +10,7 @@ import Foundation
 protocol UserDefaultsManagerProtocol {
     func getTags() -> [Tags]
     func setTags(_ newValues: Tags)
-    func deleteTags(_ values: Tags)
+    func deleteTags(_ values: [Tags])
 }
 
 struct UserDefaultsManager: UserDefaultsManagerProtocol {
@@ -30,17 +30,12 @@ struct UserDefaultsManager: UserDefaultsManagerProtocol {
             try? PropertyListEncoder().encode(currentTags), forKey: Key.news.rawValue)
     }
     
-    func deleteTags(_ values: Tags) {
+    func deleteTags(_ values: [Tags]) {
         var currentTags: [Tags] = getTags()
-        var count = 0
         
-        for currentNew in currentTags {
-            if currentNew.self == values.self {
-                currentTags.remove(at: count)
-            }
-            count += 1
-        }
+        let changeTags = currentTags.filter { !values.contains($0) }
+        
         UserDefaults.standard.set(
-            try? PropertyListEncoder().encode(currentTags), forKey: Key.news.rawValue)
+            try? PropertyListEncoder().encode(changeTags), forKey: Key.news.rawValue)
     }
 }

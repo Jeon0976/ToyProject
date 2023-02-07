@@ -5,6 +5,7 @@
 //  Created by 전성훈 on 2023/02/04.
 //
 
+// MARK: 삭제 기능 구현 -> trash 버튼 눌러서 (UserDefaults 연동) / 선택 삭제 시 추가 버튼 비활성화
 import UIKit
 
 protocol TagPlusProtocol: AnyObject {
@@ -14,6 +15,8 @@ protocol TagPlusProtocol: AnyObject {
     func makeAlertController()
     func clickedSelect()
     func clickedCancel()
+    func tagPlusButtonEnable(_ value: Bool)
+    func deleteCell(_ indexPath: [IndexPath])
 }
 
 /// 선택, 삭제 로직 구현
@@ -32,6 +35,8 @@ final class TagPlusPresenter: NSObject {
     private var mode: RightBarButtomMode = .select
     
     private var deleteTags: [Tags] = []
+    
+    private var deleteIndexPath: [IndexPath] = []
         
     init(viewController: TagPlusProtocol,
          userDefaultsManager: UserDefaultsManagerProtocol = UserDefaultsManager()
@@ -47,22 +52,28 @@ final class TagPlusPresenter: NSObject {
     
     func viewWillAppear() {
         tags = userDefaultsManager.getTags()
-        print(deleteTags)
     }
     
     func didSelectButtonClicked() {
         switch mode {
         case .select:
             viewController?.clickedSelect()
+            viewController?.tagPlusButtonEnable(false)
             mode = .delete
         case .delete:
             viewController?.reloadCollectionView()
             viewController?.clickedCancel()
+            viewController?.tagPlusButtonEnable(true)
             mode = .select
         }
     }
     
     func didDeleteBarButtonClicked() {
+        viewController?.deleteCell(deleteIndexPath)
+        userDefaultsManager.deleteTags(deleteTags)
+        deleteTags.removeAll()
+        deleteIndexPath.removeAll()
+        tags = userDefaultsManager.getTags()
     }
     
     func didTapPlusButtonCliked() {
@@ -82,12 +93,13 @@ extension TagPlusPresenter: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch mode {
         case .select:
-            print(tags[indexPath.row])
+            break
         case .delete:
             let cell = collectionView.cellForItem(at: indexPath) as? TagPlusCollectionViewCell
             cell?.clicked()
             let tag = tags[indexPath.row]
             deleteTags.append(tag)
+            deleteIndexPath.append(indexPath)
         }
     }
 }

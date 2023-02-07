@@ -32,7 +32,7 @@ final class NewsListPresenter: NSObject {
     // 0 : 0*20 +1 = 1
     // 1 : 1*20 +1 = 2
     
-    var tags: [Tags] = UserDefaultsManager().getTags()
+    var tags: [Tags] = []
     
     private var newsList: [News] = []
     
@@ -49,6 +49,12 @@ final class NewsListPresenter: NSObject {
     func viewDidLoad() {
         viewController?.setupNavigationBar()
         viewController?.setupLayout()
+        tags = userDefaultsManager.getTags()
+    }
+    
+    func viewWillAppear() {
+        tags = userDefaultsManager.getTags()
+        viewController?.reloadTableView()
     }
     
     func didCalledRefresh() {
@@ -116,7 +122,7 @@ extension NewsListPresenter: UITableViewDataSource {
 
         header?.setUp(tags: tags, delegate: self)
         
-        return header
+        return header ?? UITableViewHeaderFooterView()
     }
 }
 

@@ -29,9 +29,10 @@ final class NewsListTableViewHeaderView: UITableViewHeaderFooterView {
         
         contentView.backgroundColor = .systemBackground
         
+            tagCollectionView.removeAllTags()
+        
         setupTagCollectionViewLayout()
         setupTagCollectionView()
-        tagCollectionView.reload()
     }
 }
 
@@ -56,7 +57,6 @@ private extension NewsListTableViewHeaderView {
     }
     
     func setupTagCollectionView() {
-        
         tagCollectionView.delegate = self
         tagCollectionView.numberOfLines = 1
         tagCollectionView.scrollDirection = .horizontal
@@ -92,31 +92,29 @@ private extension NewsListTableViewHeaderView {
         /// 갱신없이 add만 해서 tag를 누를때마다 계속 생성됨, 즉 remove하고 add 해야함.
         /// 하지만, 이렇게했더니 눌렀을때 고정이 안됨.
         /// 고정을 위해선, 조건문 하나 더 생성해야되나??
-        if tagCollectionView.allNotSelectedTags().count == 0 {
-            tags.forEach { tag in
-                let font = UIFont.systemFont(ofSize: 14.0, weight: .semibold)
-                
-                let nonSelectedTagContents = TTGTextTagStringContent(
-                    text: tag.tag,
-                    textFont: font,
-                    textColor: .white
-                )
-                
-                let selectedTagContents = TTGTextTagStringContent(
-                    text: tag.tag,
-                    textFont: font,
-                    textColor: .systemOrange
-                )
-                
-                let tag = TTGTextTag(
-                    content: nonSelectedTagContents,
-                    style: nonSelectedStyle,
-                    selectedContent: selectedTagContents,
-                    selectedStyle: selectedStyle
-                )
-                tagCollectionView.addTag(tag)
-            }
+        tags.forEach { tag in
+            let font = UIFont.systemFont(ofSize: 14.0, weight: .semibold)
+            
+            let nonSelectedTagContents = TTGTextTagStringContent(
+                text: tag.tag,
+                textFont: font,
+                textColor: .white
+            )
+            
+            let selectedTagContents = TTGTextTagStringContent(
+                text: tag.tag,
+                textFont: font,
+                textColor: .systemOrange
+            )
+            
+            let tag = TTGTextTag(
+                content: nonSelectedTagContents,
+                style: nonSelectedStyle,
+                selectedContent: selectedTagContents,
+                selectedStyle: selectedStyle
+            )
+            tagCollectionView.addTag(tag)
         }
-//        tagCollectionView.reload()
+        tagCollectionView.reload()
     }
 }

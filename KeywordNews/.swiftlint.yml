@@ -4,3 +4,6 @@ excluded:
  - Pods
 disabled_rules:
 - trailing_whitespace
+
+identifier_name:
+    allowed_symbols: ["_"]

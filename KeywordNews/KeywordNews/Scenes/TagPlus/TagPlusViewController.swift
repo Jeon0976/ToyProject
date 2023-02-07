@@ -95,7 +95,7 @@ extension TagPlusViewController: TagPlusProtocol {
         navigationItem.title = "Tag"
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.rightBarButtonItems = [selectBarButton, deleteBarButton]
-
+        
     }
     
     func setupLayout() {
@@ -126,7 +126,7 @@ extension TagPlusViewController: TagPlusProtocol {
         alertController.addTextField { textField in
             textField.placeholder = "테그값을 입력하세요."
         }
-                                        
+        
         alertController.addAction(alertAction)
         present(alertController, animated: true)
     }
@@ -141,7 +141,13 @@ extension TagPlusViewController: TagPlusProtocol {
         deleteBarButton.isHidden = true
     }
     
-
+    func tagPlusButtonEnable(_ value: Bool) {
+        tagPlusButton.isEnabled = value
+    }
+    
+    func deleteCell(_ indexPath: [IndexPath]) {
+        tagCollectionView.deleteItems(at: indexPath)
+    }
 }
 
 private extension TagPlusViewController {

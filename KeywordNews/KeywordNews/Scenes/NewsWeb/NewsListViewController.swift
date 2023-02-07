@@ -56,6 +56,12 @@ final class NewsListViewController: UIViewController {
         
         presenter.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter.viewWillAppear()
+    }
 }
 
 extension NewsListViewController: NewsListProtocol {
@@ -97,6 +103,7 @@ extension NewsListViewController: NewsListProtocol {
     func reloadTableView() {
         tableView.reloadData()
     }
+    
 }
 
 private extension NewsListViewController {
