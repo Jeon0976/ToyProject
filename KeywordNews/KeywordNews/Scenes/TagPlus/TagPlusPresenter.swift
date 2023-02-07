@@ -34,9 +34,13 @@ final class TagPlusPresenter: NSObject {
     
     private var mode: RightBarButtomMode = .select
     
-    private var deleteTags: [Tags] = []
+    private var deleteTags: [IndexPath: Tags] = [:]
+    
+    private var deleteTagsProcess: [Tags] = []
     
     private var deleteIndexPath: [IndexPath] = []
+    
+    private var tagIndexPath: [IndexPath: Bool] = [:]
         
     init(viewController: TagPlusProtocol,
          userDefaultsManager: UserDefaultsManagerProtocol = UserDefaultsManager()
@@ -70,10 +74,15 @@ final class TagPlusPresenter: NSObject {
     
     func didDeleteBarButtonClicked() {
         viewController?.deleteCell(deleteIndexPath)
-        userDefaultsManager.deleteTags(deleteTags)
-        deleteTags.removeAll()
+        // 선택 창에서 선택 취소를 위한 dictionary구조로 생성해서 기존 배열로 가공 코드 추가
+        for (_, value) in deleteTags {
+            deleteTagsProcess.append(value)
+        }
+        userDefaultsManager.deleteTags(deleteTagsProcess)
         deleteIndexPath.removeAll()
+        deleteTags.removeAll()
         tags = userDefaultsManager.getTags()
+        viewController?.clickedCancel()
     }
     
     func didTapPlusButtonCliked() {
@@ -95,11 +104,20 @@ extension TagPlusPresenter: UICollectionViewDelegateFlowLayout {
         case .select:
             break
         case .delete:
-            let cell = collectionView.cellForItem(at: indexPath) as? TagPlusCollectionViewCell
-            cell?.clicked()
-            let tag = tags[indexPath.row]
-            deleteTags.append(tag)
-            deleteIndexPath.append(indexPath)
+            if tagIndexPath[indexPath] == true {
+                let cell = collectionView.cellForItem(at: indexPath) as? TagPlusCollectionViewCell
+                cell?.clicked(false)
+                tagIndexPath.updateValue(false, forKey: indexPath)
+                deleteTags.removeValue(forKey: indexPath)
+                deleteIndexPath = deleteIndexPath.filter { $0 != indexPath }
+            } else {
+                let cell = collectionView.cellForItem(at: indexPath) as? TagPlusCollectionViewCell
+                cell?.clicked(true)
+                let tag = tags[indexPath.row]
+                tagIndexPath.updateValue(true, forKey: indexPath)
+                deleteTags.updateValue(tag, forKey: indexPath)
+                deleteIndexPath.append(indexPath)
+            }
         }
     }
 }
@@ -120,7 +138,7 @@ extension TagPlusPresenter: UICollectionViewDataSource {
         let tag = tags[indexPath.row]
         
         cell?.setup(tag: tag)
-        cell?.cancel()
+        cell?.clicked(false)
         
         return cell ?? UICollectionViewCell()
     }

@@ -11,7 +11,7 @@ import SnapKit
 
 final class TagPlusCollectionViewCell: UICollectionViewCell {
     static let identifier = "TagPlusCollectionViewCell"
-    
+        
     private lazy var label: UILabel = {
        var label = UILabel()
         
@@ -47,15 +47,16 @@ final class TagPlusCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func clicked() {
-        label.alpha = 0.5
-        image.isHidden = false
+    func clicked(_ value: Bool) {
+        if value {
+            label.alpha = 0.5
+            image.isHidden = false
+        } else {
+            label.alpha = 1
+            image.isHidden = true
+        }
     }
     
-    func cancel() {
-        label.alpha = 1
-        image.isHidden = true
-    }
 }
 
 // MARK: UILabel Padding 넣기

@@ -31,7 +31,7 @@ struct UserDefaultsManager: UserDefaultsManagerProtocol {
     }
     
     func deleteTags(_ values: [Tags]) {
-        var currentTags: [Tags] = getTags()
+        let currentTags: [Tags] = getTags()
         
         let changeTags = currentTags.filter { !values.contains($0) }
         
