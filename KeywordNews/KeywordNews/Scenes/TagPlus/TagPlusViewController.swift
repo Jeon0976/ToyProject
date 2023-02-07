@@ -117,16 +117,18 @@ extension TagPlusViewController: TagPlusProtocol {
     
     func makeAlertController() {
         let alertController = UIAlertController(title: "테그 생성", message: nil, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
             if alertController.textFields?[0].text == "" {return}
             guard let text = alertController.textFields?[0].text else {return}
             self?.presenter.tagText(text)
         })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
         alertController.addTextField { textField in
             textField.placeholder = "테그값을 입력하세요."
         }
         
-        alertController.addAction(alertAction)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
         present(alertController, animated: true)
     }
     
