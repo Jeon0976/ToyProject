@@ -15,11 +15,11 @@ protocol UserDefaultsManagerProtocol {
 
 struct UserDefaultsManager: UserDefaultsManagerProtocol {
     enum Key: String {
-        case news
+        case tags
     }
     
     func getTags() -> [Tags] {
-        guard let data = UserDefaults.standard.data(forKey: Key.news.rawValue) else {return [ ]}
+        guard let data = UserDefaults.standard.data(forKey: Key.tags.rawValue) else {return [ ]}
         return (try? PropertyListDecoder().decode([Tags].self, from: data)) ?? []
     }
     
@@ -27,7 +27,7 @@ struct UserDefaultsManager: UserDefaultsManagerProtocol {
         var currentTags: [Tags] = getTags()
         currentTags.insert(newValues, at: 0)
         UserDefaults.standard.set(
-            try? PropertyListEncoder().encode(currentTags), forKey: Key.news.rawValue)
+            try? PropertyListEncoder().encode(currentTags), forKey: Key.tags.rawValue)
     }
     
     func deleteTags(_ values: [Tags]) {
@@ -36,6 +36,6 @@ struct UserDefaultsManager: UserDefaultsManagerProtocol {
         let changeTags = currentTags.filter { !values.contains($0) }
         
         UserDefaults.standard.set(
-            try? PropertyListEncoder().encode(changeTags), forKey: Key.news.rawValue)
+            try? PropertyListEncoder().encode(changeTags), forKey: Key.tags.rawValue)
     }
 }

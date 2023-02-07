@@ -5,7 +5,6 @@
 //  Created by 전성훈 on 2023/02/04.
 //
 
-// MARK: 삭제 기능 구현 -> trash 버튼 눌러서 (UserDefaults 연동) / 선택 삭제 시 추가 버튼 비활성화
 import UIKit
 
 protocol TagPlusProtocol: AnyObject {
@@ -30,16 +29,22 @@ final class TagPlusPresenter: NSObject {
     
     private let userDefaultsManager: UserDefaultsManagerProtocol
     
+    // 최초 tags 대입 변수
     private var tags: [Tags] = []
     
+    // 선택 & 취소 모드 확인 변수
     private var mode: RightBarButtomMode = .select
     
+    // 삭제 시 선택 해제를 확인하기 위한 변수
     private var deleteTags: [IndexPath: Tags] = [:]
     
+    // 삭제 시 userDefaults data에 대입을 위한 변수
     private var deleteTagsProcess: [Tags] = []
     
+    // 삭제 시 collectionViewCell data 삭제를 위한 변수
     private var deleteIndexPath: [IndexPath] = []
     
+    // 삭제 선택&해제 분기를 위한 변수
     private var tagIndexPath: [IndexPath: Bool] = [:]
         
     init(viewController: TagPlusProtocol,
@@ -79,10 +84,14 @@ final class TagPlusPresenter: NSObject {
             deleteTagsProcess.append(value)
         }
         userDefaultsManager.deleteTags(deleteTagsProcess)
+        
         deleteIndexPath.removeAll()
         deleteTags.removeAll()
+        deleteTagsProcess.removeAll()
+        
         tags = userDefaultsManager.getTags()
         viewController?.clickedCancel()
+        viewController?.tagPlusButtonEnable(true)
     }
     
     func didTapPlusButtonCliked() {
