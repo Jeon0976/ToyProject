@@ -43,8 +43,8 @@
                 query: keyword
             )
             let headers: HTTPHeaders = [
-                "X-Naver-Client-Id": "ie04mHhHFUiO1i9Pzzgw",
-                "X-Naver-Client-Secret": "Nr6VZbR7ac"
+                "X-Naver-Client-Id": "-",
+                "X-Naver-Client-Secret": "-"
             ]
             
             AF
