@@ -10,9 +10,11 @@
 		0F5BE2CA267451362E679078 /* Pods_TwitterClone_TwitterCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A0CE510DD718F976A41747 /* Pods_TwitterClone_TwitterCloneUITests.framework */; };
 		9F25BCF9B4198FDB24E7B021 /* Pods_TwitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54442B80F4BA290912A7A5EC /* Pods_TwitterClone.framework */; };
 		A26ED4CBE2FCF80FE5803EC8 /* Pods_TwitterCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD63488450F2810E841A291 /* Pods_TwitterCloneTests.framework */; };
+		C5432FF7299528F700D1D8E0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5432FF6299528F700D1D8E0 /* FeedViewController.swift */; };
+		C5432FF92995290300D1D8E0 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5432FF82995290300D1D8E0 /* FeedPresenter.swift */; };
 		C5F9CC062994F8F40049633F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9CC052994F8F40049633F /* AppDelegate.swift */; };
 		C5F9CC082994F8F40049633F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9CC072994F8F40049633F /* SceneDelegate.swift */; };
-		C5F9CC0A2994F8F40049633F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9CC092994F8F40049633F /* ViewController.swift */; };
+		C5F9CC0A2994F8F40049633F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9CC092994F8F40049633F /* TabBarViewController.swift */; };
 		C5F9CC0F2994F8F40049633F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F9CC0E2994F8F40049633F /* Assets.xcassets */; };
 		C5F9CC122994F8F40049633F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F9CC102994F8F40049633F /* LaunchScreen.storyboard */; };
 		C5F9CC1D2994F8F50049633F /* TwitterCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9CC1C2994F8F50049633F /* TwitterCloneTests.swift */; };
@@ -47,10 +49,12 @@
 		54442B80F4BA290912A7A5EC /* Pods_TwitterClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C03B62682C927337A5BBB39 /* Pods-TwitterClone-TwitterCloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClone-TwitterCloneUITests.debug.xcconfig"; path = "Target Support Files/Pods-TwitterClone-TwitterCloneUITests/Pods-TwitterClone-TwitterCloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BCD63488450F2810E841A291 /* Pods_TwitterCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5432FF6299528F700D1D8E0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		C5432FF82995290300D1D8E0 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		C5F9CC022994F8F40049633F /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F9CC052994F8F40049633F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5F9CC072994F8F40049633F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C5F9CC092994F8F40049633F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C5F9CC092994F8F40049633F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C5F9CC0E2994F8F40049633F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5F9CC112994F8F40049633F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5F9CC132994F8F40049633F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 				487F740EE8E4B368DEC922F1 /* Pods-TwitterCloneTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C5432FFA2995290800D1D8E0 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				C5432FF6299528F700D1D8E0 /* FeedViewController.swift */,
+				C5432FF82995290300D1D8E0 /* FeedPresenter.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		C5F9CBF92994F8F40049633F = {
@@ -184,7 +197,8 @@
 		C5F9CC3A2994FE6B0049633F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				C5F9CC092994F8F40049633F /* ViewController.swift */,
+				C5F9CC092994F8F40049633F /* TabBarViewController.swift */,
+				C5432FFA2995290800D1D8E0 /* Feed */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -435,12 +449,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5F9CC0A2994F8F40049633F /* ViewController.swift in Sources */,
+				C5F9CC0A2994F8F40049633F /* TabBarViewController.swift in Sources */,
 				C5F9CC062994F8F40049633F /* AppDelegate.swift in Sources */,
+				C5432FF92995290300D1D8E0 /* FeedPresenter.swift in Sources */,
 				C5F9CC3C2994FF5B0049633F /* UserDefaultsManager.swift in Sources */,
 				C5F9CC082994F8F40049633F /* SceneDelegate.swift in Sources */,
 				C5F9CC392994FE690049633F /* User.swift in Sources */,
 				C5F9CC362994FE510049633F /* Tweet.swift in Sources */,
+				C5432FF7299528F700D1D8E0 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
