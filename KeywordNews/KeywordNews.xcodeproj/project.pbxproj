@@ -15,7 +15,6 @@
 		C533DCF3298B9AFF007FA92C /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533DCF2298B9AFF007FA92C /* NewsListViewController.swift */; };
 		C533DCF8298B9AFF007FA92C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C533DCF7298B9AFF007FA92C /* Assets.xcassets */; };
 		C533DCFB298B9AFF007FA92C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C533DCF9298B9AFF007FA92C /* LaunchScreen.storyboard */; };
-		C533DD06298B9B00007FA92C /* KeywordNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533DD05298B9B00007FA92C /* KeywordNewsTests.swift */; };
 		C533DD10298B9B00007FA92C /* KeywordNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533DD0F298B9B00007FA92C /* KeywordNewsUITests.swift */; };
 		C533DD12298B9B00007FA92C /* KeywordNewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533DD11298B9B00007FA92C /* KeywordNewsUITestsLaunchTests.swift */; };
 		C533DD27298BB066007FA92C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C533DD26298BB066007FA92C /* .swiftlint.yml */; };
@@ -33,6 +32,10 @@
 		C5AA2AB2298E86D000AF8F1C /* NewsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AB1298E86D000AF8F1C /* NewsResponseModel.swift */; };
 		C5AA2AB4298E875D00AF8F1C /* NewsSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AA2AB3298E875D00AF8F1C /* NewsSearchManager.swift */; };
 		C5C47D2D299399B3004FC07C /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C47D2C299399B3004FC07C /* UILabel+.swift */; };
+		C5C47D332994B30B004FC07C /* NewsListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C47D322994B30B004FC07C /* NewsListPresenterTests.swift */; };
+		C5C47D352994B75F004FC07C /* MockNewsSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C47D342994B75F004FC07C /* MockNewsSearchManager.swift */; };
+		C5C47D372994B76E004FC07C /* MockNewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C47D362994B76E004FC07C /* MockNewsListViewController.swift */; };
+		C5C47D392994B777004FC07C /* MockUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C47D382994B777004FC07C /* MockUserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +70,6 @@
 		C533DCFA298B9AFF007FA92C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C533DCFC298B9AFF007FA92C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C533DD01298B9B00007FA92C /* KeywordNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeywordNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C533DD05298B9B00007FA92C /* KeywordNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordNewsTests.swift; sourceTree = "<group>"; };
 		C533DD0B298B9B00007FA92C /* KeywordNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeywordNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C533DD0F298B9B00007FA92C /* KeywordNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordNewsUITests.swift; sourceTree = "<group>"; };
 		C533DD11298B9B00007FA92C /* KeywordNewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordNewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -86,6 +88,10 @@
 		C5AA2AB1298E86D000AF8F1C /* NewsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponseModel.swift; sourceTree = "<group>"; };
 		C5AA2AB3298E875D00AF8F1C /* NewsSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchManager.swift; sourceTree = "<group>"; };
 		C5C47D2C299399B3004FC07C /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		C5C47D322994B30B004FC07C /* NewsListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenterTests.swift; sourceTree = "<group>"; };
+		C5C47D342994B75F004FC07C /* MockNewsSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsSearchManager.swift; sourceTree = "<group>"; };
+		C5C47D362994B76E004FC07C /* MockNewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNewsListViewController.swift; sourceTree = "<group>"; };
+		C5C47D382994B777004FC07C /* MockUserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaultsManager.swift; sourceTree = "<group>"; };
 		CA34339C9AFB45818223C468 /* Pods-KeywordNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeywordNews.release.xcconfig"; path = "Target Support Files/Pods-KeywordNews/Pods-KeywordNews.release.xcconfig"; sourceTree = "<group>"; };
 		E06939028D953AD81855F061 /* Pods_KeywordNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeywordNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD7CC3E3FF0872FBD4592EC /* Pods-KeywordNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeywordNewsTests.release.xcconfig"; path = "Target Support Files/Pods-KeywordNewsTests/Pods-KeywordNewsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,7 +190,10 @@
 		C533DD04298B9B00007FA92C /* KeywordNewsTests */ = {
 			isa = PBXGroup;
 			children = (
-				C533DD05298B9B00007FA92C /* KeywordNewsTests.swift */,
+				C5C47D322994B30B004FC07C /* NewsListPresenterTests.swift */,
+				C5C47D362994B76E004FC07C /* MockNewsListViewController.swift */,
+				C5C47D382994B777004FC07C /* MockUserDefaultsManager.swift */,
+				C5C47D342994B75F004FC07C /* MockNewsSearchManager.swift */,
 			);
 			path = KeywordNewsTests;
 			sourceTree = "<group>";
@@ -342,6 +351,7 @@
 					};
 					C533DD00298B9B00007FA92C = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = C533DCEA298B9AFF007FA92C;
 					};
 					C533DD0A298B9B00007FA92C = {
@@ -548,7 +558,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C533DD06298B9B00007FA92C /* KeywordNewsTests.swift in Sources */,
+				C5C47D392994B777004FC07C /* MockUserDefaultsManager.swift in Sources */,
+				C5C47D352994B75F004FC07C /* MockNewsSearchManager.swift in Sources */,
+				C5C47D372994B76E004FC07C /* MockNewsListViewController.swift in Sources */,
+				C5C47D332994B30B004FC07C /* NewsListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,15 +777,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4K2HXA435;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OwnCompany.KeywordNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "KeywordNewsTests/KeywordNewsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeywordNews.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KeywordNews";
@@ -785,15 +806,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4K2HXA435;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OwnCompany.KeywordNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "KeywordNewsTests/KeywordNewsTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeywordNews.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KeywordNews";
