@@ -8,10 +8,10 @@
 import UIKit
 
 protocol FeedProtocol: AnyObject {
-    func setupLayout()
+    func setupView()
 }
 
-final class FeedPresenter {
+final class FeedPresenter:NSObject {
     private weak var viewController: FeedProtocol?
     
     init(viewController: FeedProtocol) {
@@ -19,6 +19,22 @@ final class FeedPresenter {
     }
     
     func viewDidLoad() {
-        viewController?.setupLayout()
+        viewController?.setupView()
     }
+}
+
+extension FeedPresenter: UITableViewDelegate {
+    
+}
+
+extension FeedPresenter: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
+    }
+    
+    
 }

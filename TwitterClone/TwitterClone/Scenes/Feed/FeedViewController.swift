@@ -7,8 +7,19 @@
 
 import UIKit
 
+import SnapKit
+
 final class FeedViewControler: UIViewController {
     private lazy var presenter = FeedPresenter(viewController: self)
+    
+    private lazy var tableView: UITableView = {
+       let tableView = UITableView()
+       
+        tableView.delegate = presenter
+        tableView.dataSource = presenter
+        
+        return tableView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +29,13 @@ final class FeedViewControler: UIViewController {
 }
 
 extension FeedViewControler: FeedProtocol {
-    func setupLayout() {
+    func setupView() {
+        navigationItem.title = "Feed"
         
+        view.addSubview(tableView)
+        
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 }

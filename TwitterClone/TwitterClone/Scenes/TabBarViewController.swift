@@ -7,28 +7,22 @@
 
 import UIKit
 
-enum TabBarItem: CaseIterable {
-    case feed
-    case profile
-    
-    var title: String {
-        switch self {
-        case .feed: return "Feed"
-        case .profile: return "Profile"
-        }
-    }
-    
-    var icon: (default: UIImage?, selected: UIImage?) {
-        switch self {
-        case .feed:
-            return (UIImage(systemName: "list.bullet"), UIImage(systemName: "list.bullet"))
-        case .profile:
-            return (UIImage(systemName: "person"), UIImage(systemName: "person.fill"))
-        }
-    }
-}
-
 class TabBarViewController: UITabBarController {
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tabBarViewControllers: [UIViewController] = TabBarItem.allCases
+            .map { tabCase in
+                let viewController = tabCase.viewController
+                viewController.tabBarItem = UITabBarItem(
+                    title: tabCase.title,
+                    image: tabCase.icon.default,
+                    selectedImage: tabCase.icon.selected
+                )
+                
+                return viewController
+            }
+        self.viewControllers = tabBarViewControllers
+    }
 }
 
