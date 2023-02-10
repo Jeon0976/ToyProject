@@ -24,6 +24,7 @@ enum Icon {
         case .write: systemName = "square.and.pencil"
         }
         
+
         return UIImage(systemName: systemName)
     }
 }

@@ -15,6 +15,10 @@
 		C5432FFC2995573500D1D8E0 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5432FFB2995573500D1D8E0 /* TabBarItem.swift */; };
 		C54D50B22995E65200558B32 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D50B12995E65200558B32 /* FeedTableViewCell.swift */; };
 		C54D50B42995EB5500558B32 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D50B32995EB5500558B32 /* Icon.swift */; };
+		C54D50B62996147F00558B32 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D50B52996147F00558B32 /* TweetViewController.swift */; };
+		C54D50B82996148A00558B32 /* TweetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D50B72996148A00558B32 /* TweetPresenter.swift */; };
+		C54D50BC29961FF300558B32 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D50BB29961FF300558B32 /* WriteViewController.swift */; };
+		C54D50BE29961FF900558B32 /* WritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D50BD29961FF900558B32 /* WritePresenter.swift */; };
 		C5F9CC062994F8F40049633F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9CC052994F8F40049633F /* AppDelegate.swift */; };
 		C5F9CC082994F8F40049633F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9CC072994F8F40049633F /* SceneDelegate.swift */; };
 		C5F9CC0A2994F8F40049633F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9CC092994F8F40049633F /* TabBarViewController.swift */; };
@@ -57,6 +61,10 @@
 		C5432FFB2995573500D1D8E0 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		C54D50B12995E65200558B32 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		C54D50B32995EB5500558B32 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		C54D50B52996147F00558B32 /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
+		C54D50B72996148A00558B32 /* TweetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetPresenter.swift; sourceTree = "<group>"; };
+		C54D50BB29961FF300558B32 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		C54D50BD29961FF900558B32 /* WritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritePresenter.swift; sourceTree = "<group>"; };
 		C5F9CC022994F8F40049633F /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F9CC052994F8F40049633F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5F9CC072994F8F40049633F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,10 +140,37 @@
 			isa = PBXGroup;
 			children = (
 				C5432FF6299528F700D1D8E0 /* FeedViewController.swift */,
-				C54D50B12995E65200558B32 /* FeedTableViewCell.swift */,
 				C5432FF82995290300D1D8E0 /* FeedPresenter.swift */,
+				C54D50B12995E65200558B32 /* FeedTableViewCell.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		C54D50B92996148D00558B32 /* Tweet */ = {
+			isa = PBXGroup;
+			children = (
+				C54D50B52996147F00558B32 /* TweetViewController.swift */,
+				C54D50B72996148A00558B32 /* TweetPresenter.swift */,
+			);
+			path = Tweet;
+			sourceTree = "<group>";
+		};
+		C54D50BA299614CB00558B32 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9CC092994F8F40049633F /* TabBarViewController.swift */,
+				C5432FFB2995573500D1D8E0 /* TabBarItem.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C54D50BF2996200000558B32 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				C54D50BB29961FF300558B32 /* WriteViewController.swift */,
+				C54D50BD29961FF900558B32 /* WritePresenter.swift */,
+			);
+			path = Write;
 			sourceTree = "<group>";
 		};
 		C5F9CBF92994F8F40049633F = {
@@ -205,9 +240,10 @@
 		C5F9CC3A2994FE6B0049633F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				C5F9CC092994F8F40049633F /* TabBarViewController.swift */,
-				C5432FFB2995573500D1D8E0 /* TabBarItem.swift */,
+				C54D50BA299614CB00558B32 /* TabBar */,
 				C5432FFA2995290800D1D8E0 /* Feed */,
+				C54D50B92996148D00558B32 /* Tweet */,
+				C54D50BF2996200000558B32 /* Write */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -462,10 +498,14 @@
 				C5F9CC062994F8F40049633F /* AppDelegate.swift in Sources */,
 				C5432FF92995290300D1D8E0 /* FeedPresenter.swift in Sources */,
 				C5432FFC2995573500D1D8E0 /* TabBarItem.swift in Sources */,
+				C54D50B82996148A00558B32 /* TweetPresenter.swift in Sources */,
 				C5F9CC3C2994FF5B0049633F /* UserDefaultsManager.swift in Sources */,
+				C54D50BC29961FF300558B32 /* WriteViewController.swift in Sources */,
+				C54D50BE29961FF900558B32 /* WritePresenter.swift in Sources */,
 				C5F9CC082994F8F40049633F /* SceneDelegate.swift in Sources */,
 				C5F9CC392994FE690049633F /* User.swift in Sources */,
 				C54D50B42995EB5500558B32 /* Icon.swift in Sources */,
+				C54D50B62996147F00558B32 /* TweetViewController.swift in Sources */,
 				C5F9CC362994FE510049633F /* Tweet.swift in Sources */,
 				C5432FF7299528F700D1D8E0 /* FeedViewController.swift in Sources */,
 				C54D50B22995E65200558B32 /* FeedTableViewCell.swift in Sources */,
