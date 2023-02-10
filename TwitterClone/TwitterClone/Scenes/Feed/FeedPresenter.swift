@@ -33,8 +33,13 @@ extension FeedPresenter: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell
+        
+        let tweet = Tweet(user: User.shared, contents: "화성 갈끄니까~")
+        
+        cell?.setup(tweet: tweet)
+        
+        return cell ?? UITableViewCell()
     }
-    
     
 }
