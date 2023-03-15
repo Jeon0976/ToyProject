@@ -68,7 +68,7 @@ class TimerViewController: UIViewController {
             $0.center.equalToSuperview()
         }
         
-        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { [weak self] timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: {[weak self] timer in
             self?.repeatCount += 1
             print("Repeat Count: \(self?.repeatCount)")
             self?.timerLabel.text = "\(self?.repeatCount)"
