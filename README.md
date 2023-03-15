@@ -1,4 +1,15 @@
 # ToyProject
+
+<details>
+<summary> ToDoList </summary>
+
+- UIKit
+- AlertController
+- WKWebView 사용 방법
+
+</details>
+
+
 <details>
 <summary> KeywordNews </summary>
 
@@ -24,3 +35,4 @@
 - WKWebView 사용 방법
 
 </details>
+
