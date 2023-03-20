@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		C53DDF9429C169EC00E0CF73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53DDF9329C169EC00E0CF73 /* AppDelegate.swift */; };
 		C53DDF9629C169EC00E0CF73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53DDF9529C169EC00E0CF73 /* SceneDelegate.swift */; };
-		C53DDF9829C169EC00E0CF73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53DDF9729C169EC00E0CF73 /* ViewController.swift */; };
-		C53DDF9B29C169EC00E0CF73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53DDF9929C169EC00E0CF73 /* Main.storyboard */; };
+		C53DDF9829C169EC00E0CF73 /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53DDF9729C169EC00E0CF73 /* RootTabViewController.swift */; };
 		C53DDF9D29C169EC00E0CF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C53DDF9C29C169EC00E0CF73 /* Assets.xcassets */; };
 		C53DDFA029C169EC00E0CF73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53DDF9E29C169EC00E0CF73 /* LaunchScreen.storyboard */; };
+		C5C60DE429C8702900BD475B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C5C60DE329C8702900BD475B /* RxCocoa */; };
+		C5C60DE629C8702900BD475B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C5C60DE529C8702900BD475B /* RxSwift */; };
+		C5C60DE929C870A600BD475B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C5C60DE829C870A600BD475B /* .swiftlint.yml */; };
+		C5C60DED29C8748900BD475B /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DEC29C8748900BD475B /* TabBarItem.swift */; };
+		C5C60DEF29C875E900BD475B /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DEE29C875E900BD475B /* CalenderViewController.swift */; };
+		C5C60DF129C875F400BD475B /* NowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DF029C875F400BD475B /* NowListViewController.swift */; };
+		C5C60DF329C8760000BD475B /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DF229C8760000BD475B /* DoneListViewController.swift */; };
+		C5C60DF829C880D500BD475B /* NowListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DF729C880D500BD475B /* NowListViewModel.swift */; };
+		C5C60DFA29C880E300BD475B /* DoneListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DF929C880E300BD475B /* DoneListViewModel.swift */; };
+		C5C60DFE29C8810700BD475B /* CalenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DFD29C8810700BD475B /* CalenderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C53DDF9029C169EC00E0CF73 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53DDF9329C169EC00E0CF73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C53DDF9529C169EC00E0CF73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C53DDF9729C169EC00E0CF73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C53DDF9A29C169EC00E0CF73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C53DDF9729C169EC00E0CF73 /* RootTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
 		C53DDF9C29C169EC00E0CF73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C53DDF9F29C169EC00E0CF73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C53DDFA129C169EC00E0CF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5C60DE829C870A600BD475B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		C5C60DEC29C8748900BD475B /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		C5C60DEE29C875E900BD475B /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		C5C60DF029C875F400BD475B /* NowListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowListViewController.swift; sourceTree = "<group>"; };
+		C5C60DF229C8760000BD475B /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
+		C5C60DF729C880D500BD475B /* NowListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowListViewModel.swift; sourceTree = "<group>"; };
+		C5C60DF929C880E300BD475B /* DoneListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewModel.swift; sourceTree = "<group>"; };
+		C5C60DFD29C8810700BD475B /* CalenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C60DE629C8702900BD475B /* RxSwift in Frameworks */,
+				C5C60DE429C8702900BD475B /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +58,7 @@
 		C53DDF8729C169EC00E0CF73 = {
 			isa = PBXGroup;
 			children = (
+				C5C60DE829C870A600BD475B /* .swiftlint.yml */,
 				C53DDF9229C169EC00E0CF73 /* ToDoList */,
 				C53DDF9129C169EC00E0CF73 /* Products */,
 			);
@@ -58,13 +77,67 @@
 			children = (
 				C53DDF9329C169EC00E0CF73 /* AppDelegate.swift */,
 				C53DDF9529C169EC00E0CF73 /* SceneDelegate.swift */,
-				C53DDF9729C169EC00E0CF73 /* ViewController.swift */,
-				C53DDF9929C169EC00E0CF73 /* Main.storyboard */,
+				C5C60DEB29C8740400BD475B /* Model */,
+				C5C60DEA29C873F900BD475B /* Scene */,
 				C53DDF9C29C169EC00E0CF73 /* Assets.xcassets */,
 				C53DDF9E29C169EC00E0CF73 /* LaunchScreen.storyboard */,
 				C53DDFA129C169EC00E0CF73 /* Info.plist */,
 			);
 			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		C5C60DEA29C873F900BD475B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C5C60DFC29C880F400BD475B /* RootTabView */,
+				C5C60DF529C8774800BD475B /* NowList */,
+				C5C60DF429C8773F00BD475B /* DoneList */,
+				C5C60DF629C8775500BD475B /* Calender */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		C5C60DEB29C8740400BD475B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5C60DEC29C8748900BD475B /* TabBarItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5C60DF429C8773F00BD475B /* DoneList */ = {
+			isa = PBXGroup;
+			children = (
+				C5C60DF229C8760000BD475B /* DoneListViewController.swift */,
+				C5C60DF929C880E300BD475B /* DoneListViewModel.swift */,
+			);
+			path = DoneList;
+			sourceTree = "<group>";
+		};
+		C5C60DF529C8774800BD475B /* NowList */ = {
+			isa = PBXGroup;
+			children = (
+				C5C60DF029C875F400BD475B /* NowListViewController.swift */,
+				C5C60DF729C880D500BD475B /* NowListViewModel.swift */,
+			);
+			path = NowList;
+			sourceTree = "<group>";
+		};
+		C5C60DF629C8775500BD475B /* Calender */ = {
+			isa = PBXGroup;
+			children = (
+				C5C60DEE29C875E900BD475B /* CalenderViewController.swift */,
+				C5C60DFD29C8810700BD475B /* CalenderViewModel.swift */,
+			);
+			path = Calender;
+			sourceTree = "<group>";
+		};
+		C5C60DFC29C880F400BD475B /* RootTabView */ = {
+			isa = PBXGroup;
+			children = (
+				C53DDF9729C169EC00E0CF73 /* RootTabViewController.swift */,
+			);
+			path = RootTabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,12 +150,17 @@
 				C53DDF8C29C169EC00E0CF73 /* Sources */,
 				C53DDF8D29C169EC00E0CF73 /* Frameworks */,
 				C53DDF8E29C169EC00E0CF73 /* Resources */,
+				C5C60DE729C8705300BD475B /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ToDoList;
+			packageProductDependencies = (
+				C5C60DE329C8702900BD475B /* RxCocoa */,
+				C5C60DE529C8702900BD475B /* RxSwift */,
+			);
 			productName = ToDoList;
 			productReference = C53DDF9029C169EC00E0CF73 /* ToDoList.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +189,9 @@
 				Base,
 			);
 			mainGroup = C53DDF8729C169EC00E0CF73;
+			packageReferences = (
+				C5C60DE229C8702900BD475B /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = C53DDF9129C169EC00E0CF73 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,36 +206,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C60DE929C870A600BD475B /* .swiftlint.yml in Resources */,
 				C53DDFA029C169EC00E0CF73 /* LaunchScreen.storyboard in Resources */,
 				C53DDF9D29C169EC00E0CF73 /* Assets.xcassets in Resources */,
-				C53DDF9B29C169EC00E0CF73 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C5C60DE729C8705300BD475B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n    export PATH=\"$PATH:/opt/homebrew/bin\"\n    if which swiftlint > /dev/null; then\n      swiftlint\n    else\n      echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n    fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C53DDF8C29C169EC00E0CF73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C53DDF9829C169EC00E0CF73 /* ViewController.swift in Sources */,
+				C5C60DEF29C875E900BD475B /* CalenderViewController.swift in Sources */,
+				C5C60DFA29C880E300BD475B /* DoneListViewModel.swift in Sources */,
+				C5C60DF129C875F400BD475B /* NowListViewController.swift in Sources */,
+				C53DDF9829C169EC00E0CF73 /* RootTabViewController.swift in Sources */,
 				C53DDF9429C169EC00E0CF73 /* AppDelegate.swift in Sources */,
+				C5C60DED29C8748900BD475B /* TabBarItem.swift in Sources */,
+				C5C60DF829C880D500BD475B /* NowListViewModel.swift in Sources */,
 				C53DDF9629C169EC00E0CF73 /* SceneDelegate.swift in Sources */,
+				C5C60DFE29C8810700BD475B /* CalenderViewModel.swift in Sources */,
+				C5C60DF329C8760000BD475B /* DoneListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C53DDF9929C169EC00E0CF73 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C53DDF9A29C169EC00E0CF73 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C53DDF9E29C169EC00E0CF73 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +394,6 @@
 				INFOPLIST_FILE = ToDoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +421,6 @@
 				INFOPLIST_FILE = ToDoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +458,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C5C60DE229C8702900BD475B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C5C60DE329C8702900BD475B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5C60DE229C8702900BD475B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		C5C60DE529C8702900BD475B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5C60DE229C8702900BD475B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C53DDF8829C169EC00E0CF73 /* Project object */;
 }
