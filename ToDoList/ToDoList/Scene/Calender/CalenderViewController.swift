@@ -32,6 +32,6 @@ final class CalenderViewController: UIViewController {
     }
     
     private func layout() {
-        
+        view.backgroundColor = .systemBackground
     }
 }

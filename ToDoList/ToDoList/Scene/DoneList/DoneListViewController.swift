@@ -32,6 +32,6 @@ final class DoneListViewController: UIViewController {
     }
     
     private func layout() {
-        
+        view.backgroundColor = .systemBackground
     }
 }

@@ -14,9 +14,7 @@ class RootTabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .systemBackground
-        
+        setupTabBar()
         let tabBarViewControllers: [UIViewController] = TabBarItem.allCases.map { tabCase in
             
             let viewController = tabCase.viewController
@@ -30,5 +28,9 @@ class RootTabViewController: UITabBarController {
         }
         self.viewControllers = tabBarViewControllers
         self.selectedIndex = 1
+    }
+    
+    private func setupTabBar() {
+        tabBar.backgroundColor = .systemGray6
     }
 }

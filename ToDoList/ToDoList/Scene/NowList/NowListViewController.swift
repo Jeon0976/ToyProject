@@ -13,6 +13,8 @@ import RxCocoa
 final class NowListViewController: UIViewController {
     let disposeBag = DisposeBag()
     
+    let tableView = UITableView()
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
@@ -33,6 +35,6 @@ final class NowListViewController: UIViewController {
     }
     
     private func layout() {
-        
+        view.backgroundColor = .systemBackground
     }
 }
