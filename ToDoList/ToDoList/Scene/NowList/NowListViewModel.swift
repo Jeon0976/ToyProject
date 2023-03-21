@@ -9,5 +9,15 @@ import RxSwift
 import RxCocoa
 
 struct NowListViewModel {
+    let nowListCellModel = NowListCellModel()
     
+    // ViewModel -> View
+    let cellData: Driver<[String]>
+    
+    // View -> ViewModel
+    
+    init() {
+        let data = ["Test", "Test2"]
+        self.cellData = Driver.just(data)
+    }
 }

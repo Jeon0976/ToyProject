@@ -9,5 +9,15 @@ import RxSwift
 import RxCocoa
 
 struct DoneListViewModel {
+    let doneListCellModel = DoneListCellModel()
     
+    // ViewModel -> View
+    let cellData: Driver<[String]>
+    
+    // View -> ViewModel
+    
+    init() {
+        let data = ["Test1", "Test2"]
+        self.cellData = Driver.just(data)
+    }
 }

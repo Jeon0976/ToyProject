@@ -12,19 +12,15 @@ import RxCocoa
 
 final class CalenderViewController: UIViewController {
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         attribute()
         layout()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     func bind(_ viewModel: CalenderViewModel) {
-        print("TestCal")
+
     }
     
     private func attribute() {

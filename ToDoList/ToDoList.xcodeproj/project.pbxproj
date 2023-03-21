@@ -22,6 +22,11 @@
 		C5C60DF829C880D500BD475B /* NowListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DF729C880D500BD475B /* NowListViewModel.swift */; };
 		C5C60DFA29C880E300BD475B /* DoneListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DF929C880E300BD475B /* DoneListViewModel.swift */; };
 		C5C60DFE29C8810700BD475B /* CalenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DFD29C8810700BD475B /* CalenderViewModel.swift */; };
+		C5C60E0129C97E9400BD475B /* NowListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60E0029C97E9400BD475B /* NowListCellView.swift */; };
+		C5C60E0429C97F0D00BD475B /* NowListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60E0329C97F0D00BD475B /* NowListCellModel.swift */; };
+		C5C60E0729C97FE300BD475B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C5C60E0629C97FE300BD475B /* SnapKit */; };
+		C5C60E0A29C9A1F400BD475B /* DoneListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60E0929C9A1F400BD475B /* DoneListCellModel.swift */; };
+		C5C60E0C29C9A20B00BD475B /* DoneListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60E0B29C9A20B00BD475B /* DoneListCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,10 @@
 		C5C60DF729C880D500BD475B /* NowListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowListViewModel.swift; sourceTree = "<group>"; };
 		C5C60DF929C880E300BD475B /* DoneListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewModel.swift; sourceTree = "<group>"; };
 		C5C60DFD29C8810700BD475B /* CalenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewModel.swift; sourceTree = "<group>"; };
+		C5C60E0029C97E9400BD475B /* NowListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowListCellView.swift; sourceTree = "<group>"; };
+		C5C60E0329C97F0D00BD475B /* NowListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowListCellModel.swift; sourceTree = "<group>"; };
+		C5C60E0929C9A1F400BD475B /* DoneListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListCellModel.swift; sourceTree = "<group>"; };
+		C5C60E0B29C9A20B00BD475B /* DoneListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C60E0729C97FE300BD475B /* SnapKit in Frameworks */,
 				C5C60DE629C8702900BD475B /* RxSwift in Frameworks */,
 				C5C60DE429C8702900BD475B /* RxCocoa in Frameworks */,
 			);
@@ -110,6 +120,7 @@
 			children = (
 				C5C60DF229C8760000BD475B /* DoneListViewController.swift */,
 				C5C60DF929C880E300BD475B /* DoneListViewModel.swift */,
+				C5C60E0829C9A1D700BD475B /* DoneListCell */,
 			);
 			path = DoneList;
 			sourceTree = "<group>";
@@ -119,6 +130,7 @@
 			children = (
 				C5C60DF029C875F400BD475B /* NowListViewController.swift */,
 				C5C60DF729C880D500BD475B /* NowListViewModel.swift */,
+				C5C60E0229C97EE500BD475B /* NowListCell */,
 			);
 			path = NowList;
 			sourceTree = "<group>";
@@ -138,6 +150,24 @@
 				C53DDF9729C169EC00E0CF73 /* RootTabViewController.swift */,
 			);
 			path = RootTabView;
+			sourceTree = "<group>";
+		};
+		C5C60E0229C97EE500BD475B /* NowListCell */ = {
+			isa = PBXGroup;
+			children = (
+				C5C60E0329C97F0D00BD475B /* NowListCellModel.swift */,
+				C5C60E0029C97E9400BD475B /* NowListCellView.swift */,
+			);
+			path = NowListCell;
+			sourceTree = "<group>";
+		};
+		C5C60E0829C9A1D700BD475B /* DoneListCell */ = {
+			isa = PBXGroup;
+			children = (
+				C5C60E0929C9A1F400BD475B /* DoneListCellModel.swift */,
+				C5C60E0B29C9A20B00BD475B /* DoneListCellView.swift */,
+			);
+			path = DoneListCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +190,7 @@
 			packageProductDependencies = (
 				C5C60DE329C8702900BD475B /* RxCocoa */,
 				C5C60DE529C8702900BD475B /* RxSwift */,
+				C5C60E0629C97FE300BD475B /* SnapKit */,
 			);
 			productName = ToDoList;
 			productReference = C53DDF9029C169EC00E0CF73 /* ToDoList.app */;
@@ -191,6 +222,7 @@
 			mainGroup = C53DDF8729C169EC00E0CF73;
 			packageReferences = (
 				C5C60DE229C8702900BD475B /* XCRemoteSwiftPackageReference "RxSwift" */,
+				C5C60E0529C97FE300BD475B /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = C53DDF9129C169EC00E0CF73 /* Products */;
 			projectDirPath = "";
@@ -245,9 +277,13 @@
 				C5C60DFA29C880E300BD475B /* DoneListViewModel.swift in Sources */,
 				C5C60DF129C875F400BD475B /* NowListViewController.swift in Sources */,
 				C53DDF9829C169EC00E0CF73 /* RootTabViewController.swift in Sources */,
+				C5C60E0A29C9A1F400BD475B /* DoneListCellModel.swift in Sources */,
 				C53DDF9429C169EC00E0CF73 /* AppDelegate.swift in Sources */,
 				C5C60DED29C8748900BD475B /* TabBarItem.swift in Sources */,
+				C5C60E0429C97F0D00BD475B /* NowListCellModel.swift in Sources */,
+				C5C60E0C29C9A20B00BD475B /* DoneListCellView.swift in Sources */,
 				C5C60DF829C880D500BD475B /* NowListViewModel.swift in Sources */,
+				C5C60E0129C97E9400BD475B /* NowListCellView.swift in Sources */,
 				C53DDF9629C169EC00E0CF73 /* SceneDelegate.swift in Sources */,
 				C5C60DFE29C8810700BD475B /* CalenderViewModel.swift in Sources */,
 				C5C60DF329C8760000BD475B /* DoneListViewController.swift in Sources */,
@@ -468,6 +504,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		C5C60E0529C97FE300BD475B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -480,6 +524,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C5C60DE229C8702900BD475B /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		C5C60E0629C97FE300BD475B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5C60E0529C97FE300BD475B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
