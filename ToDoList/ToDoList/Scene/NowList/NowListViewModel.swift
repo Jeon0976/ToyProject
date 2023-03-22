@@ -4,6 +4,7 @@
 //
 //  Created by 전성훈 on 2023/03/20.
 //
+import UIKit
 
 import RxSwift
 import RxCocoa
@@ -12,12 +13,23 @@ struct NowListViewModel {
     let nowListCellModel = NowListCellModel()
     
     // ViewModel -> View
-    let cellData: Driver<[String]>
+    let datas: BehaviorRelay<[Task]>
+//    let presentAddTodoList: Signal<Alert>
     
     // View -> ViewModel
+    let makeTodoListButtonTapped = PublishRelay<Void>()
+    let todoSelected = PublishRelay<IndexPath>()
     
     init() {
-        let data = ["Test", "Test2"]
-        self.cellData = Driver.just(data)
+        datas = BehaviorRelay<[Task]>(value: [
+            Task(header: "섹션 테스트 1", items: [
+                TodoList(todo: "Test", isDone: false),
+                TodoList(todo: "Test2", isDone: false)
+            ]),
+            Task(header: "섹션 테스트 2", items: [
+                TodoList(todo: "Test", isDone: false),
+                TodoList(todo: "Test2", isDone: false)
+            ])
+        ])
     }
 }

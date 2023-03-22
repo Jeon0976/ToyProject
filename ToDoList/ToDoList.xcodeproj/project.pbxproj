@@ -12,21 +12,20 @@
 		C53DDF9829C169EC00E0CF73 /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53DDF9729C169EC00E0CF73 /* RootTabViewController.swift */; };
 		C53DDF9D29C169EC00E0CF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C53DDF9C29C169EC00E0CF73 /* Assets.xcassets */; };
 		C53DDFA029C169EC00E0CF73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53DDF9E29C169EC00E0CF73 /* LaunchScreen.storyboard */; };
+		C594CD1729CB3A9F009D52CE /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C594CD1629CB3A9F009D52CE /* TodoList.swift */; };
+		C594CD1A29CB42E5009D52CE /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = C594CD1929CB42E5009D52CE /* RxDataSources */; };
+		C594CD1C29CB43D8009D52CE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C594CD1B29CB43D8009D52CE /* Task.swift */; };
 		C5C60DE429C8702900BD475B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C5C60DE329C8702900BD475B /* RxCocoa */; };
 		C5C60DE629C8702900BD475B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C5C60DE529C8702900BD475B /* RxSwift */; };
 		C5C60DE929C870A600BD475B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C5C60DE829C870A600BD475B /* .swiftlint.yml */; };
 		C5C60DED29C8748900BD475B /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DEC29C8748900BD475B /* TabBarItem.swift */; };
 		C5C60DEF29C875E900BD475B /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DEE29C875E900BD475B /* CalenderViewController.swift */; };
 		C5C60DF129C875F400BD475B /* NowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DF029C875F400BD475B /* NowListViewController.swift */; };
-		C5C60DF329C8760000BD475B /* DoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DF229C8760000BD475B /* DoneListViewController.swift */; };
 		C5C60DF829C880D500BD475B /* NowListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DF729C880D500BD475B /* NowListViewModel.swift */; };
-		C5C60DFA29C880E300BD475B /* DoneListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DF929C880E300BD475B /* DoneListViewModel.swift */; };
 		C5C60DFE29C8810700BD475B /* CalenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60DFD29C8810700BD475B /* CalenderViewModel.swift */; };
 		C5C60E0129C97E9400BD475B /* NowListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60E0029C97E9400BD475B /* NowListCellView.swift */; };
 		C5C60E0429C97F0D00BD475B /* NowListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60E0329C97F0D00BD475B /* NowListCellModel.swift */; };
 		C5C60E0729C97FE300BD475B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C5C60E0629C97FE300BD475B /* SnapKit */; };
-		C5C60E0A29C9A1F400BD475B /* DoneListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60E0929C9A1F400BD475B /* DoneListCellModel.swift */; };
-		C5C60E0C29C9A20B00BD475B /* DoneListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C60E0B29C9A20B00BD475B /* DoneListCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,18 +36,16 @@
 		C53DDF9C29C169EC00E0CF73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C53DDF9F29C169EC00E0CF73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C53DDFA129C169EC00E0CF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C594CD1629CB3A9F009D52CE /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+		C594CD1B29CB43D8009D52CE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C5C60DE829C870A600BD475B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C5C60DEC29C8748900BD475B /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		C5C60DEE29C875E900BD475B /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		C5C60DF029C875F400BD475B /* NowListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowListViewController.swift; sourceTree = "<group>"; };
-		C5C60DF229C8760000BD475B /* DoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewController.swift; sourceTree = "<group>"; };
 		C5C60DF729C880D500BD475B /* NowListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowListViewModel.swift; sourceTree = "<group>"; };
-		C5C60DF929C880E300BD475B /* DoneListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListViewModel.swift; sourceTree = "<group>"; };
 		C5C60DFD29C8810700BD475B /* CalenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewModel.swift; sourceTree = "<group>"; };
 		C5C60E0029C97E9400BD475B /* NowListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowListCellView.swift; sourceTree = "<group>"; };
 		C5C60E0329C97F0D00BD475B /* NowListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowListCellModel.swift; sourceTree = "<group>"; };
-		C5C60E0929C9A1F400BD475B /* DoneListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListCellModel.swift; sourceTree = "<group>"; };
-		C5C60E0B29C9A20B00BD475B /* DoneListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C60E0729C97FE300BD475B /* SnapKit in Frameworks */,
+				C594CD1A29CB42E5009D52CE /* RxDataSources in Frameworks */,
 				C5C60DE629C8702900BD475B /* RxSwift in Frameworks */,
 				C5C60DE429C8702900BD475B /* RxCocoa in Frameworks */,
 			);
@@ -101,7 +99,6 @@
 			children = (
 				C5C60DFC29C880F400BD475B /* RootTabView */,
 				C5C60DF529C8774800BD475B /* NowList */,
-				C5C60DF429C8773F00BD475B /* DoneList */,
 				C5C60DF629C8775500BD475B /* Calender */,
 			);
 			path = Scene;
@@ -111,18 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				C5C60DEC29C8748900BD475B /* TabBarItem.swift */,
+				C594CD1629CB3A9F009D52CE /* TodoList.swift */,
+				C594CD1B29CB43D8009D52CE /* Task.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		C5C60DF429C8773F00BD475B /* DoneList */ = {
-			isa = PBXGroup;
-			children = (
-				C5C60DF229C8760000BD475B /* DoneListViewController.swift */,
-				C5C60DF929C880E300BD475B /* DoneListViewModel.swift */,
-				C5C60E0829C9A1D700BD475B /* DoneListCell */,
-			);
-			path = DoneList;
 			sourceTree = "<group>";
 		};
 		C5C60DF529C8774800BD475B /* NowList */ = {
@@ -161,15 +150,6 @@
 			path = NowListCell;
 			sourceTree = "<group>";
 		};
-		C5C60E0829C9A1D700BD475B /* DoneListCell */ = {
-			isa = PBXGroup;
-			children = (
-				C5C60E0929C9A1F400BD475B /* DoneListCellModel.swift */,
-				C5C60E0B29C9A20B00BD475B /* DoneListCellView.swift */,
-			);
-			path = DoneListCell;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,6 +171,7 @@
 				C5C60DE329C8702900BD475B /* RxCocoa */,
 				C5C60DE529C8702900BD475B /* RxSwift */,
 				C5C60E0629C97FE300BD475B /* SnapKit */,
+				C594CD1929CB42E5009D52CE /* RxDataSources */,
 			);
 			productName = ToDoList;
 			productReference = C53DDF9029C169EC00E0CF73 /* ToDoList.app */;
@@ -223,6 +204,7 @@
 			packageReferences = (
 				C5C60DE229C8702900BD475B /* XCRemoteSwiftPackageReference "RxSwift" */,
 				C5C60E0529C97FE300BD475B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C594CD1829CB42E5009D52CE /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = C53DDF9129C169EC00E0CF73 /* Products */;
 			projectDirPath = "";
@@ -273,20 +255,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C594CD1729CB3A9F009D52CE /* TodoList.swift in Sources */,
 				C5C60DEF29C875E900BD475B /* CalenderViewController.swift in Sources */,
-				C5C60DFA29C880E300BD475B /* DoneListViewModel.swift in Sources */,
 				C5C60DF129C875F400BD475B /* NowListViewController.swift in Sources */,
 				C53DDF9829C169EC00E0CF73 /* RootTabViewController.swift in Sources */,
-				C5C60E0A29C9A1F400BD475B /* DoneListCellModel.swift in Sources */,
 				C53DDF9429C169EC00E0CF73 /* AppDelegate.swift in Sources */,
 				C5C60DED29C8748900BD475B /* TabBarItem.swift in Sources */,
 				C5C60E0429C97F0D00BD475B /* NowListCellModel.swift in Sources */,
-				C5C60E0C29C9A20B00BD475B /* DoneListCellView.swift in Sources */,
 				C5C60DF829C880D500BD475B /* NowListViewModel.swift in Sources */,
 				C5C60E0129C97E9400BD475B /* NowListCellView.swift in Sources */,
+				C594CD1C29CB43D8009D52CE /* Task.swift in Sources */,
 				C53DDF9629C169EC00E0CF73 /* SceneDelegate.swift in Sources */,
 				C5C60DFE29C8810700BD475B /* CalenderViewModel.swift in Sources */,
-				C5C60DF329C8760000BD475B /* DoneListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +476,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C594CD1829CB42E5009D52CE /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		C5C60DE229C8702900BD475B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -515,6 +503,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C594CD1929CB42E5009D52CE /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C594CD1829CB42E5009D52CE /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
 		C5C60DE329C8702900BD475B /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C5C60DE229C8702900BD475B /* XCRemoteSwiftPackageReference "RxSwift" */;

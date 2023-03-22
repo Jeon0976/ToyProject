@@ -17,7 +17,7 @@ final class NowListCellView: UITableViewCell {
     let disposeBag = DisposeBag()
     
     let todoText = UILabel()
-    let todoCheckButton = UIButton()
+    let todoCheckImageView = UIImageView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -34,31 +34,33 @@ final class NowListCellView: UITableViewCell {
         
     }
     
-    func textData(_ text: String) {
-        todoText.text = text
+    func setData(_ todo: TodoList) {
+        switch todo.isDone {
+        case true:
+            todoCheckImageView.image = UIImage(systemName: "checkmark.circle.fill")
+            todoText.text = todo.todo
+        case false:
+            todoCheckImageView.image = UIImage(systemName: "circle")
+            todoText.text = todo.todo
+        }
     }
     
     private func attribute() {
-        todoText.font = .systemFont(ofSize: 17)
-        
-        let imageConfig = UIImage.SymbolConfiguration(pointSize: 18, weight: .light)
-        let image = UIImage(systemName: "checkmark.diamond", withConfiguration: imageConfig)
-        
-        todoCheckButton.setImage(image, for: .normal)
+        selectionStyle = .none
     }
     
     private func layout() {
-        [todoText, todoCheckButton].forEach {
+        [todoText, todoCheckImageView].forEach {
             contentView.addSubview($0)
         }
         
-        todoCheckButton.snp.makeConstraints {
+        todoCheckImageView.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(16.0)
             $0.top.bottom.equalToSuperview().inset(16.0)
         }
         
         todoText.snp.makeConstraints {
-            $0.leading.equalTo(todoCheckButton.snp.trailing).offset(16.0)
+            $0.leading.equalTo(todoCheckImageView.snp.trailing).offset(16.0)
             $0.top.bottom.equalToSuperview().inset(16.0)
         }
     }

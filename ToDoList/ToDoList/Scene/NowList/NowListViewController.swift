@@ -9,8 +9,10 @@ import UIKit
 
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 final class NowListViewController: UIViewController {
+    
     let disposeBag = DisposeBag()
     
     let tableView = UITableView()
@@ -24,17 +26,28 @@ final class NowListViewController: UIViewController {
     }
     
     func bind(_ viewModel: NowListViewModel) {
-        viewModel.cellData
-            .drive(tableView.rx.items) { tableView, row, data in
-                let cell = tableView.dequeueReusableCell(
-                    withIdentifier: NowListCellView.identifier,
-                    for: IndexPath(row: row, section: 0)
-                ) as? NowListCellView
+        let dataSource = RxTableViewSectionedReloadDataSource<Task>(
+            configureCell: { dataSource, tableView, indexPath, item in
+                let cell = tableView.dequeueReusableCell(withIdentifier: NowListCellView.identifier, for: indexPath) as? NowListCellView
+                cell?.setData(item)
                 
-                cell?.bind(viewModel.nowListCellModel)
-                cell?.todoText.text = data
                 return cell ?? UITableViewCell()
-            }
+            })
+        
+        dataSource.titleForHeaderInSection = { dataSource, index in
+            return dataSource.sectionModels[index].header
+        }
+        
+        viewModel.datas.asDriver()
+            .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        makeTodoList.rx.tap
+            .bind(to: viewModel.makeTodoListButtonTapped)
+            .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .bind(to: viewModel.todoSelected)
             .disposed(by: disposeBag)
     }
     
@@ -62,6 +75,24 @@ final class NowListViewController: UIViewController {
         
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+    }
+}
+
+typealias Alert = (title: String, message: String?)
+extension Reactive where Base: NowListViewController {
+    var setAlert: Binder<Alert> {
+        return Binder(base) { base, data in
+            let alertController = UIAlertController(title: data.title, message: data.message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "확인", style: .default) { _ in
+                if alertController.textFields?[0].text == "" {return}
+                guard let text = alertController.textFields?[0].text else {return}
+                
+            }
+            
+            alertController.addTextField { textField in
+                textField.placeholder = "할 일을 작성하세요."
+            }
         }
     }
 }

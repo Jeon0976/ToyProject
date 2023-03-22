@@ -38,7 +38,10 @@ final class DoneListViewController: UIViewController {
     func bind(_ viewModel: DoneListViewModel) {
         viewModel.cellData
             .drive(tableView.rx.items) { tableView, row, data in
-                let cell = tableView.dequeueReusableCell(withIdentifier: DoneListCellView.identifier, for: IndexPath(row: row, section: 0)) as? DoneListCellView
+                let cell = tableView.dequeueReusableCell(
+                    withIdentifier: DoneListCellView.identifier,
+                    for: IndexPath(row: row, section: 0)
+                ) as? DoneListCellView
                 
                 cell?.bind(viewModel.doneListCellModel)
                 cell?.textData(data)
