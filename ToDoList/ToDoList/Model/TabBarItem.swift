@@ -10,11 +10,13 @@ import UIKit
 enum TabBarItem: CaseIterable {
     case cal
     case nowList
+    case longterm
     
     var title: String {
         switch self {
         case .cal: return "달력"
         case .nowList: return "할일"
+        case .longterm: return "프로젝트"
         }
     }
     var icon: (default: UIImage, selected: UIImage) {
@@ -23,6 +25,8 @@ enum TabBarItem: CaseIterable {
             return (UIImage(systemName: "calendar.circle")!, UIImage(systemName: "calendar.circle.fill")!)
         case .nowList:
             return (UIImage(systemName: "list.bullet.circle")!, UIImage(systemName: "list.bullet.circle.fill")!)
+        case .longterm:
+            return (UIImage(systemName: "tray.full")!, UIImage(systemName: "tray.full.fill")!)
         }
     }
     
@@ -38,6 +42,11 @@ enum TabBarItem: CaseIterable {
             let nowListViewModel = NowListViewModel()
             nowListViewController.bind(nowListViewModel)
             return UINavigationController(rootViewController: nowListViewController)
+        case .longterm:
+            let longtermViewController = LongtermViewController()
+            let longtermViewModel = LongtermViewModel()
+            longtermViewController.bind(longtermViewModel)
+            return UINavigationController(rootViewController: longtermViewController)
         }
     }
     

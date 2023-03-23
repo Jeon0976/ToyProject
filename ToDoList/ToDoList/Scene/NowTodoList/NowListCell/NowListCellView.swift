@@ -47,9 +47,12 @@ final class NowListCellView: UITableViewCell {
     
     private func attribute() {
         selectionStyle = .none
+        backgroundColor = .systemBackground
     }
     
     private func layout() {
+//        contentView.layer.cornerRadius = 10
+        
         [todoText, todoCheckImageView].forEach {
             contentView.addSubview($0)
         }

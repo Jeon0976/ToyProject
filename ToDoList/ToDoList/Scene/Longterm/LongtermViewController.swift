@@ -1,16 +1,17 @@
 //
-//  CalenderViewController.swift
+//  LongtermViewController.swift
 //  ToDoList
 //
-//  Created by 전성훈 on 2023/03/20.
+//  Created by 전성훈 on 2023/03/23.
 //
 
 import UIKit
 
 import RxSwift
 import RxCocoa
+import SnapKit
 
-final class CalenderViewController: UIViewController {
+final class LongtermViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +20,13 @@ final class CalenderViewController: UIViewController {
         layout()
     }
     
-    func bind(_ viewModel: CalenderViewModel) {
+    func bind(_ viewModel: LongtermViewModel) {
 
     }
     
     private func attribute() {
         view.backgroundColor = .systemBackground
-        navigationItem.title = "달력"
+        navigationItem.title = "프로젝트"
     }
     
     private func layout() {
