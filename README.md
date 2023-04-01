@@ -1,14 +1,14 @@
 # ToyProject
 
 <details>
-##<summary>  ToDoList </summary>
-
+<summary>  RxSwift4시간에 끝내기 </summary>
+- 출처: https://www.youtube.com/watch?v=iHKBNYMWd5I&list=PL03rJBlpwTaBrhux_C8RmtWDI_kZSLvdQ
 
 </details>
 
 
 <details>
-##<summary> KeywordNews </summary>
+<summary> KeywordNews </summary>
 
 - UIKit
 - MVP
@@ -17,7 +17,7 @@
 
 </details>
 <details>
-##<summary> referenceCountCheck </summary>
+<summary> referenceCountCheck </summary>
 
 - UIKit
 - MVP
@@ -25,7 +25,7 @@
 
 </details>
 <details>
-##<summary> WKWebView </summary>
+<summary> WKWebView </summary>
 
 - UIKit
 - AlertController
