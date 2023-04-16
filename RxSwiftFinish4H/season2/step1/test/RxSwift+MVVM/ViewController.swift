@@ -74,7 +74,6 @@ class ViewController: UIViewController {
         // 5. Disposed
         return Observable.create() { emitter in
             let url = URL(string: url)!
-            
             // URLSession 자체가 다른 쓰레드에서 실행
             let task = URLSession.shared.dataTask(with: url) { (data, _, err) in
                 guard err == nil else {
@@ -83,7 +82,10 @@ class ViewController: UIViewController {
                 }
                 
                 // 데이터가 다 준비가 되면,
-                if let dat = data, let json = String(data: dat, encoding: .utf8) {
+                if let data = data, let json = String(data: data, encoding: .utf8) {
+//                    DispatchQueue.main.async {
+//                        emitter.onNext(json)
+//                    }
                     emitter.onNext(json)
                 }
                 
