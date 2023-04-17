@@ -56,6 +56,7 @@ class ViewController: UIViewController {
     
 
     func downloadJson(_ url: String) -> Observable<String?>{
+        
         // 8. 비동기로 생기는 데이터를 Observable로 감싸서 리턴하는 방법
 //        return Observable.create() { emitter in
 //            emitter.onNext("Hello")
@@ -160,32 +161,37 @@ class ViewController: UIViewController {
         downloadJson(MEMBER_LIST_URL)
         // 사이의 값을 전부 다 print 해줌
             .debug()
-        // subscribe가 되면 이때 위에 있는 URLSession 실행 됨.
-            .subscribe {  event in
-                switch event {
-                case .next(let json) :
-                    // 8. URLSession 쓰레드는 main 쓰레드가 아니여서 에러 발생
-//                    self.editView.text = json
-//                    self.setVisibleWithAnimation(self.activityIndicator, false)
-                    DispatchQueue.main.async {
-                        self.editView.text = json
-                        self.setVisibleWithAnimation(self.activityIndicator, false)
-                    }
-                    print("next")
-                    // 7. weak self 없이 순환참조를 막을 수 있는 방법이 있음
-                    // closure가 발생하면서 reference count가 증가 했고
-                    // closure가 없어지면 reference count가 감소 할 것.
-                    // 즉, .completed되거나 .error 가 발생하면 closure가 없어지니 reference count가 감소됨.
-                case .completed:
-                    print("completed")
-
-                    break
-                case .error(_) :
-                    print("error")
-                    break
-                }
-            }
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
+            .map { json in json?.count ?? 0 }
+            .filter { cnt in cnt > 0 }
+            .map {"\($0)"}
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { json in
+                self.editView.text = json
+                self.setVisibleWithAnimation(self.activityIndicator, false)
+            })
             .disposed(by: disposeBag)
+        // subscribe가 되면 이때 위에 있는 URLSession 실행 됨.
+//            .subscribe {  event in
+//                switch event {
+//                case .next(let json) :
+//                    // 8. URLSession 쓰레드는 main 쓰레드가 아니여서 에러 발생
+////                    self.editView.text = json
+////                    self.setVisibleWithAnimation(self.activityIndicator, false)
+//                        self.editView.text = json
+//                        self.setVisibleWithAnimation(self.activityIndicator, false)
+//                    }
+//                    // 7. weak self 없이 순환참조를 막을 수 있는 방법이 있음
+//                    // closure가 발생하면서 reference count가 증가 했고
+//                    // closure가 없어지면 reference count가 감소 할 것.
+//                    // 즉, .completed되거나 .error 가 발생하면 closure가 없어지니 reference count가 감소됨.
+//                case .completed:
+//                    break
+//                case .error(_) :
+//                    break
+//                }
+//            }
+//            .disposed(by: disposeBag)
 
         
         // dispose하면 왜 실행이 안되나?

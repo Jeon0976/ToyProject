@@ -1,6 +1,5 @@
 # RxSwift 4시간 끝내기 
 
-### 출처: https://www.youtube.com/watch?v=iHKBNYMWd5I&t=3328s
 ### 주제:  RxSwift의 근본 강의
 ---
 ### 메모: 
