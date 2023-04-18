@@ -70,8 +70,9 @@ class MenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let identifier = segue.identifier ?? ""
         if identifier == "OrderViewController",
-        let orderVC = segue.destination as? OrderViewController {
-            // TODO: pass selected menus
+           let selectedMenus = sender as? [Menu],
+            let orderVC = segue.destination as? OrderViewController {
+            orderVC.selectedMenus = selectedMenus
         }
     }
 
@@ -93,10 +94,11 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func onOrder(_ sender: UIButton) {
-        viewModel.onOrder()
+        let selectedMenus = viewModel.onOrder()
+        print(selectedMenus)
         // TODO: no selection
 //         showAlert("Order Fail", "No Orders")
-         performSegue(withIdentifier: "OrderViewController", sender: nil)
+         performSegue(withIdentifier: "OrderViewController", sender: selectedMenus)
         
         // viewModel.totalPrice += 100
 //        viewModel.totalPrice.onNext(100)

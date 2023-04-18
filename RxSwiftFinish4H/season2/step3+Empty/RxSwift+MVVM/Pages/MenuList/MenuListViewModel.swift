@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 // 함수형 프로그래밍
-// 함수를 값처럼 사용해서 
+// 함수를 값처럼 사용해서
 
 class MenuListViewModel {
     
@@ -96,7 +96,13 @@ class MenuListViewModel {
         menuObservable.accept(menus)
     }
     
-    func onOrder() {
+    func onOrder() -> [Menu]{
+       var selectedMenus =  menus.filter { $0.count > 0 }
         
+//        if selectedMenus.count == 0 {
+//            let err = NSError(domain: "No Orders", code: -1, userInfo: nil)
+//        }
+        
+        return selectedMenus
     }
 }

@@ -1,0 +1,6 @@
+framework module Pods_RxSwiftFinish4H {
+  umbrella header "Pods-RxSwiftFinish4H-umbrella.h"
+
+  export *
+  module * { export * }
+}
