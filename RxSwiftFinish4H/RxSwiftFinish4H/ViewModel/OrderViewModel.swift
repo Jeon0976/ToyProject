@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+import RxSwift
+
+protocol OrderViewModelType {
+    
+}
+
+final class OrderViewModel: OrderViewModelType {
+    
+}

@@ -12,7 +12,7 @@ import RxCocoa
 import SnapKit
 
 
-class MenuViewController: UIViewController {
+final class MenuViewController: UIViewController {
     
     let viewModel: MenuViewModelType
     let disposeBag = DisposeBag()
@@ -21,7 +21,7 @@ class MenuViewController: UIViewController {
     let titleLabel = UILabel()
     let activityIndicator = UIActivityIndicatorView(style: .large)
 
-    let tableView = UITableView(frame: .zero, style: .insetGrouped)
+    let tableView = UITableView(frame: .zero, style: .plain)
 
     
     let numberView = UIView()
@@ -37,6 +37,7 @@ class MenuViewController: UIViewController {
     init(viewModel: MenuViewModelType = MenuViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -46,15 +47,45 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        navigationController?.navigationBar.isHidden = true
         attribute()
         layout()
-    }
-
-    func bind() {
         
+        bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+
+    // TODO: RxSwift 스타일로 바꾸기
+    func bind() {
+        orderButton.addTarget(self, action: #selector(pushOrderView), for: .touchUpInside)
+        clearButton.addTarget(self, action: #selector(clickClear), for: .touchUpInside)
+    }
+    
+    @objc func pushOrderView() {
+        // 버튼 눌러짐 효과
+        orderButton.setTitleColor(.gray, for: .normal)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.orderButton.setTitleColor(.white, for: .normal)
+            let orderVC = OrderViewController()
+            let orderViewModel = OrderViewModel()
+            orderVC.viewModel = orderViewModel
+
+            self?.navigationController?.pushViewController(orderVC, animated: true)
+        }
+    }
+    
+    @objc func clickClear() {
+        // 버튼 눌러짐 효과
+        clearButton.setTitleColor(.systemGray4, for: .normal)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.clearButton.setTitleColor(.white, for: .normal)
+        }
+    }
+    
+    // MARK: 초기 UI Atrribute 설정
     private func attribute() {
         view.backgroundColor = .systemBackground
         
@@ -64,24 +95,41 @@ class MenuViewController: UIViewController {
         activityIndicator.color = .black
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
+        
+        tableView.register(MenuItemTableViewCell.self, forCellReuseIdentifier: MenuItemTableViewCell.Identifier)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.allowsSelection = false
+        
                 
         numberView.backgroundColor = .systemGray4
         
         yourOrders.text = "Your Orders"
-        yourOrders.font = .systemFont(ofSize: 15, weight: .bold)
+        yourOrders.font = .systemFont(ofSize: 18, weight: .bold)
 
         clearButton.setTitle("Clear", for: .normal)
-        clearButton.tintColor = .white
+        clearButton.setTitleColor(.white, for: .normal)
+        
         
         itemCountLabel.text = "0"
+        itemCountLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        itemCountLabel.textColor = .systemIndigo
+        
         item.text = "Items"
+        item.font = .systemFont(ofSize: 18, weight: .light)
+        item.textColor = .systemIndigo
+        
+        totalPrice.text = "0"
+        totalPrice.font = .systemFont(ofSize: 42, weight: .heavy)
         
         orderButton.setTitle("ORDER", for: .normal)
-        orderButton.tintColor = .white
+        orderButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        orderButton.setTitleColor(.white, for: .normal)
         
         bottomView.backgroundColor = .black
     }
     
+    // MARK: Layout 설정
     func layout() {
         [titleLabel,activityIndicator,tableView,numberView,itemCountLabel,item,totalPrice,yourOrders,clearButton,bottomView,orderButton].forEach { view.addSubview($0) }
         
@@ -94,6 +142,72 @@ class MenuViewController: UIViewController {
             $0.top.equalTo(titleLabel.snp.top)
             $0.left.equalTo(titleLabel.snp.right).offset(16.0)
         }
+        
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(16.0)
+            $0.left.equalToSuperview()
+            $0.right.equalToSuperview()
+        }
+        
+        numberView.snp.makeConstraints {
+            $0.top.equalTo(tableView.snp.bottom)
+            $0.bottom.equalTo(bottomView.snp.top)
+            $0.left.right.equalToSuperview()
+            $0.height.equalToSuperview().multipliedBy(0.15)
+        }
+        
+        yourOrders.snp.makeConstraints {
+            $0.top.equalTo(numberView.snp.top).inset(16)
+            $0.left.equalTo(numberView.snp.left).inset(16)
+        }
+        
+        clearButton.snp.makeConstraints {
+            $0.top.equalTo(yourOrders.snp.top).inset(-5)
+            $0.left.equalTo(yourOrders.snp.right).offset(16)
+        }
+        
+        itemCountLabel.snp.makeConstraints {
+            $0.top.equalTo(yourOrders.snp.top)
+        }
+        
+        item.snp.makeConstraints {
+            $0.top.equalTo(yourOrders.snp.top)
+            $0.right.equalTo(numberView.snp.right).inset(16)
+            $0.left.equalTo(itemCountLabel.snp.right).offset(8)
+        }
+        
+        totalPrice.snp.makeConstraints {
+            $0.right.equalTo(numberView.snp.right).inset(16)
+            $0.bottom.equalTo(numberView.snp.bottom).inset(8)
+        }
+        
+        
+        bottomView.snp.makeConstraints {
+            $0.bottom.equalToSuperview()
+            $0.left.right.equalToSuperview()
+            $0.height.equalToSuperview().multipliedBy(0.1)
+        }
+        
+        orderButton.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(bottomView.snp.top).inset(6)
+        }
     }
 }
 
+extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MenuItemTableViewCell.Identifier, for: indexPath) as? MenuItemTableViewCell
+        
+        cell?.makeLayout()
+        cell?.makeCell("Test", "300", "0")
+        
+        return cell ?? UITableViewCell()
+    }
+    
+    
+}

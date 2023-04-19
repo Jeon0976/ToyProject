@@ -13,6 +13,6 @@ protocol MenuViewModelType {
     
 }
 
-class MenuViewModel : MenuViewModelType {
+final class MenuViewModel : MenuViewModelType {
     
 }
