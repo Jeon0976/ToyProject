@@ -26,7 +26,7 @@ class OrderViewController: UIViewController {
         
         let orderList = selectedMenus.map { "\($0.name) \($0.count)개" }.joined(separator: "\n")
         ordersList.text = orderList
-        ordersListHeight.constant = ordersList.bounds.width - 30
+//        ordersListHeight.constant = ordersList.bounds.width - 30
         let price = selectedMenus.map { $0.count * $0.price }.reduce(0, +)
         let vat = 100
         itemsPrice.text = String(price)

@@ -131,39 +131,51 @@ final class MenuViewController: UIViewController {
     
     // MARK: Layout 설정
     func layout() {
-        [titleLabel,activityIndicator,tableView,numberView,itemCountLabel,item,totalPrice,yourOrders,clearButton,bottomView,orderButton].forEach { view.addSubview($0) }
+        [
+            titleLabel,
+            activityIndicator,
+            tableView,
+            numberView,
+            itemCountLabel,
+            item,
+            totalPrice,
+            yourOrders,
+            clearButton,
+            bottomView,
+            orderButton
+        ].forEach { view.addSubview($0) }
         
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(16.0)
-            $0.left.equalTo(view.safeAreaLayoutGuide).inset(16.0)
+            $0.leading.equalTo(view.safeAreaLayoutGuide).inset(16.0)
         }
         
         activityIndicator.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.top)
-            $0.left.equalTo(titleLabel.snp.right).offset(16.0)
+            $0.leading.equalTo(titleLabel.snp.trailing).offset(16.0)
         }
         
         tableView.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(16.0)
-            $0.left.equalToSuperview()
-            $0.right.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
         }
         
         numberView.snp.makeConstraints {
             $0.top.equalTo(tableView.snp.bottom)
             $0.bottom.equalTo(bottomView.snp.top)
-            $0.left.right.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
             $0.height.equalToSuperview().multipliedBy(0.15)
         }
         
         yourOrders.snp.makeConstraints {
             $0.top.equalTo(numberView.snp.top).inset(16)
-            $0.left.equalTo(numberView.snp.left).inset(16)
+            $0.leading.equalTo(numberView.snp.leading).inset(16)
         }
         
         clearButton.snp.makeConstraints {
             $0.top.equalTo(yourOrders.snp.top).inset(-5)
-            $0.left.equalTo(yourOrders.snp.right).offset(16)
+            $0.leading.equalTo(yourOrders.snp.trailing).offset(16)
         }
         
         itemCountLabel.snp.makeConstraints {
@@ -172,19 +184,19 @@ final class MenuViewController: UIViewController {
         
         item.snp.makeConstraints {
             $0.top.equalTo(yourOrders.snp.top)
-            $0.right.equalTo(numberView.snp.right).inset(16)
-            $0.left.equalTo(itemCountLabel.snp.right).offset(8)
+            $0.trailing.equalTo(numberView.snp.trailing).inset(16)
+            $0.leading.equalTo(itemCountLabel.snp.trailing).offset(8)
         }
         
         totalPrice.snp.makeConstraints {
-            $0.right.equalTo(numberView.snp.right).inset(16)
+            $0.trailing.equalTo(numberView.snp.trailing).inset(16)
             $0.bottom.equalTo(numberView.snp.bottom).inset(8)
         }
         
         
         bottomView.snp.makeConstraints {
             $0.bottom.equalToSuperview()
-            $0.left.right.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
             $0.height.equalToSuperview().multipliedBy(0.1)
         }
         
