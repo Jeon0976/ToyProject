@@ -5,6 +5,9 @@
 - 출처: https://www.youtube.com/watch?v=iHKBNYMWd5I&list=PL03rJBlpwTaBrhux_C8RmtWDI_kZSLvdQ
 - RxSwift
 - MVVM
+- JSON Parsing
+- 1. RxSwift 4시간 끝내기 (수업)
+- 2. RxSwift 4시간 끝내기 (개인)
 
 </details>
 

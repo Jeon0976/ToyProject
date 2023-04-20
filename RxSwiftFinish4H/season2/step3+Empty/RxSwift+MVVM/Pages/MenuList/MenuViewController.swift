@@ -22,8 +22,6 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = nil
-        
         viewModel.menuObservable
             .bind(to: tableView.rx.items(cellIdentifier: cellID,cellType: MenuItemTableViewCell.self)) { index, item, cell in
                 

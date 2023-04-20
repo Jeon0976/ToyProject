@@ -42,9 +42,7 @@ final class OrderViewController :UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        scrollView.delegate = self
-        
+                
         attribute()
         layout()
     }
@@ -74,6 +72,7 @@ final class OrderViewController :UIViewController {
         titleOrdered.text = "Ordered Items"
         titleOrdered.font = .systemFont(ofSize: 24, weight: .medium)
                 
+        orderedItems.isScrollEnabled = false
         orderedItems.text = """
         SELECTED MENU 1
         SELECTED MENU 2
@@ -85,6 +84,8 @@ final class OrderViewController :UIViewController {
         SELECTED MENU 8
         SELECTED MENU 9
         """
+        orderedItems.sizeToFit()
+        
         orderedItems.font = .systemFont(ofSize: 32, weight: .light)
         
         priceToPay.text = "Price to Pay"
@@ -153,7 +154,6 @@ final class OrderViewController :UIViewController {
             $0.top.equalTo(titleOrdered.snp.bottom).offset(32.0)
             $0.leading.equalTo(contentView.snp.leading).inset(16.0)
             $0.trailing.equalTo(contentView.snp.trailing).inset(16.0)
-//            $0.height.equalTo(400)
         }
 
         priceToPay.snp.makeConstraints {
@@ -183,7 +183,6 @@ final class OrderViewController :UIViewController {
 
         separator.snp.makeConstraints {
             $0.top.equalTo(vatPrice.snp.bottom).offset(32.0)
-//            $0.bottom.equalTo(totalPrice.snp.top).offset(32.0)
             $0.leading.equalTo(contentView.snp.leading ).inset(16.0)
             $0.trailing.equalTo(contentView.snp.trailing).inset(16.0)
             $0.height.equalTo(1)
@@ -197,9 +196,3 @@ final class OrderViewController :UIViewController {
     }
 }
 
-
-extension OrderViewController : UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("Scrolled")
-    }
-}

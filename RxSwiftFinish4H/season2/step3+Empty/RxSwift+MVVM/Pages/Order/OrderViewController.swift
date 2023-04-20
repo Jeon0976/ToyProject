@@ -25,7 +25,10 @@ class OrderViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
         
         let orderList = selectedMenus.map { "\($0.name) \($0.count)개" }.joined(separator: "\n")
+        ordersList.isScrollEnabled = false
         ordersList.text = orderList
+//        ordersList.sizeToFit()
+
 //        ordersListHeight.constant = ordersList.bounds.width - 30
         let price = selectedMenus.map { $0.count * $0.price }.reduce(0, +)
         let vat = 100
@@ -43,26 +46,25 @@ class OrderViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // TODO: update selected menu info
-
-
         updateTextViewHeight()
-    }
+
+        }
 
     // MARK: - UI Logic
 
     func updateTextViewHeight() {
-//        let text = ordersList.text ?? ""
-//        let width = ordersList.bounds.width
-//        let font = ordersList.font ?? UIFont.systemFont(ofSize: 20)
-//
-//        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
-//        let boundingBox = text.boundingRect(with: constraintRect,
-//                                            options: [.usesLineFragmentOrigin, .usesFontLeading],
-//                                            attributes: [NSAttributedString.Key.font: font],
-//                                            context: nil)
-//        let height = boundingBox.height
-//
-//        ordersListHeight.constant = height + 40
+        let text = ordersList.text ?? ""
+        let width = ordersList.bounds.width
+        let font = ordersList.font ?? UIFont.systemFont(ofSize: 20)
+
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = text.boundingRect(with: constraintRect,
+                                            options: [.usesLineFragmentOrigin, .usesFontLeading],
+                                            attributes: [NSAttributedString.Key.font: font],
+                                            context: nil)
+        let height = boundingBox.height
+
+        ordersListHeight.constant = height + 40
 
 
     }

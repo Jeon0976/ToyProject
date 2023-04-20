@@ -97,7 +97,7 @@ class MenuListViewModel {
     }
     
     func onOrder() -> [Menu]{
-       var selectedMenus =  menus.filter { $0.count > 0 }
+        let selectedMenus =  menus.filter { $0.count > 0 }
         
 //        if selectedMenus.count == 0 {
 //            let err = NSError(domain: "No Orders", code: -1, userInfo: nil)
