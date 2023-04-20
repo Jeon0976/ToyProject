@@ -279,7 +279,7 @@ class ViewController: UIViewController  {
 - 다른 쓰레드에서 작업하는 데이터를 observeOn(MainScheduler.instance)를 활용하여 Main Thread에서 실행 시켜주는 것을 **operator**라고 한다.
     - map, filter 등 관련 operator도 사용 가능하다. 
 #### Step 2) RxSwift + MVVM을 활용한 앱 예제
-![[Simulator Screen Shot - iPhone 14 Pro - 2023-04-20 at 13.18.46.png|250]]![[Simulator Screen Shot - iPhone 14 Pro - 2023-04-20 at 13.18.42.png|250]]
+!(test)[https://github.com/Jeon0976/TIL/blob/main/SubFile/스크린샷%20보관함/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-04-20%20at%2013.18.42.png]!(test2)[https://github.com/Jeon0976/TIL/blob/main/SubFile/스크린샷%20보관함/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-04-20%20at%2013.18.46.png]
 - MenuViewController
 ~~~ swift 
 import UIKit
