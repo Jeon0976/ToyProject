@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct ViewMenu {
+struct ViewMenu : Identifiable {
+    var id = UUID()
     var name: String
     var price: Int
     var count: Int
@@ -34,8 +35,3 @@ struct ViewMenu {
     
 }
 
-extension ViewMenu: Equatable {
-    static func == (lhs: ViewMenu, rhs: ViewMenu) -> Bool {
-        return lhs.name == rhs.name && lhs.price == rhs.price && lhs.count == rhs.count
-    }
-}

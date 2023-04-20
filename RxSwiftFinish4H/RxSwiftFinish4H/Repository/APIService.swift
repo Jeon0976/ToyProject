@@ -45,4 +45,29 @@ class APIService {
             return Disposables.create()
         }
     }
+    
+    // RxSwift X
+    static func fetchMenus(completion: @escaping ([MenuItem]?, Error?) -> Void) {
+        struct Response: Decodable {
+            let menus: [MenuItem]
+        }
+
+        URLSession.shared.dataTask(with: URL(string: MenuUrl)!) { data, res, err in
+            if let err = err {
+                completion(nil, err)
+                return
+            }
+            guard let data = data else {
+                let httpResponse = res as! HTTPURLResponse
+                completion(nil, NSError(domain: "no data", code: httpResponse.statusCode, userInfo: nil))
+                return
+            }
+            do {
+                let response = try JSONDecoder().decode(Response.self, from: data)
+                completion(response.menus, nil)
+            } catch let error {
+                completion(nil,error)
+            }
+        }.resume()
+    }
 }

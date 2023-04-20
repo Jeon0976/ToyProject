@@ -9,6 +9,10 @@ import UIKit
 
 import SnapKit
 
+protocol MenuItemTableViewCellDelegate {
+    func clickButton(_ value: Int, _ id: UUID?)
+}
+
 final class MenuItemTableViewCell: UITableViewCell {
     static let Identifier = "MenuItemTableViewCell"
     
@@ -19,6 +23,22 @@ final class MenuItemTableViewCell: UITableViewCell {
     let plusButton = UIButton()
     let minusButton = UIButton()
     
+//    let onChange: ((Int) -> Void)? = nil
+    var delegate: MenuItemTableViewCellDelegate?
+// 받은 UUID 값을 확인
+    var id: UUID?
+    
+//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+//        super.init(style: style, reuseIdentifier: reuseIdentifier)
+//
+//        plusButton.addTarget(self, action: #selector(clickPlus), for: .touchUpInside)
+//        minusButton.addTarget(self, action: #selector(clickMinus), for: .touchUpInside)
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
     func makeCell(_ title: String, _ price: String, _ count: String) {
         self.title.text = title
         self.price.text = price
@@ -26,12 +46,24 @@ final class MenuItemTableViewCell: UITableViewCell {
     }
     
     func makeLayout() {
-        attribute()
         layout()
+        attribute()
+    }
+    
+    
+    @objc func clickPlus() {
+        delegate?.clickButton(1, id)
+        print("TEST")
+    }
+    
+    @objc func clickMinus() {
+        delegate?.clickButton(-1, id)
     }
     
     // MARK: 초기 UI Attribute 설정
     private func attribute() {
+        plusButton.addTarget(self, action: #selector(clickPlus), for: .touchUpInside)
+        minusButton.addTarget(self, action: #selector(clickMinus), for: .touchUpInside)
         count.font = .systemFont(ofSize: 16, weight: .light)
         count.textColor = .systemIndigo
         

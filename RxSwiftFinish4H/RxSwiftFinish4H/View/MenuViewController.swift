@@ -14,11 +14,23 @@ import SnapKit
 
 final class MenuViewController: UIViewController {
     
+    var onChange: ((Int) -> Void)?
+    
+    
     let viewModel: MenuViewModelType
     let disposeBag = DisposeBag()
     
+    // 불러온 데이터를 menu에 넣어주는데 넣어주고나서 MainSchduler에서 tableView.reload 실시
+    var menus: [ViewMenu] = [] {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
     
     let titleLabel = UILabel()
+    let refreshControl = UIRefreshControl()
     let activityIndicator = UIActivityIndicatorView(style: .large)
 
     let tableView = UITableView(frame: .zero, style: .plain)
@@ -37,7 +49,9 @@ final class MenuViewController: UIViewController {
     init(viewModel: MenuViewModelType = MenuViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        
+
+        // 처음 API 데이터 불러오기
+        getData()
     }
     
     required init?(coder: NSCoder) {
@@ -50,7 +64,7 @@ final class MenuViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         attribute()
         layout()
-        
+
         bind()
     }
     
@@ -62,6 +76,7 @@ final class MenuViewController: UIViewController {
     func bind() {
         orderButton.addTarget(self, action: #selector(pushOrderView), for: .touchUpInside)
         clearButton.addTarget(self, action: #selector(clickClear), for: .touchUpInside)
+        refreshControl.addTarget(self, action: #selector(handleRefreshControl), for: .valueChanged)
     }
     
     @objc func pushOrderView() {
@@ -72,7 +87,7 @@ final class MenuViewController: UIViewController {
             let orderVC = OrderViewController()
             let orderViewModel = OrderViewModel()
             orderVC.viewModel = orderViewModel
-
+            orderVC.selectedMenus = (self?.menus.filter { $0.count > 0 })!
             self?.navigationController?.pushViewController(orderVC, animated: true)
         }
     }
@@ -81,7 +96,24 @@ final class MenuViewController: UIViewController {
         // 버튼 눌러짐 효과
         clearButton.setTitleColor(.systemGray4, for: .normal)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.menus.indices.forEach { index in
+                self?.menus[index].count = 0
+            }
+            self?.tableView.reloadData()
+            self?.totalPrice.text = "0"
+            self?.itemCountLabel.text = "0"
             self?.clearButton.setTitleColor(.white, for: .normal)
+        }
+    }
+    
+    @objc func handleRefreshControl() {
+        activityIndicator.isHidden = false
+        
+        getData()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.refreshControl.endRefreshing()
+            self?.activityIndicator.isHidden = true
         }
     }
     
@@ -93,13 +125,15 @@ final class MenuViewController: UIViewController {
         titleLabel.font = .systemFont(ofSize: 30, weight: .heavy)
         
         activityIndicator.color = .black
-        activityIndicator.isHidden = false
         activityIndicator.startAnimating()
+        activityIndicator.isHidden = true
         
         tableView.register(MenuItemTableViewCell.self, forCellReuseIdentifier: MenuItemTableViewCell.Identifier)
         tableView.delegate = self
         tableView.dataSource = self
+        // 클릭 무시
         tableView.allowsSelection = false
+        tableView.refreshControl = refreshControl
         
                 
         numberView.backgroundColor = .systemGray4
@@ -209,17 +243,49 @@ final class MenuViewController: UIViewController {
 
 extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return menus.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MenuItemTableViewCell.Identifier, for: indexPath) as? MenuItemTableViewCell
         
-        cell?.makeLayout()
-        cell?.makeCell("Test", "300", "0")
+        let menu = menus[indexPath.row]
         
+        cell?.delegate = self
+        cell?.makeLayout()
+        cell?.id = menu.id
+        cell?.makeCell(menu.name, String(menu.price), String(menu.count))
+
         return cell ?? UITableViewCell()
     }
     
+}
+
+// MARK: API 처리
+extension MenuViewController {
+    func getData() {
+        APIService.fetchMenus { [weak self] menuItem, err in
+            if let err = err {
+                return print(err)
+            }
+            guard menuItem != nil else {
+                return print("no data")
+            }
+            self?.menus = menuItem!.map { ViewMenu(name: $0.name, price: $0.price, count: 0)}
+        }
+    }
+}
+
+// MARK: Cell Delegate
+extension MenuViewController: MenuItemTableViewCellDelegate {
+    func clickButton(_ value: Int, _ id: UUID?) {
+        if let index = menus.firstIndex(where: { $0.id == id }) {
+            menus[index].count += value
+            menus[index].count = max(menus[index].count, 0)
+        }
+        tableView.reloadData()
+        itemCountLabel.text = String(menus.map { $0.count }.reduce(0, +))
+        totalPrice.text = String(menus.map { $0.price * $0.count}.reduce(0, +))
+    }
     
 }

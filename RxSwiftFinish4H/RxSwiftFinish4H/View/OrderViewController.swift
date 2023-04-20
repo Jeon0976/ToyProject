@@ -30,6 +30,7 @@ final class OrderViewController :UIViewController {
     let separator = UIView()
     let totalPrice = UILabel()
     
+    var selectedMenus : [ViewMenu] = []
     
     init(viewModel: OrderViewModelType = OrderViewModel()) {
         self.viewModel = viewModel
@@ -49,6 +50,7 @@ final class OrderViewController :UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
+        
     }
     
     func bind() {
@@ -57,6 +59,9 @@ final class OrderViewController :UIViewController {
     
     // MARK: 초기 UI Attribute 설정
     private func attribute() {
+        
+        let price = selectedMenus.map { $0.count * $0.price}.reduce(0, +)
+        let vatt = 100
         
         view.backgroundColor = .systemBackground
         
@@ -73,17 +78,7 @@ final class OrderViewController :UIViewController {
         titleOrdered.font = .systemFont(ofSize: 24, weight: .medium)
                 
         orderedItems.isScrollEnabled = false
-        orderedItems.text = """
-        SELECTED MENU 1
-        SELECTED MENU 2
-        SELECTED MENU 3
-        SELECTED MENU 4
-        SELECTED MENU 5
-        SELECTED MENU 6
-        SELECTED MENU 7
-        SELECTED MENU 8
-        SELECTED MENU 9
-        """
+        orderedItems.text = selectedMenus.map { "\($0.name) \($0.count)개"}.joined(separator: "\n")
         orderedItems.sizeToFit()
         
         orderedItems.font = .systemFont(ofSize: 32, weight: .light)
@@ -97,15 +92,15 @@ final class OrderViewController :UIViewController {
         vat.text = "VAT"
         vat.font = .systemFont(ofSize: 32, weight: .light)
         
-        itemsPrice.text = "2000"
+        itemsPrice.text = String(price)
         itemsPrice.font = .systemFont(ofSize: 18, weight: .medium)
         
-        vatPrice.text = "250"
+        vatPrice.text = String(vatt)
         vatPrice.font = .systemFont(ofSize: 18, weight: .medium)
         
         separator.backgroundColor = .black
         
-        totalPrice.text = "2250"
+        totalPrice.text = String(price + vatt)
         totalPrice.font = .systemFont(ofSize: 48, weight: .heavy)
     }
 

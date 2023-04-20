@@ -10,12 +10,12 @@ import Foundation
 import RxSwift
 
 protocol MenuFetchable {
-    func fetchMenus() -> Observable<[MenuItem]>
+    func fetchMenusRx() -> Observable<[MenuItem]>
 }
 
 /// Json 형태의 Data를 MenuItem형태의 Observable로 파싱
 class MenuStore: MenuFetchable {
-    func fetchMenus() -> Observable<[MenuItem]> {
+    func fetchMenusRx() -> Observable<[MenuItem]> {
         struct Response: Decodable {
             let menus: [MenuItem]
         }
@@ -31,3 +31,5 @@ class MenuStore: MenuFetchable {
             }
     }
 }
+
+
