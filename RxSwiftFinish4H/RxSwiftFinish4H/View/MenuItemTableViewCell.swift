@@ -9,9 +9,9 @@ import UIKit
 
 import SnapKit
 
-protocol MenuItemTableViewCellDelegate {
-    func clickButton(_ value: Int, _ id: UUID?)
-}
+//protocol MenuItemTableViewCellDelegate {
+//    func clickButton(_ value: Int, _ id: UUID?)
+//}
 
 final class MenuItemTableViewCell: UITableViewCell {
     static let Identifier = "MenuItemTableViewCell"
@@ -23,8 +23,10 @@ final class MenuItemTableViewCell: UITableViewCell {
     let plusButton = UIButton()
     let minusButton = UIButton()
     
+    var onChange: ((Int) -> Void)?
+
 //    let onChange: ((Int) -> Void)? = nil
-    var delegate: MenuItemTableViewCellDelegate?
+//    var delegate: MenuItemTableViewCellDelegate?
 // 받은 UUID 값을 확인
     var id: UUID?
     
@@ -52,12 +54,13 @@ final class MenuItemTableViewCell: UITableViewCell {
     
     
     @objc func clickPlus() {
-        delegate?.clickButton(1, id)
-        print("TEST")
+        onChange?(1)
+//        delegate?.clickButton(1, id)
     }
     
     @objc func clickMinus() {
-        delegate?.clickButton(-1, id)
+        onChange?(-1)
+//        delegate?.clickButton(-1, id)
     }
     
     // MARK: 초기 UI Attribute 설정
@@ -81,7 +84,7 @@ final class MenuItemTableViewCell: UITableViewCell {
     
     // MARK: Layout 설정
     private func layout() {
-        [plusButton,minusButton,title,price,count].forEach { addSubview($0) }
+        [plusButton,minusButton,title,price,count].forEach { contentView.addSubview($0) }
         
         plusButton.snp.makeConstraints {
             $0.top.equalToSuperview().inset(8)

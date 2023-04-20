@@ -14,9 +14,6 @@ import SnapKit
 
 final class MenuViewController: UIViewController {
     
-    var onChange: ((Int) -> Void)?
-    
-    
     let viewModel: MenuViewModelType
     let disposeBag = DisposeBag()
     
@@ -28,6 +25,8 @@ final class MenuViewController: UIViewController {
             }
         }
     }
+    
+
     
     let titleLabel = UILabel()
     let refreshControl = UIRefreshControl()
@@ -251,14 +250,25 @@ extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
         
         let menu = menus[indexPath.row]
         
-        cell?.delegate = self
+//        cell?.delegate = self
         cell?.makeLayout()
         cell?.id = menu.id
         cell?.makeCell(menu.name, String(menu.price), String(menu.count))
+        cell?.onChange = { [weak self] increase in
+            self?.clickButton1(increase, menu.id)
+        }
 
         return cell ?? UITableViewCell()
     }
     
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let cell = tableView.dequeueReusableCell(withIdentifier:MenuItemTableViewCell.Identifier) as! MenuItemTableViewCell
+//        let data = menus[indexPath.row]
+//
+//        cell.configure(with: data)
+//        return cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+//    }
+
 }
 
 // MARK: API 처리
@@ -277,8 +287,22 @@ extension MenuViewController {
 }
 
 // MARK: Cell Delegate
-extension MenuViewController: MenuItemTableViewCellDelegate {
-    func clickButton(_ value: Int, _ id: UUID?) {
+//extension MenuViewController: MenuItemTableViewCellDelegate {
+//    func clickButton(_ value: Int, _ id: UUID?) {
+//        if let index = menus.firstIndex(where: { $0.id == id }) {
+//            menus[index].count += value
+//            menus[index].count = max(menus[index].count, 0)
+//        }
+//        tableView.reloadData()
+//        itemCountLabel.text = String(menus.map { $0.count }.reduce(0, +))
+//        totalPrice.text = String(menus.map { $0.price * $0.count}.reduce(0, +))
+//    }
+//
+//}
+
+// MARK: closure를 활용한 내부 데이터
+extension MenuViewController  {
+    func clickButton1(_ value: Int, _ id: UUID?) {
         if let index = menus.firstIndex(where: { $0.id == id }) {
             menus[index].count += value
             menus[index].count = max(menus[index].count, 0)
