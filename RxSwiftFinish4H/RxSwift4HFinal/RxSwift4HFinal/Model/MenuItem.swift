@@ -10,4 +10,9 @@ import Foundation
 struct MenuItem: Decodable {
     var name: String
     var price: Int
+    
+    
+    func asViewMenu() -> ViewMenu {
+        ViewMenu(self)
+    }
 }

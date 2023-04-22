@@ -11,9 +11,79 @@ import RxSwift
 import RxCocoa
 
 protocol MenuViewModelType {
+    // ViewModel -> View
+    var menus: BehaviorRelay<[ViewMenu]> { get }
+    var totalCount: BehaviorRelay<String> { get }
+    var totalPrice: BehaviorRelay<String> { get }
     
+    // View -> ViewModel
+    var increaseCount: AnyObserver<(ViewMenu,Int)> { get }
+    var orderButton: AnyObserver<Void> { get }
+
 }
 
 final class MenuViewModel: MenuViewModelType {
+    let disposeBag = DisposeBag()
     
+    var viewMenus: [ViewMenu] = []
+    
+    // ViewModel -> View
+    var menus =  BehaviorRelay<[ViewMenu]>(value: [])
+    var totalCount = BehaviorRelay<String>(value: "0")
+    var totalPrice = BehaviorRelay<String>(value: "0")
+    
+    // View -> ViewModel
+    var increaseCount: AnyObserver<(ViewMenu,Int)>
+    var orderButton: AnyObserver<Void>
+    
+    init() {
+        let increasing = PublishSubject<(ViewMenu, Int)>()
+        let orderingButton = PublishSubject<Void>()
+        
+        
+        increaseCount = increasing.asObserver()
+        orderButton = orderingButton.asObserver()
+
+        
+        increasing
+            .map({ (menus, int) in
+                if let index = self.viewMenus.firstIndex(where: { $0.id == menus.id }) {
+                    self.viewMenus[index].count += int
+                    self.viewMenus[index].count = max(self.viewMenus[index].count, 0)
+                }
+                print(menus)
+            })
+            .subscribe(onNext: { [weak self] _ in
+                self?.menus.accept(self!.viewMenus)
+            })
+            .disposed(by: disposeBag)
+            
+        
+        // Model 데이터 ViewModel로 불러오기
+        APIService.fetchMenus { [weak self] menusData, err in
+            if err != nil {
+                return print("error")
+            }
+            guard menusData != nil else {
+                return print("no data")
+            }
+            let viewMenus = menusData?.map { $0.asViewMenu() }
+            
+            self?.viewMenus = viewMenus!
+            self?.menus.accept(viewMenus!)
+        }
+
+        _ = menus
+            .map { $0.map { $0.count }.reduce(0, +)}
+            .map { "\($0)"}
+            .bind(to: totalCount)
+            .disposed(by: disposeBag)
+        
+        _ = menus
+            .map { $0.map { $0.count * $0.price}.reduce(0, +)}
+            .map { $0.currencyKR() }
+            .bind(to: totalPrice)
+            .disposed(by: disposeBag)
+        
+    }
 }

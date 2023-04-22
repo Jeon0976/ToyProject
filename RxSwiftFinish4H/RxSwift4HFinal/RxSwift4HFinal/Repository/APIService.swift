@@ -9,10 +9,7 @@ import Foundation
 
 import RxSwift
 
-let menuUrl = """
-                https://firebasestorage.googleapis.com/v0/b/rxswiftin4hours.appspot.com/o/fried_menus.
-                json?alt=media&token=42d5cb7e-8ec4-48f9-bf39-3049e796c936
-              """
+let menuUrl = "https://firebasestorage.googleapis.com/v0/b/rxswiftin4hours.appspot.com/o/fried_menus.json?alt=media&token=42d5cb7e-8ec4-48f9-bf39-3049e796c936"
 
 class APIService {
     static func fecthAllMenus(onComplete: @escaping (Result<Data, Error>) -> Void) {
@@ -44,5 +41,29 @@ class APIService {
             }
             return Disposables.create()
         }
+    }
+    
+    static func fetchMenus(completion: @escaping ([MenuItem]?, Error?) -> Void) {
+        struct Response: Decodable {
+            let menus: [MenuItem]
+        }
+        
+        URLSession.shared.dataTask(with: URL(string: menuUrl)!) { data, res, err in
+            if let err = err {
+                completion(nil, err)
+                return
+            }
+            guard let data = data else {
+                let httpResponse = res as! HTTPURLResponse
+                completion(nil, NSError(domain: "No Data", code: httpResponse.statusCode))
+                return
+            }
+            do {
+                let response = try JSONDecoder().decode(Response.self, from: data)
+                completion(response.menus, nil)
+            } catch let error {
+                completion(nil,error)
+            }
+        }.resume()
     }
 }

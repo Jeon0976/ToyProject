@@ -32,9 +32,11 @@ final class MenuViewController: UIViewController {
     var bottomView = UIView()
     var orderButton = UIButton()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         attribute()
         layout()
         
@@ -53,7 +55,36 @@ final class MenuViewController: UIViewController {
     
     // MARK: Binding
     func bind() {
+        // TableView 그리기
+        viewModel.menus
+            .bind(to: tableView.rx.items(
+                cellIdentifier: MenuItemTableViewCell.identifier,
+                cellType: MenuItemTableViewCell.self)
+            ) { _, element, cell in
+                cell.makeLayout()
+                cell.makeValue(element.name, String(element.count),element.price.currencyKR())
+                
+                // cell 내부 Observable dispose
+                cell.onChanged
+                    .map { (element, $0) }
+                    .bind(to: self.viewModel.increaseCount)
+                    .disposed(by: cell.disposeBag)
+            }
+            .disposed(by: disposeBag)
         
+        // ViewModel에서 View totalCount 변경
+        viewModel.totalCount
+            .bind(to: itemCountLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        // ViewModel에서 View totalPrice 변경
+        viewModel.totalPrice
+            .bind(to: totalPrice.rx.text)
+            .disposed(by: disposeBag)
+        
+        
+        // view에서 viewModel로 order 클릭 시
+        viewModel
     }
     
     // MARK: 초기 UI Atrribute 설정

@@ -22,7 +22,6 @@
 		C572A1AD29F37C0D00A75815 /* MenuStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C572A1AC29F37C0D00A75815 /* MenuStore.swift */; };
 		C572A1AF29F37C1500A75815 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C572A1AE29F37C1500A75815 /* APIService.swift */; };
 		C572A1B129F37C4000A75815 /* Utils..swift in Sources */ = {isa = PBXBuildFile; fileRef = C572A1B029F37C4000A75815 /* Utils..swift */; };
-		C572A1B429F37D2C00A75815 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C572A1B329F37D2C00A75815 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		C572A1AC29F37C0D00A75815 /* MenuStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuStore.swift; sourceTree = "<group>"; };
 		C572A1AE29F37C1500A75815 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C572A1B029F37C4000A75815 /* Utils..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils..swift; sourceTree = "<group>"; };
-		C572A1B329F37D2C00A75815 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		CF98D0D4572604F34D4FDE75 /* Pods-RxSwift4HFinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift4HFinal.release.xcconfig"; path = "Target Support Files/Pods-RxSwift4HFinal/Pods-RxSwift4HFinal.release.xcconfig"; sourceTree = "<group>"; };
 		DD4F4262AB9462F96630D5C8 /* Pods_RxSwift4HFinal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift4HFinal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,7 +78,6 @@
 		C572A17929F37A2700A75815 = {
 			isa = PBXGroup;
 			children = (
-				C572A1B329F37D2C00A75815 /* .swiftlint.yml */,
 				C572A18429F37A2700A75815 /* RxSwift4HFinal */,
 				C572A18329F37A2700A75815 /* Products */,
 				9C1E5CE23569584D180D6937 /* Pods */,
@@ -186,7 +183,6 @@
 				C572A17F29F37A2700A75815 /* Frameworks */,
 				C572A18029F37A2700A75815 /* Resources */,
 				438746FB885D8D791F40832A /* [CP] Embed Pods Frameworks */,
-				C572A1B229F37D0100A75815 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -235,7 +231,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C572A1B429F37D2C00A75815 /* .swiftlint.yml in Resources */,
 				C572A19229F37A2800A75815 /* LaunchScreen.storyboard in Resources */,
 				C572A18F29F37A2800A75815 /* Assets.xcassets in Resources */,
 			);
@@ -282,25 +277,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		C572A1B229F37D0100A75815 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "    export PATH=\"$PATH:/opt/homebrew/bin\"\n    if which swiftlint > /dev/null; then\n      swiftlint\n    else\n      echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n    fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
