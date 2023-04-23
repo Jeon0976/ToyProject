@@ -43,6 +43,12 @@ final class MenuViewController: UIViewController {
         bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     init(viewModel: MenuViewModelType = MenuViewModel()) {
         self.viewModel = viewModel
         
@@ -84,7 +90,21 @@ final class MenuViewController: UIViewController {
         
         
         // view에서 viewModel로 order 클릭 시
-        viewModel
+        orderButton.rx.tap
+            .bind(to: viewModel.orderButtonTapped)
+            .disposed(by: disposeBag)
+        
+        // viewModel에서 데이터 필터링 후 view 띄우기
+        // TODO: viewModel에서 data처리
+        viewModel.showOrderPage
+            .subscribe(onNext: { [weak self] selectedMenus in
+                let viewModel = OrderViewModel(menus: selectedMenus)
+                
+                let viewController = OrderViewController(viewModel: viewModel)
+
+                self?.navigationController?.pushViewController(viewController, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
     // MARK: 초기 UI Atrribute 설정

@@ -15,7 +15,7 @@ final class OrderViewController: UIViewController {
     
     var disposeBag = DisposeBag()
     var viewModel: OrderViewModelType
-    
+        
     var scrollView = UIScrollView()
     
     var contentView = UIView()
@@ -30,7 +30,7 @@ final class OrderViewController: UIViewController {
     var separator = UIView()
     var totalPrice = UILabel()
     
-    init(viewModel: OrderViewModelType = OrderViewModel()) {
+    init(viewModel: OrderViewModelType) {
         self.viewModel = viewModel
 
         super.init(nibName: nil, bundle: nil)
@@ -49,15 +49,39 @@ final class OrderViewController: UIViewController {
         bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = false
+        orderedItems.sizeToFit()
+    }
+    
     func bind() {
         
+        viewModel.orderedItems
+            .bind(to: orderedItems.rx
+                .text)
+            .disposed(by: disposeBag)
+
+        
+        viewModel.itemsPrice
+            .map { $0.currencyKR() }
+            .bind(to: itemsPrice.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.vatPrice
+            .map { $0.currencyKR() }
+            .bind(to: vatPrice.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.totalPrice
+            .map { $0.currencyKR() }
+            .bind(to: totalPrice.rx.text)
+            .disposed(by: disposeBag)
     }
    
     // MARK: 초기 UI Attribute 설정
     private func attribute() {
-        
-        let price = 1000
-        let vatt = 100
         
         view.backgroundColor = .systemBackground
         
@@ -73,12 +97,7 @@ final class OrderViewController: UIViewController {
         titleOrdered.font = .systemFont(ofSize: 24, weight: .medium)
                 
         orderedItems.isScrollEnabled = false
-        orderedItems.text = """
-                            test1
-                            test2
-                            test3
-                            test4
-                            """
+
         orderedItems.sizeToFit()
         
         orderedItems.font = .systemFont(ofSize: 32, weight: .light)
@@ -92,15 +111,12 @@ final class OrderViewController: UIViewController {
         vat.text = "VAT"
         vat.font = .systemFont(ofSize: 32, weight: .light)
         
-        itemsPrice.text = String(price)
         itemsPrice.font = .systemFont(ofSize: 18, weight: .medium)
         
-        vatPrice.text = String(vatt)
         vatPrice.font = .systemFont(ofSize: 18, weight: .medium)
         
         separator.backgroundColor = .black
         
-        totalPrice.text = String(price + vatt)
         totalPrice.font = .systemFont(ofSize: 48, weight: .heavy)
     }
     

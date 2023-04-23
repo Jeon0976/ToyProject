@@ -15,10 +15,11 @@ protocol MenuViewModelType {
     var menus: BehaviorRelay<[ViewMenu]> { get }
     var totalCount: BehaviorRelay<String> { get }
     var totalPrice: BehaviorRelay<String> { get }
+    var showOrderPage: Observable<[ViewMenu]> { get }
     
     // View -> ViewModel
     var increaseCount: AnyObserver<(ViewMenu,Int)> { get }
-    var orderButton: AnyObserver<Void> { get }
+    var orderButtonTapped: AnyObserver<Void> { get }
 
 }
 
@@ -31,10 +32,12 @@ final class MenuViewModel: MenuViewModelType {
     var menus =  BehaviorRelay<[ViewMenu]>(value: [])
     var totalCount = BehaviorRelay<String>(value: "0")
     var totalPrice = BehaviorRelay<String>(value: "0")
+    var showOrderPage: Observable<[ViewMenu]>
+    
     
     // View -> ViewModel
     var increaseCount: AnyObserver<(ViewMenu,Int)>
-    var orderButton: AnyObserver<Void>
+    var orderButtonTapped: AnyObserver<Void>
     
     init() {
         let increasing = PublishSubject<(ViewMenu, Int)>()
@@ -42,7 +45,12 @@ final class MenuViewModel: MenuViewModelType {
         
         
         increaseCount = increasing.asObserver()
-        orderButton = orderingButton.asObserver()
+    
+        orderButtonTapped = orderingButton.asObserver()
+            
+        showOrderPage = orderingButton
+            .withLatestFrom(menus)
+            .map { $0.filter { $0.count > 0 }}
 
         
         increasing
