@@ -88,22 +88,45 @@ final class MenuViewController: UIViewController {
             .bind(to: totalPrice.rx.text)
             .disposed(by: disposeBag)
         
-        
+        viewModel.endRefreshControl
+            .observe(on: MainScheduler.instance)
+            .do(onNext: { [weak self] finished in
+                if finished {
+                    self?.tableView.refreshControl?.endRefreshing()
+                }
+            })
+            .bind(to: activityIndicator.rx.isHidden)
+            .disposed(by: disposeBag)
+
         // view에서 viewModel로 order 클릭 시
         orderButton.rx.tap
             .bind(to: viewModel.orderButtonTapped)
             .disposed(by: disposeBag)
         
         // viewModel에서 데이터 필터링 후 view 띄우기
-        // TODO: viewModel에서 data처리
         viewModel.showOrderPage
             .subscribe(onNext: { [weak self] selectedMenus in
+                if selectedMenus.count == 0 {
+                    self?.showAlert()
+                }
+                
                 let viewModel = OrderViewModel(menus: selectedMenus)
                 
                 let viewController = OrderViewController(viewModel: viewModel)
 
                 self?.navigationController?.pushViewController(viewController, animated: true)
             })
+            .disposed(by: disposeBag)
+        
+        clearButton.rx.tap
+            .bind(to: viewModel.clearButtonTapped)
+            .disposed(by: disposeBag)
+        
+        tableView.refreshControl?.rx.controlEvent(.valueChanged)
+//                .map({ _ in
+//                    self.activityIndicator.isHidden = false
+//                })
+            .bind(to: viewModel.refreshControl)
             .disposed(by: disposeBag)
     }
     
@@ -223,5 +246,13 @@ final class MenuViewController: UIViewController {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(bottomView.snp.top).inset(6)
         }
+    }
+}
+
+extension MenuViewController {
+    func showAlert() {
+        let alert = UIAlertController(title: "Order Fail", message: "주문을 해주세요.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }
