@@ -62,6 +62,7 @@ final class MenuViewModel: MenuViewModelType {
         refreshControl = refreshing.asObserver()
         
         endRefreshControl = refreshing
+
             .map { true }
             
 
