@@ -67,6 +67,8 @@ final class MenuViewController: UIViewController {
                 cellIdentifier: MenuItemTableViewCell.identifier,
                 cellType: MenuItemTableViewCell.self)
             ) { _, element, cell in
+                cell.disposeBag = DisposeBag()
+                
                 cell.makeLayout()
                 cell.makeValue(element.name, String(element.count),element.price.currencyKR())
                 
@@ -75,6 +77,7 @@ final class MenuViewController: UIViewController {
                     .map { (element, $0) }
                     .bind(to: self.viewModel.increaseCount)
                     .disposed(by: cell.disposeBag)
+                
             }
             .disposed(by: disposeBag)
         

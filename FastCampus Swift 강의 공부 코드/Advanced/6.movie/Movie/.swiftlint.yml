@@ -1,0 +1,5 @@
+excluded:
+    - MovieTests
+disabled_rules:
+    - trailing_whitespace
+    - vertical_whitespace

@@ -1,0 +1,907 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C551F8E82922211E007BC344 /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551F8E72922211E007BC344 /* DetailListCell.swift */; };
+		C551F8EA29222368007BC344 /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551F8E929222368007BC344 /* DetailListBackgroundView.swift */; };
+		C551F8EC29222376007BC344 /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551F8EB29222376007BC344 /* DetailListBackgroundViewModel.swift */; };
+		C551F8EE292284CC007BC344 /* LocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551F8ED292284CC007BC344 /* LocalAPI.swift */; };
+		C551F8F12922862C007BC344 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551F8F02922862C007BC344 /* LocalNetwork.swift */; };
+		C551F8F329228990007BC344 /* LocationInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551F8F229228990007BC344 /* LocationInformationModel.swift */; };
+		C551F8F8292292AE007BC344 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D61365291DF1A800D4F26A /* CoreLocation.framework */; };
+		C551F8FE292292B2007BC344 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D61367291DF1B100D4F26A /* QuartzCore.framework */; };
+		C551F900292292B5007BC344 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D61363291DF17E00D4F26A /* SystemConfiguration.framework */; };
+		C58158642924BA200077CDE6 /* LocalNetworkStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58158632924BA200077CDE6 /* LocalNetworkStub.swift */; };
+		C58158662924C4780077CDE6 /* networkDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = C58158652924C4780077CDE6 /* networkDummy.json */; };
+		C58158682924C4D00077CDE6 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58158672924C4D00077CDE6 /* Dummy.swift */; };
+		C581586C2924C6190077CDE6 /* LocationInformationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581586B2924C6190077CDE6 /* LocationInformationModelTests.swift */; };
+		C581586E2924C93D0077CDE6 /* LocationInformationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581586D2924C93D0077CDE6 /* LocationInformationViewModelTests.swift */; };
+		C5A611092922996500723BF1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D61369291DF1B900D4F26A /* libc++.tbd */; };
+		C5A6110A2922996700723BF1 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D6136B291DF1C100D4F26A /* libxml2.tbd */; };
+		C5A6110B2922996B00723BF1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D6136D291DF1C900D4F26A /* libsqlite3.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
+		C5A6110C292321D800723BF1 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D61399291DF21A00D4F26A /* DaumMap.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		C5D61326291DE92F00D4F26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D61325291DE92F00D4F26A /* AppDelegate.swift */; };
+		C5D61328291DE92F00D4F26A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D61327291DE92F00D4F26A /* SceneDelegate.swift */; };
+		C5D6132F291DE93000D4F26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5D6132E291DE93000D4F26A /* Assets.xcassets */; };
+		C5D61332291DE93000D4F26A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D61330291DE93000D4F26A /* LaunchScreen.storyboard */; };
+		C5D6139A291DF21A00D4F26A /* map_pinup_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61375291DF21A00D4F26A /* map_pinup_custom@3x.png */; };
+		C5D6139B291DF21A00D4F26A /* map_pin_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61376291DF21A00D4F26A /* map_pin_custom.png */; };
+		C5D6139C291DF21A00D4F26A /* shadow_balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61377291DF21A00D4F26A /* shadow_balloon.png */; };
+		C5D6139D291DF21A00D4F26A /* map_pinup.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61378291DF21A00D4F26A /* map_pinup.png */; };
+		C5D6139E291DF21A00D4F26A /* detail_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61379291DF21A00D4F26A /* detail_button.png */; };
+		C5D6139F291DF21A00D4F26A /* map_pin_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D6137A291DF21A00D4F26A /* map_pin_custom@3x.png */; };
+		C5D613A0291DF21A00D4F26A /* map_pinup@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D6137B291DF21A00D4F26A /* map_pinup@3x.png */; };
+		C5D613A1291DF21A00D4F26A /* map_pin_shadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D6137C291DF21A00D4F26A /* map_pin_shadow@3x.png */; };
+		C5D613A2291DF21A00D4F26A /* copyright.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D6137D291DF21A00D4F26A /* copyright.png */; };
+		C5D613A3291DF21A00D4F26A /* th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D6137E291DF21A00D4F26A /* th_line.png */; };
+		C5D613A4291DF21A00D4F26A /* map_pin_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D6137F291DF21A00D4F26A /* map_pin_red@3x.png */; };
+		C5D613A5291DF21A00D4F26A /* daum_copyright.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61380291DF21A00D4F26A /* daum_copyright.png */; };
+		C5D613A6291DF21A00D4F26A /* map_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61381291DF21A00D4F26A /* map_pin@3x.png */; };
+		C5D613A7291DF21A00D4F26A /* map_present_tracking.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61382291DF21A00D4F26A /* map_present_tracking.png */; };
+		C5D613A8291DF21A00D4F26A /* map_pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61383291DF21A00D4F26A /* map_pin_red.png */; };
+		C5D613A9291DF21A00D4F26A /* info_box.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D6138D291DF21A00D4F26A /* info_box.png */; };
+		C5D613AA291DF21A00D4F26A /* point_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D6138E291DF21A00D4F26A /* point_sprite.png */; };
+		C5D613AB291DF21A00D4F26A /* map_pinup_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D6138F291DF21A00D4F26A /* map_pinup_custom.png */; };
+		C5D613AC291DF21A00D4F26A /* info_box_tail.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61390291DF21A00D4F26A /* info_box_tail.png */; };
+		C5D613AD291DF21A00D4F26A /* noimage256.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61391291DF21A00D4F26A /* noimage256.png */; };
+		C5D613AE291DF21A00D4F26A /* map_present_direction.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61392291DF21A00D4F26A /* map_present_direction.png */; };
+		C5D613AF291DF21A00D4F26A /* map_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61393291DF21A00D4F26A /* map_pin.png */; };
+		C5D613B0291DF21A00D4F26A /* map_present.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61394291DF21A00D4F26A /* map_present.png */; };
+		C5D613B1291DF21A00D4F26A /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61395291DF21A00D4F26A /* noimage.png */; };
+		C5D613B2291DF21A00D4F26A /* map_present_background_update.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61396291DF21A00D4F26A /* map_present_background_update.png */; };
+		C5D613B3291DF21A00D4F26A /* daum_th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61397291DF21A00D4F26A /* daum_th_line.png */; };
+		C5D613B4291DF21A00D4F26A /* map_pin_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = C5D61398291DF21A00D4F26A /* map_pin_shadow.png */; };
+		C5D613B7291E042900D4F26A /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D613B6291E042900D4F26A /* LocationData.swift */; };
+		C5D613BA291E046C00D4F26A /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D613B9291E046C00D4F26A /* KLDocument.swift */; };
+		C5D613BC291E058600D4F26A /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D613BB291E058600D4F26A /* DetailListCellData.swift */; };
+		C5D613BE291E06AE00D4F26A /* LocationInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D613BD291E06AE00D4F26A /* LocationInformationViewController.swift */; };
+		C5D613C1291E06F500D4F26A /* LocationInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D613C0291E06F500D4F26A /* LocationInformationViewModel.swift */; };
+		C5E7DB26291E37B800E2C3DD /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E7DB25291E37B800E2C3DD /* MTMapViewError.swift */; };
+		DDA5B40C25D17D86FBF39366 /* Pods_FindCVSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900C5CAF80601B9EBD37461C /* Pods_FindCVSTests.framework */; };
+		F73531C68FD3399D70E33B90 /* Pods_FindCVS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8052E0B574CA519F1F96005 /* Pods_FindCVS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C581585E2924B9E30077CDE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5D6131A291DE92F00D4F26A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5D61321291DE92F00D4F26A;
+			remoteInfo = FindCVS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38F5BF7A5881FE57F729EC4F /* Pods-FindCVS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVS.release.xcconfig"; path = "Target Support Files/Pods-FindCVS/Pods-FindCVS.release.xcconfig"; sourceTree = "<group>"; };
+		900C5CAF80601B9EBD37461C /* Pods_FindCVSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindCVSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99386B7D28787AFE0F3881D3 /* Pods-FindCVSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVSTests.release.xcconfig"; path = "Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests.release.xcconfig"; sourceTree = "<group>"; };
+		A8052E0B574CA519F1F96005 /* Pods_FindCVS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindCVS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0DB52F6629EEE4355B5E892 /* Pods-FindCVSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVSTests.debug.xcconfig"; path = "Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C551F8E72922211E007BC344 /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
+		C551F8E929222368007BC344 /* DetailListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundView.swift; sourceTree = "<group>"; };
+		C551F8EB29222376007BC344 /* DetailListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundViewModel.swift; sourceTree = "<group>"; };
+		C551F8ED292284CC007BC344 /* LocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPI.swift; sourceTree = "<group>"; };
+		C551F8F02922862C007BC344 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
+		C551F8F229228990007BC344 /* LocationInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModel.swift; sourceTree = "<group>"; };
+		C581585A2924B9E30077CDE6 /* FindCVSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindCVSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C58158632924BA200077CDE6 /* LocalNetworkStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkStub.swift; sourceTree = "<group>"; };
+		C58158652924C4780077CDE6 /* networkDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = networkDummy.json; sourceTree = "<group>"; };
+		C58158672924C4D00077CDE6 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		C581586B2924C6190077CDE6 /* LocationInformationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModelTests.swift; sourceTree = "<group>"; };
+		C581586D2924C93D0077CDE6 /* LocationInformationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModelTests.swift; sourceTree = "<group>"; };
+		C5A6110F29232AED00723BF1 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		C5D61322291DE92F00D4F26A /* FindCVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindCVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5D61325291DE92F00D4F26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C5D61327291DE92F00D4F26A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C5D6132E291DE93000D4F26A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5D61331291DE93000D4F26A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C5D61333291DE93000D4F26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5D6135F291DF0E300D4F26A /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		C5D61363291DF17E00D4F26A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C5D61365291DF1A800D4F26A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C5D61367291DF1B100D4F26A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C5D61369291DF1B900D4F26A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		C5D6136B291DF1C100D4F26A /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		C5D6136D291DF1C900D4F26A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C5D61375291DF21A00D4F26A /* map_pinup_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup_custom@3x.png"; sourceTree = "<group>"; };
+		C5D61376291DF21A00D4F26A /* map_pin_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_custom.png; sourceTree = "<group>"; };
+		C5D61377291DF21A00D4F26A /* shadow_balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow_balloon.png; sourceTree = "<group>"; };
+		C5D61378291DF21A00D4F26A /* map_pinup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pinup.png; sourceTree = "<group>"; };
+		C5D61379291DF21A00D4F26A /* detail_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_button.png; sourceTree = "<group>"; };
+		C5D6137A291DF21A00D4F26A /* map_pin_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_custom@3x.png"; sourceTree = "<group>"; };
+		C5D6137B291DF21A00D4F26A /* map_pinup@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup@3x.png"; sourceTree = "<group>"; };
+		C5D6137C291DF21A00D4F26A /* map_pin_shadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_shadow@3x.png"; sourceTree = "<group>"; };
+		C5D6137D291DF21A00D4F26A /* copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copyright.png; sourceTree = "<group>"; };
+		C5D6137E291DF21A00D4F26A /* th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = th_line.png; sourceTree = "<group>"; };
+		C5D6137F291DF21A00D4F26A /* map_pin_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_red@3x.png"; sourceTree = "<group>"; };
+		C5D61380291DF21A00D4F26A /* daum_copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_copyright.png; sourceTree = "<group>"; };
+		C5D61381291DF21A00D4F26A /* map_pin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin@3x.png"; sourceTree = "<group>"; };
+		C5D61382291DF21A00D4F26A /* map_present_tracking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_tracking.png; sourceTree = "<group>"; };
+		C5D61383291DF21A00D4F26A /* map_pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_red.png; sourceTree = "<group>"; };
+		C5D61385291DF21A00D4F26A /* MTMapPOIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapPOIItem.h; sourceTree = "<group>"; };
+		C5D61386291DF21A00D4F26A /* MTMapCameraUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapCameraUpdate.h; sourceTree = "<group>"; };
+		C5D61387291DF21A00D4F26A /* MTMapReverseGeoCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapReverseGeoCoder.h; sourceTree = "<group>"; };
+		C5D61388291DF21A00D4F26A /* MTMapPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapPolyline.h; sourceTree = "<group>"; };
+		C5D61389291DF21A00D4F26A /* MTMapLocationMarkerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapLocationMarkerItem.h; sourceTree = "<group>"; };
+		C5D6138A291DF21A00D4F26A /* MTMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapView.h; sourceTree = "<group>"; };
+		C5D6138B291DF21A00D4F26A /* MTMapGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapGeometry.h; sourceTree = "<group>"; };
+		C5D6138C291DF21A00D4F26A /* MTMapCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapCircle.h; sourceTree = "<group>"; };
+		C5D6138D291DF21A00D4F26A /* info_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_box.png; sourceTree = "<group>"; };
+		C5D6138E291DF21A00D4F26A /* point_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point_sprite.png; sourceTree = "<group>"; };
+		C5D6138F291DF21A00D4F26A /* map_pinup_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pinup_custom.png; sourceTree = "<group>"; };
+		C5D61390291DF21A00D4F26A /* info_box_tail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_box_tail.png; sourceTree = "<group>"; };
+		C5D61391291DF21A00D4F26A /* noimage256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage256.png; sourceTree = "<group>"; };
+		C5D61392291DF21A00D4F26A /* map_present_direction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_direction.png; sourceTree = "<group>"; };
+		C5D61393291DF21A00D4F26A /* map_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin.png; sourceTree = "<group>"; };
+		C5D61394291DF21A00D4F26A /* map_present.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present.png; sourceTree = "<group>"; };
+		C5D61395291DF21A00D4F26A /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
+		C5D61396291DF21A00D4F26A /* map_present_background_update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_background_update.png; sourceTree = "<group>"; };
+		C5D61397291DF21A00D4F26A /* daum_th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_th_line.png; sourceTree = "<group>"; };
+		C5D61398291DF21A00D4F26A /* map_pin_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_shadow.png; sourceTree = "<group>"; };
+		C5D61399291DF21A00D4F26A /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		C5D613B6291E042900D4F26A /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		C5D613B9291E046C00D4F26A /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
+		C5D613BB291E058600D4F26A /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
+		C5D613BD291E06AE00D4F26A /* LocationInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewController.swift; sourceTree = "<group>"; };
+		C5D613C0291E06F500D4F26A /* LocationInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModel.swift; sourceTree = "<group>"; };
+		C5E7DB25291E37B800E2C3DD /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
+		FE5F26442DCB52459C9A61E3 /* Pods-FindCVS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVS.debug.xcconfig"; path = "Target Support Files/Pods-FindCVS/Pods-FindCVS.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C58158572924B9E30077CDE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA5B40C25D17D86FBF39366 /* Pods_FindCVSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5D6131F291DE92F00D4F26A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A611092922996500723BF1 /* libc++.tbd in Frameworks */,
+				C551F8FE292292B2007BC344 /* QuartzCore.framework in Frameworks */,
+				C551F8F8292292AE007BC344 /* CoreLocation.framework in Frameworks */,
+				C5A6110B2922996B00723BF1 /* libsqlite3.tbd in Frameworks */,
+				C5A6110C292321D800723BF1 /* DaumMap.framework in Frameworks */,
+				C551F900292292B5007BC344 /* SystemConfiguration.framework in Frameworks */,
+				C5A6110A2922996700723BF1 /* libxml2.tbd in Frameworks */,
+				F73531C68FD3399D70E33B90 /* Pods_FindCVS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B6B20150A0D14D0BB0565B69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE5F26442DCB52459C9A61E3 /* Pods-FindCVS.debug.xcconfig */,
+				38F5BF7A5881FE57F729EC4F /* Pods-FindCVS.release.xcconfig */,
+				C0DB52F6629EEE4355B5E892 /* Pods-FindCVSTests.debug.xcconfig */,
+				99386B7D28787AFE0F3881D3 /* Pods-FindCVSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C551F8EF292284D2007BC344 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C551F8ED292284CC007BC344 /* LocalAPI.swift */,
+				C551F8F02922862C007BC344 /* LocalNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C551F8F429228994007BC344 /* LocationInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C5D613BD291E06AE00D4F26A /* LocationInformationViewController.swift */,
+				C551F8F229228990007BC344 /* LocationInformationModel.swift */,
+				C5D613C0291E06F500D4F26A /* LocationInformationViewModel.swift */,
+			);
+			path = LocationInfo;
+			sourceTree = "<group>";
+		};
+		C581585B2924B9E30077CDE6 /* FindCVSTests */ = {
+			isa = PBXGroup;
+			children = (
+				C58158632924BA200077CDE6 /* LocalNetworkStub.swift */,
+				C58158672924C4D00077CDE6 /* Dummy.swift */,
+				C581586B2924C6190077CDE6 /* LocationInformationModelTests.swift */,
+				C581586D2924C93D0077CDE6 /* LocationInformationViewModelTests.swift */,
+				C58158652924C4780077CDE6 /* networkDummy.json */,
+			);
+			path = FindCVSTests;
+			sourceTree = "<group>";
+		};
+		C5D61319291DE92F00D4F26A = {
+			isa = PBXGroup;
+			children = (
+				C5D61324291DE92F00D4F26A /* FindCVS */,
+				C581585B2924B9E30077CDE6 /* FindCVSTests */,
+				C5D61323291DE92F00D4F26A /* Products */,
+				C5D6135C291DF04200D4F26A /* Frameworks */,
+				B6B20150A0D14D0BB0565B69 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		C5D61323291DE92F00D4F26A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5D61322291DE92F00D4F26A /* FindCVS.app */,
+				C581585A2924B9E30077CDE6 /* FindCVSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5D61324291DE92F00D4F26A /* FindCVS */ = {
+			isa = PBXGroup;
+			children = (
+				C5D6135F291DF0E300D4F26A /* BridgingHeader.h */,
+				C5D61325291DE92F00D4F26A /* AppDelegate.swift */,
+				C5D61327291DE92F00D4F26A /* SceneDelegate.swift */,
+				C551F8EF292284D2007BC344 /* Network */,
+				C5D613BF291E06C000D4F26A /* Presentation */,
+				C5D613B8291E043300D4F26A /* Entities */,
+				C5D6132E291DE93000D4F26A /* Assets.xcassets */,
+				C5D61330291DE93000D4F26A /* LaunchScreen.storyboard */,
+				C5D61333291DE93000D4F26A /* Info.plist */,
+			);
+			path = FindCVS;
+			sourceTree = "<group>";
+		};
+		C5D6135C291DF04200D4F26A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5A6110F29232AED00723BF1 /* Metal.framework */,
+				C5D61373291DF21A00D4F26A /* DaumMap.embeddedframework */,
+				C5D6136D291DF1C900D4F26A /* libsqlite3.tbd */,
+				C5D6136B291DF1C100D4F26A /* libxml2.tbd */,
+				C5D61369291DF1B900D4F26A /* libc++.tbd */,
+				C5D61367291DF1B100D4F26A /* QuartzCore.framework */,
+				C5D61365291DF1A800D4F26A /* CoreLocation.framework */,
+				C5D61363291DF17E00D4F26A /* SystemConfiguration.framework */,
+				A8052E0B574CA519F1F96005 /* Pods_FindCVS.framework */,
+				900C5CAF80601B9EBD37461C /* Pods_FindCVSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5D61373291DF21A00D4F26A /* DaumMap.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				C5D61374291DF21A00D4F26A /* Resources */,
+				C5D61399291DF21A00D4F26A /* DaumMap.framework */,
+			);
+			path = DaumMap.embeddedframework;
+			sourceTree = "<group>";
+		};
+		C5D61374291DF21A00D4F26A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C5D61375291DF21A00D4F26A /* map_pinup_custom@3x.png */,
+				C5D61376291DF21A00D4F26A /* map_pin_custom.png */,
+				C5D61377291DF21A00D4F26A /* shadow_balloon.png */,
+				C5D61378291DF21A00D4F26A /* map_pinup.png */,
+				C5D61379291DF21A00D4F26A /* detail_button.png */,
+				C5D6137A291DF21A00D4F26A /* map_pin_custom@3x.png */,
+				C5D6137B291DF21A00D4F26A /* map_pinup@3x.png */,
+				C5D6137C291DF21A00D4F26A /* map_pin_shadow@3x.png */,
+				C5D6137D291DF21A00D4F26A /* copyright.png */,
+				C5D6137E291DF21A00D4F26A /* th_line.png */,
+				C5D6137F291DF21A00D4F26A /* map_pin_red@3x.png */,
+				C5D61380291DF21A00D4F26A /* daum_copyright.png */,
+				C5D61381291DF21A00D4F26A /* map_pin@3x.png */,
+				C5D61382291DF21A00D4F26A /* map_present_tracking.png */,
+				C5D61383291DF21A00D4F26A /* map_pin_red.png */,
+				C5D61384291DF21A00D4F26A /* Headers */,
+				C5D6138D291DF21A00D4F26A /* info_box.png */,
+				C5D6138E291DF21A00D4F26A /* point_sprite.png */,
+				C5D6138F291DF21A00D4F26A /* map_pinup_custom.png */,
+				C5D61390291DF21A00D4F26A /* info_box_tail.png */,
+				C5D61391291DF21A00D4F26A /* noimage256.png */,
+				C5D61392291DF21A00D4F26A /* map_present_direction.png */,
+				C5D61393291DF21A00D4F26A /* map_pin.png */,
+				C5D61394291DF21A00D4F26A /* map_present.png */,
+				C5D61395291DF21A00D4F26A /* noimage.png */,
+				C5D61396291DF21A00D4F26A /* map_present_background_update.png */,
+				C5D61397291DF21A00D4F26A /* daum_th_line.png */,
+				C5D61398291DF21A00D4F26A /* map_pin_shadow.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5D61384291DF21A00D4F26A /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C5D61385291DF21A00D4F26A /* MTMapPOIItem.h */,
+				C5D61386291DF21A00D4F26A /* MTMapCameraUpdate.h */,
+				C5D61387291DF21A00D4F26A /* MTMapReverseGeoCoder.h */,
+				C5D61388291DF21A00D4F26A /* MTMapPolyline.h */,
+				C5D61389291DF21A00D4F26A /* MTMapLocationMarkerItem.h */,
+				C5D6138A291DF21A00D4F26A /* MTMapView.h */,
+				C5D6138B291DF21A00D4F26A /* MTMapGeometry.h */,
+				C5D6138C291DF21A00D4F26A /* MTMapCircle.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		C5D613B8291E043300D4F26A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C5D613B6291E042900D4F26A /* LocationData.swift */,
+				C5D613B9291E046C00D4F26A /* KLDocument.swift */,
+				C5D613BB291E058600D4F26A /* DetailListCellData.swift */,
+				C5E7DB25291E37B800E2C3DD /* MTMapViewError.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C5D613BF291E06C000D4F26A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C551F8F429228994007BC344 /* LocationInfo */,
+				C551F8E72922211E007BC344 /* DetailListCell.swift */,
+				C551F8E929222368007BC344 /* DetailListBackgroundView.swift */,
+				C551F8EB29222376007BC344 /* DetailListBackgroundViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C58158592924B9E30077CDE6 /* FindCVSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C58158622924B9E30077CDE6 /* Build configuration list for PBXNativeTarget "FindCVSTests" */;
+			buildPhases = (
+				98050792DAB8CEC6D6E35ED0 /* [CP] Check Pods Manifest.lock */,
+				C58158562924B9E30077CDE6 /* Sources */,
+				C58158572924B9E30077CDE6 /* Frameworks */,
+				C58158582924B9E30077CDE6 /* Resources */,
+				C91D08EB48BF9FDD4A6289C0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C581585F2924B9E30077CDE6 /* PBXTargetDependency */,
+			);
+			name = FindCVSTests;
+			productName = FindCVSTests;
+			productReference = C581585A2924B9E30077CDE6 /* FindCVSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C5D61321291DE92F00D4F26A /* FindCVS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5D61336291DE93000D4F26A /* Build configuration list for PBXNativeTarget "FindCVS" */;
+			buildPhases = (
+				CFA5A759C2F75C66F691D390 /* [CP] Check Pods Manifest.lock */,
+				C5D6131E291DE92F00D4F26A /* Sources */,
+				C5D6131F291DE92F00D4F26A /* Frameworks */,
+				C5D61320291DE92F00D4F26A /* Resources */,
+				B370588977652ABF0CE69569 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindCVS;
+			packageProductDependencies = (
+			);
+			productName = FindCVS;
+			productReference = C5D61322291DE92F00D4F26A /* FindCVS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5D6131A291DE92F00D4F26A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					C58158592924B9E30077CDE6 = {
+						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
+						TestTargetID = C5D61321291DE92F00D4F26A;
+					};
+					C5D61321291DE92F00D4F26A = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = C5D6131D291DE92F00D4F26A /* Build configuration list for PBXProject "FindCVS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5D61319291DE92F00D4F26A;
+			packageReferences = (
+			);
+			productRefGroup = C5D61323291DE92F00D4F26A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5D61321291DE92F00D4F26A /* FindCVS */,
+				C58158592924B9E30077CDE6 /* FindCVSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C58158582924B9E30077CDE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58158662924C4780077CDE6 /* networkDummy.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5D61320291DE92F00D4F26A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5D613B0291DF21A00D4F26A /* map_present.png in Resources */,
+				C5D613A6291DF21A00D4F26A /* map_pin@3x.png in Resources */,
+				C5D613A4291DF21A00D4F26A /* map_pin_red@3x.png in Resources */,
+				C5D613AF291DF21A00D4F26A /* map_pin.png in Resources */,
+				C5D613A8291DF21A00D4F26A /* map_pin_red.png in Resources */,
+				C5D6139A291DF21A00D4F26A /* map_pinup_custom@3x.png in Resources */,
+				C5D613A2291DF21A00D4F26A /* copyright.png in Resources */,
+				C5D613A1291DF21A00D4F26A /* map_pin_shadow@3x.png in Resources */,
+				C5D61332291DE93000D4F26A /* LaunchScreen.storyboard in Resources */,
+				C5D613A5291DF21A00D4F26A /* daum_copyright.png in Resources */,
+				C5D613A9291DF21A00D4F26A /* info_box.png in Resources */,
+				C5D6139F291DF21A00D4F26A /* map_pin_custom@3x.png in Resources */,
+				C5D613B4291DF21A00D4F26A /* map_pin_shadow.png in Resources */,
+				C5D613A7291DF21A00D4F26A /* map_present_tracking.png in Resources */,
+				C5D6139E291DF21A00D4F26A /* detail_button.png in Resources */,
+				C5D613B1291DF21A00D4F26A /* noimage.png in Resources */,
+				C5D613A3291DF21A00D4F26A /* th_line.png in Resources */,
+				C5D613AC291DF21A00D4F26A /* info_box_tail.png in Resources */,
+				C5D6139B291DF21A00D4F26A /* map_pin_custom.png in Resources */,
+				C5D613AB291DF21A00D4F26A /* map_pinup_custom.png in Resources */,
+				C5D613A0291DF21A00D4F26A /* map_pinup@3x.png in Resources */,
+				C5D613AA291DF21A00D4F26A /* point_sprite.png in Resources */,
+				C5D613B2291DF21A00D4F26A /* map_present_background_update.png in Resources */,
+				C5D613AE291DF21A00D4F26A /* map_present_direction.png in Resources */,
+				C5D613AD291DF21A00D4F26A /* noimage256.png in Resources */,
+				C5D6139C291DF21A00D4F26A /* shadow_balloon.png in Resources */,
+				C5D6132F291DE93000D4F26A /* Assets.xcassets in Resources */,
+				C5D613B3291DF21A00D4F26A /* daum_th_line.png in Resources */,
+				C5D6139D291DF21A00D4F26A /* map_pinup.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98050792DAB8CEC6D6E35ED0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindCVSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B370588977652ABF0CE69569 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C91D08EB48BF9FDD4A6289C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFA5A759C2F75C66F691D390 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindCVS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C58158562924B9E30077CDE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C581586E2924C93D0077CDE6 /* LocationInformationViewModelTests.swift in Sources */,
+				C58158682924C4D00077CDE6 /* Dummy.swift in Sources */,
+				C581586C2924C6190077CDE6 /* LocationInformationModelTests.swift in Sources */,
+				C58158642924BA200077CDE6 /* LocalNetworkStub.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5D6131E291DE92F00D4F26A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5D613B7291E042900D4F26A /* LocationData.swift in Sources */,
+				C551F8EA29222368007BC344 /* DetailListBackgroundView.swift in Sources */,
+				C551F8EC29222376007BC344 /* DetailListBackgroundViewModel.swift in Sources */,
+				C5D613BA291E046C00D4F26A /* KLDocument.swift in Sources */,
+				C551F8F12922862C007BC344 /* LocalNetwork.swift in Sources */,
+				C5D613BE291E06AE00D4F26A /* LocationInformationViewController.swift in Sources */,
+				C5E7DB26291E37B800E2C3DD /* MTMapViewError.swift in Sources */,
+				C551F8EE292284CC007BC344 /* LocalAPI.swift in Sources */,
+				C551F8E82922211E007BC344 /* DetailListCell.swift in Sources */,
+				C5D61326291DE92F00D4F26A /* AppDelegate.swift in Sources */,
+				C5D613BC291E058600D4F26A /* DetailListCellData.swift in Sources */,
+				C551F8F329228990007BC344 /* LocationInformationModel.swift in Sources */,
+				C5D61328291DE92F00D4F26A /* SceneDelegate.swift in Sources */,
+				C5D613C1291E06F500D4F26A /* LocationInformationViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C581585F2924B9E30077CDE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5D61321291DE92F00D4F26A /* FindCVS */;
+			targetProxy = C581585E2924B9E30077CDE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5D61330291DE93000D4F26A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5D61331291DE93000D4F26A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C58158602924B9E30077CDE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0DB52F6629EEE4355B5E892 /* Pods-FindCVSTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4K2HXA435;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.OwnCompany.FindCVSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindCVS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindCVS";
+			};
+			name = Debug;
+		};
+		C58158612924B9E30077CDE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99386B7D28787AFE0F3881D3 /* Pods-FindCVSTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4K2HXA435;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.OwnCompany.FindCVSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindCVS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindCVS";
+			};
+			name = Release;
+		};
+		C5D61334291DE93000D4F26A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C5D61335291DE93000D4F26A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5D61337291DE93000D4F26A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE5F26442DCB52459C9A61E3 /* Pods-FindCVS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4K2HXA435;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FindCVS/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "내 주변의 편의점 정보를 불러오려면 현재 위치가 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "내 주변의 편의점 정보를 불러오려면 현재 위치가 필요합니다. 2 ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 갖고와라";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.OwnCompany.FindCVS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/jeonseonghun/Desktop/FCSwift/Advanced/1.FindCVS/FindCVS/FindCVS/BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C5D61338291DE93000D4F26A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38F5BF7A5881FE57F729EC4F /* Pods-FindCVS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4K2HXA435;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
+				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FindCVS/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "내 주변의 편의점 정보를 불러오려면 현재 위치가 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "내 주변의 편의점 정보를 불러오려면 현재 위치가 필요합니다. 2 ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 갖고와라";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.OwnCompany.FindCVS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/jeonseonghun/Desktop/FCSwift/Advanced/1.FindCVS/FindCVS/FindCVS/BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C58158622924B9E30077CDE6 /* Build configuration list for PBXNativeTarget "FindCVSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C58158602924B9E30077CDE6 /* Debug */,
+				C58158612924B9E30077CDE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5D6131D291DE92F00D4F26A /* Build configuration list for PBXProject "FindCVS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5D61334291DE93000D4F26A /* Debug */,
+				C5D61335291DE93000D4F26A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5D61336291DE93000D4F26A /* Build configuration list for PBXNativeTarget "FindCVS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5D61337291DE93000D4F26A /* Debug */,
+				C5D61338291DE93000D4F26A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5D6131A291DE92F00D4F26A /* Project object */;
+}
