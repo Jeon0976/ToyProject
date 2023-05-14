@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='Contents'/>
+        <page name='2-1.Operation'/>
+        <page name='2-2.OperationQueue'/>
+        <page name='2-3.BlockOperation'/>
+        <page name='Untitled Page 4'/>
+        <page name='Untitled Page 5'/>
+        <page name='Untitled Page 6'/>
+        <page name='3.AsyncOperation'/>
+        <page name='4-1.Dependency'/>
+        <page name='4-1.Dependency2'/>
+        <page name='4-2.Cancellation'/>
+        <page name='4-2.Cancellation2'/>
+        <page name='Untitled Page 7'/>
+    </pages>
+</playground>

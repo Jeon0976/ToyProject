@@ -62,7 +62,6 @@ final class MenuViewModel: MenuViewModelType {
         refreshControl = refreshing.asObserver()
         
         endRefreshControl = refreshing
-
             .map { true }
             
 
@@ -113,7 +112,7 @@ final class MenuViewModel: MenuViewModelType {
             .map { "\($0)"}
             .bind(to: totalCount)
             .disposed(by: disposeBag)
-        
+                
         menus
             .map { $0.map { $0.count * $0.price}.reduce(0, +)}
             .map { $0.currencyKR() }

@@ -1,4 +1,5 @@
 //
+//
 //  OrderViewController.swift
 //  RxSwift4HFinal
 //
@@ -84,7 +85,6 @@ final class OrderViewController: UIViewController {
     private func attribute() {
         
         view.backgroundColor = .systemBackground
-        
         navigationItem.title = "Receipt"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = .black
