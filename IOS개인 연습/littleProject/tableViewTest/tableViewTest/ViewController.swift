@@ -52,6 +52,8 @@ class ViewController: UIViewController {
 
     @objc func tapped() {
         testAppend.append(Date())
+        
+        tableView.isEditing = true
 
         tableView.reloadSections(IndexSet(2...2), with: .left)
     }
@@ -60,6 +62,68 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if indexPath.section == 0 || indexPath.section == 1 {
+                data.remove(at: indexPath.row)
+            } else {
+                testAppend.remove(at: indexPath.row)
+            }
+        }
+
+        tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedItem = testAppend[sourceIndexPath.row]
+        testAppend.remove(at: sourceIndexPath.row)
+        testAppend.insert(movedItem, at: destinationIndexPath.row)
+        
+        tableView.reloadSections(IndexSet(integer: 2), with: .left)
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.section == 2 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let modifyAction = UIContextualAction(style: .normal, title: "테스트") { action, view, completionHandler in
+            print("test")
+            completionHandler(true)
+        }
+
+        let delete = UIContextualAction(style: .destructive, title: "삭제") { [weak self] action, view, completionHandler in
+            if indexPath.section == 0 || indexPath.section == 1 {
+                self?.data.remove(at: indexPath.row)
+            } else {
+                self?.testAppend.remove(at: indexPath.row)
+            }
+
+            tableView.reloadData()
+            completionHandler(true)
+        }
+
+        let configuartion = UISwipeActionsConfiguration(actions: [delete, modifyAction])
+        return configuartion
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark {
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+        } else {
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension ViewController: UITableViewDataSource {
