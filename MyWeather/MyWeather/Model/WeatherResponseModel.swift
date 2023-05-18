@@ -24,7 +24,7 @@ struct WeatherResponseModel: Decodable {
 struct WeatherDetail: Decodable {
     var imageCode: String
     
-    var imageURL: URL? { URL(string: "https://openweathermap.org/img/wn/10d@\(imageCode).png")}
+    var imageURL: URL? { URL(string: "https://openweathermap.org/img/wn/\(imageCode)@4x.png")}
     
     enum CodingKeys: String, CodingKey {
         case imageCode = "icon"
@@ -39,17 +39,18 @@ struct Temp: Decodable {
     let kelvinToCelsius = 273.15
     
     var nowTemp: String {
-        let nowC = nowTempK - kelvinToCelsius
+        let nowC = round((nowTempK - kelvinToCelsius) * 10)/10
+        
         return String(nowC)
     }
     
     var lowTemp: String {
-        let lowC = lowTempK - kelvinToCelsius
+        let lowC = round((lowTempK - kelvinToCelsius) * 10)/10
         return String(lowC)
     }
     
     var maxTemp: String {
-        let maxC = maxTempK - kelvinToCelsius
+        let maxC = round((maxTempK - kelvinToCelsius) * 10)/10
         return String(maxC)
     }
     

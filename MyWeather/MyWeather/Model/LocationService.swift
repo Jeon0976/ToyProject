@@ -15,4 +15,9 @@ final class LocationService {
     
     var longtitude: Double?
     var latitude: Double?
+    
+    private init(longtitude: Double? = nil, latitude: Double? = nil) {
+        self.longtitude = longtitude
+        self.latitude = latitude
+    }
 }

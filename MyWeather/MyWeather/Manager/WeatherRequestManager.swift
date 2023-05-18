@@ -12,30 +12,28 @@ import Foundation
 struct WeatherRequestManager {
     
     //MARK: OpenWeather 주소 값
-    let scheme = "https"
-    let openWeather = "api.openweathermap.org"
-    let openWeatherPath = "/data/2.5/weather"
+    private let scheme = "https"
+    private let openWeather = "api.openweathermap.org"
+    private let openWeatherPath = "/data/2.5/weather"
     
     //MARK: OpenWeahter 키 값
-    let lat = "lat"
-    let lon = "lon"
-    let id = "appid"
+    private let lat = "lat"
+    private let lon = "lon"
+    private let id = "appid"
     
     //MARK: OpenWeather apiKey
-    let apiKey = "baf0548634d00b30b393182fbbf46c53"
-    
+    private var apiKey = Bundle.main.apiKey
     
     //MARK: URL 요청 메서드 구현
     func request(_ latitude: Double, _ longtitude: Double, completionHandler: @escaping ((WeatherResponseModel) -> Void)) {
         var urlComponents = URLComponents()
-        
         urlComponents.scheme = scheme
         urlComponents.host = openWeather
         urlComponents.path = openWeatherPath
         urlComponents.queryItems = [
             URLQueryItem(name: lat, value: String(latitude)),
             URLQueryItem(name: lon, value: String(longtitude)),
-            URLQueryItem(name: id, value: apiKey)
+            URLQueryItem(name: id, value: apiKey!)
         ]
         
         guard let url = urlComponents.url else { return }
@@ -51,5 +49,17 @@ struct WeatherRequestManager {
                 }
             }
         }.resume()
+    }
+}
+
+extension Bundle {
+    var apiKey: String? {
+        guard let file = self.path(forResource: "API", ofType: "plist"),
+              let resource = NSDictionary(contentsOfFile: file),
+              let key = resource["API_KEY"] as? String else {
+            print("plist error")
+            return nil
+        }
+        return key
     }
 }
