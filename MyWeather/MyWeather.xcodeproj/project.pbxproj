@@ -17,7 +17,7 @@
 		C552D66C2A1633820064E2CC /* WeatherResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552D66B2A1633820064E2CC /* WeatherResponseModel.swift */; };
 		C552D66E2A16338C0064E2CC /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552D66D2A16338C0064E2CC /* Weather.swift */; };
 		C552D6722A1635B80064E2CC /* WeatherRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552D6712A1635B80064E2CC /* WeatherRequestManager.swift */; };
-		C552D6782A1672520064E2CC /* API.plist in Resources */ = {isa = PBXBuildFile; fileRef = C552D6772A1672520064E2CC /* API.plist */; };
+		C552D67A2A168AC50064E2CC /* API.plist in Resources */ = {isa = PBXBuildFile; fileRef = C552D6792A168AC50064E2CC /* API.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		C552D66B2A1633820064E2CC /* WeatherResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseModel.swift; sourceTree = "<group>"; };
 		C552D66D2A16338C0064E2CC /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		C552D6712A1635B80064E2CC /* WeatherRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequestManager.swift; sourceTree = "<group>"; };
-		C552D6772A1672520064E2CC /* API.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API.plist; sourceTree = "<group>"; };
+		C552D6792A168AC50064E2CC /* API.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 				C552D65E2A1535260064E2CC /* Info.plist */,
 				C552D6502A1535250064E2CC /* AppDelegate.swift */,
 				C552D6522A1535250064E2CC /* SceneDelegate.swift */,
-				C552D6772A1672520064E2CC /* API.plist */,
+				C552D6792A168AC50064E2CC /* API.plist */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -180,8 +180,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C552D6782A1672520064E2CC /* API.plist in Resources */,
 				C552D65D2A1535260064E2CC /* LaunchScreen.storyboard in Resources */,
+				C552D67A2A168AC50064E2CC /* API.plist in Resources */,
 				C552D65A2A1535260064E2CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
