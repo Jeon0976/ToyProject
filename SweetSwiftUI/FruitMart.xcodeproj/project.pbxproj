@@ -17,6 +17,10 @@
 		C57D9D8B2A2B29B500343F4B /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D9D8A2A2B29B500343F4B /* ProductRow.swift */; };
 		C57D9D922A2B2B9C00343F4B /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D9D912A2B2B9C00343F4B /* ColorExtension.swift */; };
 		C57D9D942A2B2D9900343F4B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D9D932A2B2D9900343F4B /* Product.swift */; };
+		C5FFB4A22A2E22E5005F2E51 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4A12A2E22E5005F2E51 /* BundleExtension.swift */; };
+		C5FFB4A42A2E2585005F2E51 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4A32A2E2585005F2E51 /* Store.swift */; };
+		C5FFB4A62A2E294E005F2E51 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4A52A2E294E005F2E51 /* ProductDetailView.swift */; };
+		C5FFB4A82A2E2F49005F2E51 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4A72A2E2F49005F2E51 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		C57D9D8A2A2B29B500343F4B /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductRow.swift; path = ../../../../../../../Documents/ProductRow.swift; sourceTree = "<group>"; };
 		C57D9D912A2B2B9C00343F4B /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorExtension.swift; path = ../../../../../../../Documents/ColorExtension.swift; sourceTree = "<group>"; };
 		C57D9D932A2B2D9900343F4B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		C5FFB4A12A2E22E5005F2E51 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		C5FFB4A32A2E2585005F2E51 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		C5FFB4A52A2E294E005F2E51 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		C5FFB4A72A2E2F49005F2E51 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +139,7 @@
 			children = (
 				5238EACF240BAC920079E99D /* Home.swift */,
 				C57D9D8A2A2B29B500343F4B /* ProductRow.swift */,
+				C5FFB4A52A2E294E005F2E51 /* ProductDetailView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -139,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				C57D9D932A2B2D9900343F4B /* Product.swift */,
+				C5FFB4A32A2E2585005F2E51 /* Store.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -147,7 +157,9 @@
 		C57D9D8F2A2B2B5600343F4B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C5FFB4A72A2E2F49005F2E51 /* String.swift */,
 				C57D9D912A2B2B9C00343F4B /* ColorExtension.swift */,
+				C5FFB4A12A2E22E5005F2E51 /* BundleExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -234,10 +246,14 @@
 			files = (
 				C57D9D8B2A2B29B500343F4B /* ProductRow.swift in Sources */,
 				5238EACC240BAC920079E99D /* AppDelegate.swift in Sources */,
+				C5FFB4A82A2E2F49005F2E51 /* String.swift in Sources */,
+				C5FFB4A42A2E2585005F2E51 /* Store.swift in Sources */,
 				5238EACE240BAC920079E99D /* SceneDelegate.swift in Sources */,
 				5238EAD0240BAC920079E99D /* Home.swift in Sources */,
 				C57D9D922A2B2B9C00343F4B /* ColorExtension.swift in Sources */,
 				C57D9D942A2B2D9900343F4B /* Product.swift in Sources */,
+				C5FFB4A22A2E22E5005F2E51 /* BundleExtension.swift in Sources */,
+				C5FFB4A62A2E294E005F2E51 /* ProductDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +395,7 @@
 				DEVELOPMENT_TEAM = C4K2HXA435;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/FruitMart/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -400,6 +417,7 @@
 				DEVELOPMENT_TEAM = C4K2HXA435;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/FruitMart/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
