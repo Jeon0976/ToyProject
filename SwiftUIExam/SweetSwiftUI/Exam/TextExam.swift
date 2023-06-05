@@ -39,7 +39,7 @@ struct TextExam: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TextExamView_Previews: PreviewProvider {
     static var previews: some View {
         TextExam()
     }
