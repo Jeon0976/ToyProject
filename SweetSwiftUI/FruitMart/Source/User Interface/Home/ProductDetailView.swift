@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProductDetailView: View {
     let product: Product
-    @State private var 수량test = 0
+    @State private var 수량test = 1
     
     var body: some View {
         VStack(spacing: 0) {
@@ -78,7 +78,7 @@ private extension ProductDetailView {
             // 추후 다시 구현 예정
             HStack {
                 Button(action: {
-                    if 수량test == 0 {
+                    if 수량test == 1 {
                         return
                     } else {
                         수량test -= 1
@@ -91,7 +91,7 @@ private extension ProductDetailView {
                     Text("+")
                 }
             }
-        }
+        }.foregroundColor(.black)
     }
     
     var placeOrderButton: some View {
@@ -111,6 +111,16 @@ private extension ProductDetailView {
 
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailView(product: Product(name: "Test", imageName: "fig", price: 1000, description: "테스트~ 테스트~ 망고를~~ 유혹하네"))
+       let source1 = ProductDetailView(product: Product(
+                name: "Test",
+                imageName: "fig",
+                price: 1000,
+                description: "테스트~ 테스트~ 망고를~~ 유혹하네"
+            )
+        )
+        return Group {
+            Preview(source: source1)
+        }
+
     }
 }

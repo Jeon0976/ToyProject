@@ -21,6 +21,7 @@
 		C5FFB4A42A2E2585005F2E51 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4A32A2E2585005F2E51 /* Store.swift */; };
 		C5FFB4A62A2E294E005F2E51 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4A52A2E294E005F2E51 /* ProductDetailView.swift */; };
 		C5FFB4A82A2E2F49005F2E51 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4A72A2E2F49005F2E51 /* String.swift */; };
+		C5FFB4B02A2F5E76005F2E51 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4AF2A2F5E76005F2E51 /* Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C5FFB4A32A2E2585005F2E51 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		C5FFB4A52A2E294E005F2E51 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		C5FFB4A72A2E2F49005F2E51 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		C5FFB4AF2A2F5E76005F2E51 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,9 +169,18 @@
 		C57D9D902A2B2B7F00343F4B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				C5FFB4AE2A2F5E68005F2E51 /* CustomView */,
 				C57D9D8F2A2B2B5600343F4B /* Extension */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		C5FFB4AE2A2F5E68005F2E51 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				C5FFB4AF2A2F5E76005F2E51 /* Preview.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 			files = (
 				C57D9D8B2A2B29B500343F4B /* ProductRow.swift in Sources */,
 				5238EACC240BAC920079E99D /* AppDelegate.swift in Sources */,
+				C5FFB4B02A2F5E76005F2E51 /* Preview.swift in Sources */,
 				C5FFB4A82A2E2F49005F2E51 /* String.swift in Sources */,
 				C5FFB4A42A2E2585005F2E51 /* Store.swift in Sources */,
 				5238EACE240BAC920079E99D /* SceneDelegate.swift in Sources */,
