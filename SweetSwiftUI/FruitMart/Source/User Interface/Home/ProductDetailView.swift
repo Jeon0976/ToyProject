@@ -9,8 +9,12 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    @EnvironmentObject private var store: Store
+    
     let product: Product
-    @State private var 수량test = 1
+    
+    @State private var quantity: Int = 1
+    @State private var showingAlert: Bool = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -18,6 +22,10 @@ struct ProductDetailView: View {
             orderView
         }
         .edgesIgnoringSafeArea(.top)
+        .alert(isPresented: $showingAlert) {
+            confirmAlert
+        }
+
     }
 }
 
@@ -56,10 +64,7 @@ private extension ProductDetailView {
                 
                 Spacer()
                 
-                Image(systemName: "heart")
-                    .imageScale(.large)
-                    .foregroundColor(Color.peach)
-                    .frame(width: 32, height: 32)
+                FavoriteButton(product: product)
             }
             
             Text(product.description.splitText())
@@ -69,33 +74,20 @@ private extension ProductDetailView {
     }
     
     var priceInfo: some View {
+        let price = quantity * product.price
+        
         // 통화 기호는 작게 나타내고 가격만 더 크게 표시
-        HStack {
-            (Text("₩") + Text("\(product.price)").font(.title)).fontWeight(.medium)
+        return HStack {
+            (Text("₩") + Text("\(price)").font(.title)).fontWeight(.medium)
             
             Spacer()
             
-            // 추후 다시 구현 예정
-            HStack {
-                Button(action: {
-                    if 수량test == 1 {
-                        return
-                    } else {
-                        수량test -= 1
-                    }}) {
-                    Text("-")
-                }
-                Text("\(수량test)")
-                
-                Button(action: { 수량test += 1}) {
-                    Text("+")
-                }
-            }
+            QuantitySelector(quantity: $quantity)
         }.foregroundColor(.black)
     }
     
     var placeOrderButton: some View {
-        Button(action: { print("Test") }) {
+        Button(action: { self.showingAlert = true }) {
             Capsule()
                 .fill(Color.peach)
             // 너비는 주어진 공간을 최대로 사용하고 높이는 최소, 최대치 지정
@@ -106,6 +98,21 @@ private extension ProductDetailView {
                 .foregroundColor(Color.white)
                 .padding(.vertical, 8)
         }
+    }
+    
+    var confirmAlert: Alert {
+        Alert(
+            title: Text("주문 확인"),
+            message: Text("\(product.name)을(를) \(quantity)개 구매하겠습니까?"),
+            primaryButton: .default(Text("확인"), action: {
+                self.placeOrder()
+            }),
+            secondaryButton: .cancel(Text("취소"))
+        )
+    }
+    
+    func placeOrder() {
+        store.placeOrder(product: product, quantity: quantity)
     }
 }
 

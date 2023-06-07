@@ -9,11 +9,19 @@
 import Foundation
 
 struct Product: Decodable, Identifiable {
-    let id: UUID = UUID()
+    var id: UUID = UUID()
     
     let name: String
     let imageName: String
     let price: Int
     let description: String
     var isFavorite: Bool = false
+    
+    enum CodingKeys: CodingKey {
+        case name 
+        case imageName
+        case price
+        case description
+        case isFavorite
+    }
 }

@@ -26,6 +26,10 @@
 		C5D745C32A25CA53006F9F31 /* SweetSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D745C22A25CA53006F9F31 /* SweetSwiftUIUITestsLaunchTests.swift */; };
 		C5FFB4AB2A2F404D005F2E51 /* CustomFunctionBuilders.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4AA2A2F404D005F2E51 /* CustomFunctionBuilders.swift */; };
 		C5FFB4AD2A2F49CC005F2E51 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4AC2A2F49CC005F2E51 /* Preview.swift */; };
+		C5FFB5172A303560005F2E51 /* StateBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB5162A303560005F2E51 /* StateBinding.swift */; };
+		C5FFB5192A303868005F2E51 /* ObservableObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB5182A303868005F2E51 /* ObservableObjectTest.swift */; };
+		C5FFB51B2A303B0E005F2E51 /* AlertAndSheetExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB51A2A303B0E005F2E51 /* AlertAndSheetExample.swift */; };
+		C5FFB51D2A3042B0005F2E51 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB51C2A3042B0005F2E51 /* PresentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		C5D745C22A25CA53006F9F31 /* SweetSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C5FFB4AA2A2F404D005F2E51 /* CustomFunctionBuilders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFunctionBuilders.swift; sourceTree = "<group>"; };
 		C5FFB4AC2A2F49CC005F2E51 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		C5FFB5162A303560005F2E51 /* StateBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBinding.swift; sourceTree = "<group>"; };
+		C5FFB5182A303868005F2E51 /* ObservableObjectTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectTest.swift; sourceTree = "<group>"; };
+		C5FFB51A2A303B0E005F2E51 /* AlertAndSheetExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndSheetExample.swift; sourceTree = "<group>"; };
+		C5FFB51C2A3042B0005F2E51 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,8 @@
 				C5C82A3E2A2E1FD000F24332 /* UsePriority.swift */,
 				C5FFB4AA2A2F404D005F2E51 /* CustomFunctionBuilders.swift */,
 				C5FFB4AC2A2F49CC005F2E51 /* Preview.swift */,
+				C5FFB5152A303451005F2E51 /* DataFlow */,
+				C5FFB51E2A3042BE005F2E51 /* AlertAndSheet */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -185,6 +195,24 @@
 				C5D745C22A25CA53006F9F31 /* SweetSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = SweetSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		C5FFB5152A303451005F2E51 /* DataFlow */ = {
+			isa = PBXGroup;
+			children = (
+				C5FFB5162A303560005F2E51 /* StateBinding.swift */,
+				C5FFB5182A303868005F2E51 /* ObservableObjectTest.swift */,
+			);
+			path = DataFlow;
+			sourceTree = "<group>";
+		};
+		C5FFB51E2A3042BE005F2E51 /* AlertAndSheet */ = {
+			isa = PBXGroup;
+			children = (
+				C5FFB51A2A303B0E005F2E51 /* AlertAndSheetExample.swift */,
+				C5FFB51C2A3042B0005F2E51 /* PresentView.swift */,
+			);
+			path = AlertAndSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,9 +354,13 @@
 				C5C82A2B2A2D8B5E00F24332 /* SwiftUIView.swift in Sources */,
 				C57CF2BA2A261CF500F4FBDD /* ImageExam.swift in Sources */,
 				C5C82A362A2DD67700F24332 /* GeometryReaderExample.swift in Sources */,
+				C5FFB51B2A303B0E005F2E51 /* AlertAndSheetExample.swift in Sources */,
+				C5FFB51D2A3042B0005F2E51 /* PresentView.swift in Sources */,
 				C5C82A3F2A2E1FD000F24332 /* UsePriority.swift in Sources */,
 				C5C82A342A2DB2BB00F24332 /* ListDetailExample.swift in Sources */,
 				C5C82A322A2DABB500F24332 /* ColorDetail.swift in Sources */,
+				C5FFB5172A303560005F2E51 /* StateBinding.swift in Sources */,
+				C5FFB5192A303868005F2E51 /* ObservableObjectTest.swift in Sources */,
 				C5C82A392A2DDE5B00F24332 /* GeometryReaderExample2.swift in Sources */,
 				C5C82A2F2A2D938C00F24332 /* NavigationViewExample.swift in Sources */,
 			);
