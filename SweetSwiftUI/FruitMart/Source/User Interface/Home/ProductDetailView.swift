@@ -21,6 +21,11 @@ struct ProductDetailView: View {
             productImage
             orderView
         }
+        .modifier(Popup(size: CGSize(width: 200, height: 200),
+                        style: .dimmed,
+                        message: Text("팝업")
+                       )
+        )
         .edgesIgnoringSafeArea(.top)
         .alert(isPresented: $showingAlert) {
             confirmAlert
@@ -32,9 +37,7 @@ struct ProductDetailView: View {
 private extension ProductDetailView {
     var productImage: some View {
         GeometryReader { _ in
-            Image(self.product.imageName)
-                .resizable()
-                .scaledToFill()
+            ResizedImage(self.product.imageName)
         }
     }
     
@@ -98,6 +101,7 @@ private extension ProductDetailView {
                 .foregroundColor(Color.white)
                 .padding(.vertical, 8)
         }
+        .buttonStyle(ShrinkButtonStyle())
     }
     
     var confirmAlert: Alert {

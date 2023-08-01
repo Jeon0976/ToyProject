@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C545616E2A31B7F8006E76F3 /* VIewModifierExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545616D2A31B7F8006E76F3 /* VIewModifierExample.swift */; };
+		C54561702A31C28C006E76F3 /* CustomStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545616F2A31C28C006E76F3 /* CustomStyle.swift */; };
 		C57CF2BA2A261CF500F4FBDD /* ImageExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57CF2B92A261CF500F4FBDD /* ImageExam.swift */; };
 		C57D9D892A2B083C00343F4B /* StackExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D9D882A2B083C00343F4B /* StackExam.swift */; };
 		C5C82A2B2A2D8B5E00F24332 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A2A2A2D8B5E00F24332 /* SwiftUIView.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C545616D2A31B7F8006E76F3 /* VIewModifierExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewModifierExample.swift; sourceTree = "<group>"; };
+		C545616F2A31C28C006E76F3 /* CustomStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyle.swift; sourceTree = "<group>"; };
 		C57CF2B92A261CF500F4FBDD /* ImageExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExam.swift; sourceTree = "<group>"; };
 		C57D9D882A2B083C00343F4B /* StackExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackExam.swift; sourceTree = "<group>"; };
 		C5C82A2A2A2D8B5E00F24332 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
@@ -103,6 +107,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C545616A2A31B7CB006E76F3 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				C545616D2A31B7F8006E76F3 /* VIewModifierExample.swift */,
+				C545616F2A31C28C006E76F3 /* CustomStyle.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		C57CF2BB2A261CFE00F4FBDD /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +131,7 @@
 				C5FFB4AC2A2F49CC005F2E51 /* Preview.swift */,
 				C5FFB5152A303451005F2E51 /* DataFlow */,
 				C5FFB51E2A3042BE005F2E51 /* AlertAndSheet */,
+				C545616A2A31B7CB006E76F3 /* Custom */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -352,6 +366,8 @@
 				C5FFB4AD2A2F49CC005F2E51 /* Preview.swift in Sources */,
 				C5D745A82A25CA52006F9F31 /* TextExam.swift in Sources */,
 				C5C82A2B2A2D8B5E00F24332 /* SwiftUIView.swift in Sources */,
+				C545616E2A31B7F8006E76F3 /* VIewModifierExample.swift in Sources */,
+				C54561702A31C28C006E76F3 /* CustomStyle.swift in Sources */,
 				C57CF2BA2A261CF500F4FBDD /* ImageExam.swift in Sources */,
 				C5C82A362A2DD67700F24332 /* GeometryReaderExample.swift in Sources */,
 				C5FFB51B2A303B0E005F2E51 /* AlertAndSheetExample.swift in Sources */,
