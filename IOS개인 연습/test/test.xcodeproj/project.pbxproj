@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C50865F8299A19C000AAF82B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C50865F7299A19C000AAF82B /* RxCocoa */; };
 		C50865FA299A19C000AAF82B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C50865F9299A19C000AAF82B /* RxSwift */; };
+		C595ACD32A85070B00D35123 /* UnderlineSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C595ACD22A85070B00D35123 /* UnderlineSegmentedControl.swift */; };
 		C5A1B72A2993524300892872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1B7292993524300892872 /* AppDelegate.swift */; };
 		C5A1B72C2993524300892872 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1B72B2993524300892872 /* SceneDelegate.swift */; };
 		C5A1B72E2993524300892872 /* FrameAnctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1B72D2993524300892872 /* FrameAnctor.swift */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C5681DBA2AA1805900BA4FDC /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		C595ACD22A85070B00D35123 /* UnderlineSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineSegmentedControl.swift; sourceTree = "<group>"; };
 		C5A1B7262993524300892872 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A1B7292993524300892872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5A1B72B2993524300892872 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,11 +111,13 @@
 				C5A1B7292993524300892872 /* AppDelegate.swift */,
 				C5A1B72B2993524300892872 /* SceneDelegate.swift */,
 				C5E306E42A6FB0A000C11CF7 /* ViewController.swift */,
+				C595ACD22A85070B00D35123 /* UnderlineSegmentedControl.swift */,
+				C5A1B7372993524400892872 /* Info.plist */,
 				C5A1B72D2993524300892872 /* FrameAnctor.swift */,
 				C5A1B72F2993524300892872 /* Main.storyboard */,
 				C5A1B7322993524400892872 /* Assets.xcassets */,
 				C5A1B7342993524400892872 /* LaunchScreen.storyboard */,
-				C5A1B7372993524400892872 /* Info.plist */,
+				C5681DBA2AA1805900BA4FDC /* test.playground */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5A1B72E2993524300892872 /* FrameAnctor.swift in Sources */,
+				C595ACD32A85070B00D35123 /* UnderlineSegmentedControl.swift in Sources */,
 				C5A1B72A2993524300892872 /* AppDelegate.swift in Sources */,
 				C5E306E52A6FB0A000C11CF7 /* ViewController.swift in Sources */,
 				C5A1B72C2993524300892872 /* SceneDelegate.swift in Sources */,

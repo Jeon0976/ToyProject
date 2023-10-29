@@ -1,266 +1,332 @@
-//
-//  ViewController.swift
-//  test
-//
-//  Created by 전성훈 on 2023/07/25.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    var test = testField()
-    var testButton = MenuPlusButton()
+    var test = [CommentArray(commentId: "테스트데데데데데데데데데데데데", userId: "테스트테스트테스트", content: """
+테스트입니다테스트입니다테스트입니다테스트입
+니다테스트입니다테스트입니다테스트입
+니다테스트입니다테스트입니다
+테스트입니다테스트입니다테스트입니다테스트입니다테스트입니다테스트입니다
+테스트입니다테스트입니다테스트입니다테스트입니다테스
+트입니다테스트입니다테스트입니다테스트입니다테스트입니다
+""", createdTime: "22.02.12"),
+                CommentArray(commentId: "test", userId: "테스트", content: """
+가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마
+바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바
+사아자
+차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사
+아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차
+카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+""", createdTime: "22.02.12"),
+                CommentArray(commentId: "테스트", userId: "테스트", content: "테스트입니다.", createdTime: "22.02.12"),
+                CommentArray(commentId: "테스트", userId: "테스트", content: "테스트입니다.", createdTime: "22.02.12"),
+                CommentArray(commentId: "테스트", userId: "테스트", content: "테스트입니다.", createdTime: "22.02.12"),
+                CommentArray(commentId: "테스트", userId: "테스트", content: "테스트입니다.", createdTime: "22.02.12"),
+                CommentArray(commentId: "테스트", userId: "테스트", content: "테스트입니다.", createdTime: "22.02.12"),
+                CommentArray(commentId: "테스트", userId: "테스트", content: "테스트입니다.", createdTime: "22.02.12"),
+                CommentArray(commentId: "테스트", userId: "테스트", content: "테스트입니다.", createdTime: "22.02.12")
+    ]
+    
+    private lazy var reviewsTableView: UITableView = {
+        let tableView = UITableView()
+        
+        tableView.register(
+            PlaceReviewTableViewCell.self,
+            forCellReuseIdentifier: PlaceReviewTableViewCell.identifier
+        )
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.isScrollEnabled = true
+        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 200
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        return tableView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        view.addSubview(reviewsTableView)
+        reviewsTableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            reviewsTableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            reviewsTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            reviewsTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            reviewsTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -16)
+        ])
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
-        test.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(test)
+//        reviewsTableView.reloadData()
+//        reviewsTableView.layoutIfNeeded()
+    }
+}
+
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        test.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: PlaceReviewTableViewCell.identifier, for: indexPath) as? PlaceReviewTableViewCell
         
-        testButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(testButton)
+        let comment = test[indexPath.row]
+        
+        cell?.selectionStyle = .none
+        cell?.bindingData(comment)
+        
+        return cell ?? UITableViewCell()
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+
+}
+
+final class PlaceReviewTableViewCell: UITableViewCell {
+    static let identifier = "PlaceReviewTableViewCell"
+    
+    private lazy var userId: UILabel = {
+        let label = UILabel()
+                
+        return label
+    }()
+    
+    private lazy var createdTime: UILabel = {
+        let label = UILabel()
+
+        
+        return label
+    }()
+    
+    private lazy var review: ReviewLabel = {
+        let label = ReviewLabel()
+        
+        return label
+    }()
+    
+    private lazy var topLabelStack: UIStackView = {
+        let stackView = UIStackView()
+        
+        stackView.spacing = 7
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        
+        return stackView
+    }()
+    
+    private lazy var topStackView: UIStackView = {
+        let stackView = UIStackView()
+        
+        stackView.spacing = 15
+        stackView.axis = .horizontal
+        stackView.distribution = .equalCentering
+        
+        return stackView
+    }()
+    
+    private lazy var reportButton: UIButton = {
+        let button = UIButton()
+        
+        button.setImage(UIImage(named: "test"), for: .normal)
+        
+        return button
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        makeLayout()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func makeLayout() {
+        
+        [
+            userId,
+            createdTime
+        ].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            topLabelStack.addArrangedSubview($0)
+        }
+        
+        [
+            topLabelStack,
+            reportButton
+        ].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            topStackView.addArrangedSubview($0)
+        }
+        
+        [
+            topStackView,
+            review
+        ].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            self.contentView.addSubview($0)
+        }
+//        topLabelStack.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+
         
         NSLayoutConstraint.activate([
-            test.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            test.widthAnchor.constraint(equalToConstant: 200),
-            test.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            testButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
-            testButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
-            testButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32)
+            topStackView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 0),
+            topStackView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 16),
+            topStackView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -16),
+//            reportButton.topAnchor.constraint(equalTo: topStackView.topAnchor),
+//            reportButton.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -16),
+//            reportButton.widthAnchor.constraint(equalToConstant: 20),
+//            reportButton.heightAnchor.constraint(equalToConstant: 20),
+            
+            review.topAnchor.constraint(equalTo: topStackView.bottomAnchor, constant: 10),
+            review.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 16),
+            review.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -16),
+            review.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -15)
         ])
+    }
+    
+    func bindingData(_ comment: CommentArray) {
+        userId.text = comment.userId
+        createdTime.text = comment.createdTime
         
-        test.addRightButton()
-        test.placeholder = "Test"
-        test.keyboardType = .numberPad
-        test.delegate = self
-        
-        testButton.setButton("메뉴 정보 추가하기")
+        review.setLabel(text: comment.content, isAbbreviated: true, isMyReview: false)
     }
 }
 
-extension ViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField == test {
-            if textField.text == "변동" {
-                textField.endEditing(true)
-                return false
-            } else if let result = textField.text, let textRange = Range(range, in: result) {
-                let updateText = result.replacingCharacters(in: textRange, with: string)
-                textField.text = updateText.formatNumber()
-                return false
-            }
-        }
-        return true
-    }
+struct CommentArray: Codable {
+    var commentId: String
+    var userId: String
+    var content: String
+    var createdTime: String
 }
 
 
-class testField: UITextField {
-    private var horizontalPadding: CGFloat = 16
-    private var verticalPadding: CGFloat = 12
-    private var buttonPadding: CGFloat = 7
-    private var buttonSize: CGFloat = 24
+final class ReviewLabel: UILabel {
     
-    private var isAddRightButton = false
-    
-    private var variablePrice: UIButton?
+    private var topInset: CGFloat = 12.0
+    private var bottomInset: CGFloat = 12.0
+    private var leftInset: CGFloat = 16.0
+    private var rightInset: CGFloat = 16.0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        configuration()
+        setAttribute()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
-        let inset = setTextInset()
-        
-        return bounds.inset(by: inset)
+    override func drawText(in rect: CGRect) {
+        let insets = UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
+        super.drawText(in: rect.inset(by: insets))
     }
-    
-    override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        let inset = setTextInset()
-        
-        return bounds.inset(by: inset)
-    }
-    
-    private func configuration() {
-        textColor = .black
-        font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        backgroundColor = .systemGray6
-        layer.cornerRadius = 10
-    }
-    
-    private func setTextInset() -> UIEdgeInsets {
-        var inset = UIEdgeInsets(
-            top: verticalPadding,
-            left: horizontalPadding,
-            bottom: verticalPadding,
-            right: horizontalPadding
-        )
-        
-        if isAddRightButton {
-            let rightInest = horizontalPadding + buttonSize + buttonPadding
-            
-            inset.right = rightInest
-            
-            return inset
-        }
-        
-        return inset
-    }
-    
-    func addRightButton() {
-        isAddRightButton = !isAddRightButton
-        
-        let image = UIImage(named: "test")?.withRenderingMode(.alwaysTemplate)
-        
-        let button = UIButton()
-        button.setImage(image, for: .normal)
-        button.addTarget(self, action: #selector(test), for: .touchUpInside)
-        button.tintColor = .blue
 
-        button.frame = .init(x: horizontalPadding, y: 0, width: buttonSize, height: buttonSize)
-        
-        let paddingWidth = horizontalPadding + buttonSize + buttonPadding
-        
-        let paddingView = UIView(frame: CGRect(
-            x: 0,
-            y: 0,
-            width: paddingWidth,
-            height: buttonSize)
-        )
-        
-        paddingView.addSubview(button)
-        
-        rightView = paddingView
-        rightViewMode = .always
+    override var intrinsicContentSize: CGSize {
+        let size = super.intrinsicContentSize
+        return CGSize(width: size.width + leftInset + rightInset,
+                      height: size.height + topInset + bottomInset)
     }
     
-    @objc func test() {
-        if variablePrice == nil {
-
-            variablePrice = UIButton(frame: CGRect(x: self.rightView!.frame.origin.x,
-                                                   y: self.rightView!.frame.origin.y + 10,
-                                                   width: 56, height: 47))
-            variablePrice?.setTitle("변동", for: .normal)
-            variablePrice?.backgroundColor = .white
-            variablePrice?.layer.cornerRadius = 10
-            variablePrice?.layer.borderWidth = 1
-            variablePrice?.layer.borderColor = UIColor.lightGray.cgColor
-            variablePrice?.setTitleColor(.lightGray, for: .normal)
-            
-            variablePrice?.addTarget(self, action: #selector(changeTextField), for: .touchUpInside)
-            self.addSubview(variablePrice!)
+    private func setAttribute() {
+        self.font = .systemFont(ofSize: 15, weight: .medium)
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+    }
+    
+    func setLabel(text: String, isAbbreviated: Bool, isMyReview: Bool) {
+        if isMyReview {
+            changedReviewColor()
         } else {
-            variablePrice?.isHidden = false
+            normalColorReview()
+        }
+        
+        if isAbbreviated {
+            whenIsAbbreviated(text)
+        } else {
+            whenShowAllLabel(text)
         }
     }
     
-    @objc func changeTextField() {
-        variablePrice?.isHidden = true
-
-        if self.text == "변동" {
-            self.text = ""
-            variablePrice?.setTitle("변동", for: .normal)
-            variablePrice?.frame.size.width = 56
-            variablePrice?.frame.origin.x += 15
-        } else {
-            self.text = "변동"
-            variablePrice?.setTitle("변동취소", for: .normal)
-            variablePrice?.frame.size.width = 90
-            variablePrice?.frame.origin.x -= 15
-        }
+    private func whenIsAbbreviated(_ text: String) {
+        self.numberOfLines = 4
+        self.text = text
         self.layoutIfNeeded()
+        print(self.text)
+    }
+    
+    private func whenShowAllLabel(_ text: String) {
+        self.numberOfLines = 0
+        self.text = text
+    }
+    
+    private func normalColorReview() {
+        self.textColor = .black
+        self.backgroundColor = .lightGray
+    }
+    
+    private func changedReviewColor() {
+        self.textColor = .blue
+        self.backgroundColor = .lightGray
     }
 }
 
 
-extension String {
-    func formatNumber() -> String? {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.locale = .current
-        print(self)
+extension UILabel {
+    func replaceEllipsis(with string: String) {
+        guard let text = self.text else { return }
         
-        let noCommaString = self.replacingOccurrences(of: ",", with: "")
+        lineBreakMode = .byTruncatingTail
         
-        if let number = Int(noCommaString) {
-            return numberFormatter.string(from: NSNumber(value: number))
+        if numberOfLine(for: text) <= self.numberOfLines {
+            return
         }
-        return self
-    }
-}
+        
+        let stringArray = text.components(separatedBy: "\n")
+        
+        var numberOfLines: Int = 0
+        var index: Int = 0
 
-final class MenuPlusButton: UIButton {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupButton()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-     
-    private func setupButton() {
-        layer.cornerRadius = 27
-        backgroundColor = .white
-        layer.borderColor = UIColor.black.cgColor
-        layer.borderWidth = 2
-    }
-    
-    func setButton(_ title: String) {
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 18, weight: .semibold),
-            .foregroundColor: UIColor.black
-        ]
-        
-        let attributedTitle = NSAttributedString(string: title, attributes: attributes)
-        
-        setAttributedTitle(attributedTitle, for: .normal)
-        
-        setImage(UIImage(named: "Search"), for: .normal)
-        
-        imageView?.contentMode = .scaleAspectFit
-        semanticContentAttribute = .forceLeftToRight
-        
-        imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 10)
-        titleEdgeInsets = .init(top: 0, left: 10, bottom: 0, right: 0)
-        
-        contentEdgeInsets = .init(top: 14.5, left: 32, bottom: 14.5, right: 32)
-    }
-}
+        while !(numberOfLines >= self.numberOfLines) {
+            let string = stringArray[index]
 
-final class CategoryButton: UIButton {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+            let numberOfLine = numberOfLine(for: string)
+            numberOfLines += numberOfLine
+
+            if !(numberOfLines >= self.numberOfLines) { index += 1 }
+        }
+        
+        let last = stringArray[index]
+
+        var result = stringArray[0..<index].joined(separator: "\n") + "\n" + last
+        while !(numberOfLine(for: result + string) == self.numberOfLines) {
+            result.removeLast()
+        }
+        
+        print(numberOfLines)
+        print(index)
+        
+        result += string
+//        print(result)
+        self.text = result
+//        self.sizeToFit()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setButton(_ title: String) {
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 16, weight: .medium),
-            .foregroundColor: UIColor.black
-        ]
+    fileprivate func numberOfLine(for text: String) -> Int {
+        guard let font = self.font, text.count != 0 else { return 0 }
         
-        let attributedTitle = NSAttributedString(string: title, attributes: attributes)
+        let rect = CGSize(width: self.bounds.width, height: CGFloat.greatestFiniteMagnitude)
+        let labelSize = text.boundingRect(with: rect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+        let numberOfLine = Int(ceil(CGFloat(labelSize.height) / font.lineHeight ))
         
-        setAttributedTitle(attributedTitle, for: .normal)
-        
-        setImage(UIImage(named: "Search"), for: .normal)
-        setImage(UIImage(named: "Search"), for: .selected)
-        
-        self.imageView?.contentMode = .scaleAspectFit
-        self.semanticContentAttribute = .forceLeftToRight
-        self.imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 7)
-        self.titleEdgeInsets = .init(top: 0, left: 7, bottom: 0, right: 0)
+        return numberOfLine
     }
 }

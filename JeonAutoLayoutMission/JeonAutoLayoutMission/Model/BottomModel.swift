@@ -10,13 +10,17 @@ import UIKit
 struct BottomModel {
     let title: String
     let subTitle: String
+    let numberOfParticipants: String
     let image: UIImage
     let isStar: Bool
     let isMessagePresent: Bool
-    let messageFromWho: [MessageFromWho]
+    let messageFromWho: [MessageFromWho]?
 }
 
-struct MessageFromWho {
+struct MessageFromWho: Hashable {
+    var id: UUID = UUID()
+    
+    let userIcon: UIImage
     let from: String
     let beforeTime: String
 }

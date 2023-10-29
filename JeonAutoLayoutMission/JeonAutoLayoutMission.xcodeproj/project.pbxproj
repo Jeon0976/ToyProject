@@ -12,9 +12,6 @@
 		C51BBAE92A79174200BF5B7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BBAE82A79174200BF5B7C /* ViewController.swift */; };
 		C51BBAEE2A79174200BF5B7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C51BBAED2A79174200BF5B7C /* Assets.xcassets */; };
 		C51BBAF12A79174200BF5B7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51BBAEF2A79174200BF5B7C /* LaunchScreen.storyboard */; };
-		C51BBAFC2A79174200BF5B7C /* JeonAutoLayoutMissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BBAFB2A79174200BF5B7C /* JeonAutoLayoutMissionTests.swift */; };
-		C51BBB062A79174200BF5B7C /* JeonAutoLayoutMissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BBB052A79174200BF5B7C /* JeonAutoLayoutMissionUITests.swift */; };
-		C51BBB082A79174200BF5B7C /* JeonAutoLayoutMissionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BBB072A79174200BF5B7C /* JeonAutoLayoutMissionUITestsLaunchTests.swift */; };
 		C51BBB152A7920C700BF5B7C /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BBB142A7920C700BF5B7C /* TopView.swift */; };
 		C51BBB172A7920D300BF5B7C /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BBB162A7920D300BF5B7C /* BottomView.swift */; };
 		C51BBB1A2A79236D00BF5B7C /* EntryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BBB192A79236D00BF5B7C /* EntryButton.swift */; };
@@ -22,6 +19,9 @@
 		C51BBB202A79252600BF5B7C /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BBB1F2A79252600BF5B7C /* Attribute.swift */; };
 		C51BBB232A79282000BF5B7C /* BottomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BBB222A79282000BF5B7C /* BottomModel.swift */; };
 		C51BBB252A7928F400BF5B7C /* TopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BBB242A7928F400BF5B7C /* TopModel.swift */; };
+		C5569B772A796132007B225D /* DataBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5569B762A796132007B225D /* DataBinding.swift */; };
+		C5569B7B2A79F42C007B225D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5569B7A2A79F42C007B225D /* String+Extension.swift */; };
+		C5569B7D2A79FC9E007B225D /* MessageFromWhoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5569B7C2A79FC9E007B225D /* MessageFromWhoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +50,7 @@
 		C51BBAF02A79174200BF5B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C51BBAF22A79174200BF5B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C51BBAF72A79174200BF5B7C /* JeonAutoLayoutMissionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JeonAutoLayoutMissionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C51BBAFB2A79174200BF5B7C /* JeonAutoLayoutMissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeonAutoLayoutMissionTests.swift; sourceTree = "<group>"; };
 		C51BBB012A79174200BF5B7C /* JeonAutoLayoutMissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JeonAutoLayoutMissionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C51BBB052A79174200BF5B7C /* JeonAutoLayoutMissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeonAutoLayoutMissionUITests.swift; sourceTree = "<group>"; };
-		C51BBB072A79174200BF5B7C /* JeonAutoLayoutMissionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeonAutoLayoutMissionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C51BBB142A7920C700BF5B7C /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		C51BBB162A7920D300BF5B7C /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		C51BBB192A79236D00BF5B7C /* EntryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryButton.swift; sourceTree = "<group>"; };
@@ -61,6 +58,9 @@
 		C51BBB1F2A79252600BF5B7C /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 		C51BBB222A79282000BF5B7C /* BottomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomModel.swift; sourceTree = "<group>"; };
 		C51BBB242A7928F400BF5B7C /* TopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopModel.swift; sourceTree = "<group>"; };
+		C5569B762A796132007B225D /* DataBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBinding.swift; sourceTree = "<group>"; };
+		C5569B7A2A79F42C007B225D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C5569B7C2A79FC9E007B225D /* MessageFromWhoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFromWhoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				C51BBAE32A79174100BF5B7C /* JeonAutoLayoutMission */,
-				C51BBAFA2A79174200BF5B7C /* JeonAutoLayoutMissionTests */,
-				C51BBB042A79174200BF5B7C /* JeonAutoLayoutMissionUITests */,
 				C51BBAE22A79174100BF5B7C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,52 +109,36 @@
 		C51BBAE32A79174100BF5B7C /* JeonAutoLayoutMission */ = {
 			isa = PBXGroup;
 			children = (
-				C51BBAE42A79174100BF5B7C /* AppDelegate.swift */,
-				C51BBAE62A79174100BF5B7C /* SceneDelegate.swift */,
-				C51BBB212A79281300BF5B7C /* Model */,
-				C51BBB1B2A79250700BF5B7C /* ViewController */,
 				C51BBAED2A79174200BF5B7C /* Assets.xcassets */,
 				C51BBAEF2A79174200BF5B7C /* LaunchScreen.storyboard */,
 				C51BBAF22A79174200BF5B7C /* Info.plist */,
+				C51BBAE42A79174100BF5B7C /* AppDelegate.swift */,
+				C51BBAE62A79174100BF5B7C /* SceneDelegate.swift */,
+				C5569B782A7965BD007B225D /* Custom */,
+				C51BBB212A79281300BF5B7C /* Model */,
+				C51BBB1B2A79250700BF5B7C /* Scene */,
 			);
 			path = JeonAutoLayoutMission;
-			sourceTree = "<group>";
-		};
-		C51BBAFA2A79174200BF5B7C /* JeonAutoLayoutMissionTests */ = {
-			isa = PBXGroup;
-			children = (
-				C51BBAFB2A79174200BF5B7C /* JeonAutoLayoutMissionTests.swift */,
-			);
-			path = JeonAutoLayoutMissionTests;
-			sourceTree = "<group>";
-		};
-		C51BBB042A79174200BF5B7C /* JeonAutoLayoutMissionUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C51BBB052A79174200BF5B7C /* JeonAutoLayoutMissionUITests.swift */,
-				C51BBB072A79174200BF5B7C /* JeonAutoLayoutMissionUITestsLaunchTests.swift */,
-			);
-			path = JeonAutoLayoutMissionUITests;
 			sourceTree = "<group>";
 		};
 		C51BBB182A7920DB00BF5B7C /* SubView */ = {
 			isa = PBXGroup;
 			children = (
-				C51BBB192A79236D00BF5B7C /* EntryButton.swift */,
 				C51BBB142A7920C700BF5B7C /* TopView.swift */,
 				C51BBB162A7920D300BF5B7C /* BottomView.swift */,
+				C5569B7E2A79FF11007B225D /* BottomViewSub */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
 		};
-		C51BBB1B2A79250700BF5B7C /* ViewController */ = {
+		C51BBB1B2A79250700BF5B7C /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				C51BBAE82A79174200BF5B7C /* ViewController.swift */,
 				C51BBB1C2A79251300BF5B7C /* ViewControllerExtension */,
 				C51BBB182A7920DB00BF5B7C /* SubView */,
 			);
-			path = ViewController;
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		C51BBB1C2A79251300BF5B7C /* ViewControllerExtension */ = {
@@ -164,6 +146,7 @@
 			children = (
 				C51BBB1D2A79251F00BF5B7C /* Layout.swift */,
 				C51BBB1F2A79252600BF5B7C /* Attribute.swift */,
+				C5569B762A796132007B225D /* DataBinding.swift */,
 			);
 			path = ViewControllerExtension;
 			sourceTree = "<group>";
@@ -175,6 +158,31 @@
 				C51BBB222A79282000BF5B7C /* BottomModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C5569B782A7965BD007B225D /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				C5569B792A79F41F007B225D /* Extension */,
+				C51BBB192A79236D00BF5B7C /* EntryButton.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		C5569B792A79F41F007B225D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C5569B7A2A79F42C007B225D /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C5569B7E2A79FF11007B225D /* BottomViewSub */ = {
+			isa = PBXGroup;
+			children = (
+				C5569B7C2A79FC9E007B225D /* MessageFromWhoCell.swift */,
+			);
+			path = BottomViewSub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +317,10 @@
 			files = (
 				C51BBAE92A79174200BF5B7C /* ViewController.swift in Sources */,
 				C51BBAE52A79174100BF5B7C /* AppDelegate.swift in Sources */,
+				C5569B772A796132007B225D /* DataBinding.swift in Sources */,
 				C51BBB152A7920C700BF5B7C /* TopView.swift in Sources */,
+				C5569B7B2A79F42C007B225D /* String+Extension.swift in Sources */,
+				C5569B7D2A79FC9E007B225D /* MessageFromWhoCell.swift in Sources */,
 				C51BBB252A7928F400BF5B7C /* TopModel.swift in Sources */,
 				C51BBAE72A79174100BF5B7C /* SceneDelegate.swift in Sources */,
 				C51BBB1E2A79251F00BF5B7C /* Layout.swift in Sources */,
@@ -324,7 +335,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51BBAFC2A79174200BF5B7C /* JeonAutoLayoutMissionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +342,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51BBB082A79174200BF5B7C /* JeonAutoLayoutMissionUITestsLaunchTests.swift in Sources */,
-				C51BBB062A79174200BF5B7C /* JeonAutoLayoutMissionUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
