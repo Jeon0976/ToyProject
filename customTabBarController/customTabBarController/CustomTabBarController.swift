@@ -17,6 +17,7 @@ final class CustomTabBarController: UIViewController {
         
         view.backgroundColor = .white
         view.layer.cornerRadius = 35
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         return view
     }()
