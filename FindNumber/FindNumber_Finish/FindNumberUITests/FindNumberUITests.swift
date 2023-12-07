@@ -21,7 +21,9 @@ final class FindNumberUITests: XCTestCase {
         // given
         let button = app.buttons["1번"]
         let button2 = app.buttons["2번"]
+        let reset = app.buttons["다시 시작"]
         
+        reset.tap()
         button.tap()
         button2.tap()
         button.tap()

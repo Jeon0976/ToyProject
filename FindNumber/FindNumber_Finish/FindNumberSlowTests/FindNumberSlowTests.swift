@@ -11,7 +11,8 @@ import XCTest
 
 final class FindNumberSlowTests: XCTestCase {
     var sut: URLSession!
-    
+    let networkMonitor = NetworkMonitor.shared
+
     override func setUpWithError() throws {
         try super.setUpWithError()
         sut = URLSession(configuration: .default)
@@ -22,7 +23,9 @@ final class FindNumberSlowTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testValidApiCallGetsHTTPStatusCode200() throws {
+    func test_유효한API_호출후_HTTPStatusCode200_받기() throws {
+        try XCTSkipUnless(networkMonitor.isReachable, "Network connectivity needed for this test.")
+
         // given
         let urlString = "https://www.randomnumberapi.com/api/v1.0/random?min=0&max=3&count=1"
         let url = URL(string: urlString)!
@@ -44,5 +47,4 @@ final class FindNumberSlowTests: XCTestCase {
         XCTAssertNil(responseError)
         XCTAssertEqual(statusCode, 200)
     }
-    
 }

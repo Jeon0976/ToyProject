@@ -9,32 +9,33 @@ import Foundation
 
 final class FindNumberModel {
     
-    var urlSession: URLSessionProtocol = URLSession.shared
+    var urlSession: URLSessionProtocol!
+    var defaults: UserDefaults!
     
     var round: Int {
         get {
-            let initialRound = UserDefaults.standard.integer(forKey: "Round")
+            let initialRound = defaults.integer(forKey: "Round")
             return initialRound == 0 ? 1 : initialRound
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "Round")
+            defaults.set(newValue, forKey: "Round")
         }
     }
     var bestRecord: Int {
         get {
-            UserDefaults.standard.integer(forKey: "bestRecord")
+            defaults.integer(forKey: "bestRecord")
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "bestRecord")
+            defaults.set(newValue, forKey: "bestRecord")
         }
     }
     
     var currentRecord: Int {
         get {
-            UserDefaults.standard.integer(forKey: "CurrentRecord")
+            defaults.integer(forKey: "CurrentRecord")
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "CurrentRecord")
+            defaults.set(newValue, forKey: "CurrentRecord")
         }
     }
     
@@ -43,7 +44,13 @@ final class FindNumberModel {
 
     var target: Int = 1
     
-    init() {
+    init(
+        urlSession: URLSessionProtocol = URLSession.shared,
+        defaults: UserDefaults = UserDefaults.standard
+    ) {
+        self.urlSession = urlSession
+        self.defaults = defaults
+        
         gameStart()
     }
     
@@ -61,14 +68,14 @@ final class FindNumberModel {
             }
             round += 1
             currentRecord += 1
-            
+            onUpdate?()
+
             gameStart()
         } else {
             round = 1
             currentRecord = 0
+            onUpdate?()
         }
-        
-        onUpdate?()
     }
     
     func resetStage() {

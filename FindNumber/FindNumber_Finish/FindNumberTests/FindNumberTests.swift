@@ -9,12 +9,31 @@ import XCTest
 
 @testable import FindNumber
 
+final class MockUserDefaults: UserDefaults {
+    private var storage = [String: Any]()
+
+    override func integer(forKey defaultName: String) -> Int {
+        return storage[defaultName] as? Int ?? 0
+    }
+
+    override func set(_ value: Int, forKey defaultName: String) {
+        storage[defaultName] = value
+    }
+}
+
 final class FindNumberTests: XCTestCase {
     var sut: FindNumberModel!
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        sut = FindNumberModel()
+        
+        let urlSessionStub = URLSessionStub()
+        let mockUserDefaults = MockUserDefaults(suiteName: "TestDefaults")
+
+        sut = FindNumberModel(
+            urlSession: urlSessionStub,
+            defaults: mockUserDefaults!
+        )
     }
 
     override func tearDownWithError() throws {
@@ -22,7 +41,7 @@ final class FindNumberTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testGetNumber() {
+    func test_타겟번호_받기() {
         // given
         let stubbedData = "[1]".data(using: .utf8)
         let urlString = "http://www.randomnumberapi.com/api/v1.0/random?min=1&max=3&count=1"
@@ -51,10 +70,9 @@ final class FindNumberTests: XCTestCase {
         XCTAssertEqual(receivedNumber, 1)
     }
     
-    func testCheckNum_Success() {
+    func test_사용자_선택번호와_타겟이_같을_경우() {
         // given
         sut.target = 1
-        
         let expectedValue = sut.target
         
         // when
@@ -62,9 +80,11 @@ final class FindNumberTests: XCTestCase {
         
         // then
         XCTAssertEqual(sut.currentRecord, 1, "Current record should be incremented")
+        XCTAssertEqual(sut.bestRecord, 1, "Best record should be incremented")
+        XCTAssertEqual(sut.round, 2, "Rount should be incremented")
     }
     
-    func testCheckNum_Failure() {
+    func test_사용자_선택번호와_타겟이_다를_경우() {
         // given
         sut.target = 2
         let expectedValue = 1
@@ -77,7 +97,7 @@ final class FindNumberTests: XCTestCase {
         XCTAssertEqual(sut.round, 1, "Round should be reset to 1")
     }
     
-    func testResetStage() {
+    func test_스테이지_초기화() {
         // given
         sut.round = 3
         sut.currentRecord = 2
