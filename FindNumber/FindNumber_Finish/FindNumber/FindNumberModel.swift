@@ -55,6 +55,7 @@ final class FindNumberModel {
     }
     
     private func gameStart() {
+        print("Test")
         getNumber { newTarget in
             print(newTarget)
             self.target = newTarget

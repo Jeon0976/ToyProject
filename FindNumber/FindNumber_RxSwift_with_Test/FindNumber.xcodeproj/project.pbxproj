@@ -7,102 +7,128 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C58FD9982B231726002E1E41 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C58FD9972B231726002E1E41 /* RxCocoa */; };
+		C58FD9A02B231726002E1E41 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C58FD99F2B231726002E1E41 /* RxSwift */; };
+		C58FD9AE2B234BFA002E1E41 /* FindNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58FD9AD2B234BFA002E1E41 /* FindNumberTests.swift */; };
+		C58FD9B62B234FBF002E1E41 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = C58FD9B52B234FBF002E1E41 /* RxBlocking */; };
+		C58FD9B82B234FBF002E1E41 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C58FD9B72B234FBF002E1E41 /* RxCocoa */; };
+		C58FD9BA2B234FBF002E1E41 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C58FD9B92B234FBF002E1E41 /* RxSwift */; };
+		C58FD9BC2B234FBF002E1E41 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = C58FD9BB2B234FBF002E1E41 /* RxTest */; };
+		C58FD9C42B2449B6002E1E41 /* FindNumberSlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58FD9C32B2449B6002E1E41 /* FindNumberSlowTest.swift */; };
 		C5BFBF7E2B207C270058B281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFBF7D2B207C270058B281 /* AppDelegate.swift */; };
 		C5BFBF802B207C270058B281 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFBF7F2B207C270058B281 /* SceneDelegate.swift */; };
-		C5BFBF822B207C270058B281 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFBF812B207C270058B281 /* ViewController.swift */; };
+		C5BFBF822B207C270058B281 /* FindNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFBF812B207C270058B281 /* FindNumberViewController.swift */; };
 		C5BFBF872B207C280058B281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5BFBF862B207C280058B281 /* Assets.xcassets */; };
 		C5BFBF8A2B207C280058B281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BFBF882B207C280058B281 /* LaunchScreen.storyboard */; };
-		C5BFBF932B2087DE0058B281 /* FindNumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFBF922B2087DE0058B281 /* FindNumberModel.swift */; };
+		C5BFBF932B2087DE0058B281 /* FindNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFBF922B2087DE0058B281 /* FindNumberViewModel.swift */; };
 		C5BFBF952B2088610058B281 /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFBF942B2088610058B281 /* URLSessionStub.swift */; };
 		C5BFBF972B20886A0058B281 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFBF962B20886A0058B281 /* NetworkMonitor.swift */; };
-		C5BFBFAA2B209E8E0058B281 /* FindNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFBFA92B209E8E0058B281 /* FindNumberTests.swift */; };
-		C5BFBFB72B209E970058B281 /* FindNumberSlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFBFB62B209E970058B281 /* FindNumberSlowTests.swift */; };
-		C5BFBFC42B209E9B0058B281 /* FindNumberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFBFC32B209E9B0058B281 /* FindNumberUITests.swift */; };
+		C5D654F12B259ACF00A04F4F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = C5D654F02B259ACF00A04F4F /* RxBlocking */; };
+		C5D654F32B259ACF00A04F4F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C5D654F22B259ACF00A04F4F /* RxCocoa */; };
+		C5D654F52B259ACF00A04F4F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C5D654F42B259ACF00A04F4F /* RxSwift */; };
+		C5D654F72B259ACF00A04F4F /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = C5D654F62B259ACF00A04F4F /* RxTest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C5BFBFAB2B209E8E0058B281 /* PBXContainerItemProxy */ = {
+		C58FD9AF2B234BFA002E1E41 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C5BFBF722B207C270058B281 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C5BFBF792B207C270058B281;
-			remoteInfo = FineNumber;
+			remoteInfo = FindNumber;
 		};
-		C5BFBFB82B209E970058B281 /* PBXContainerItemProxy */ = {
+		C58FD9C52B2449B6002E1E41 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C5BFBF722B207C270058B281 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C5BFBF792B207C270058B281;
-			remoteInfo = FineNumber;
-		};
-		C5BFBFC72B209E9C0058B281 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C5BFBF722B207C270058B281 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C5BFBF792B207C270058B281;
-			remoteInfo = FineNumber;
+			remoteInfo = FindNumber;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C58FD9AB2B234BFA002E1E41 /* FindNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C58FD9AD2B234BFA002E1E41 /* FindNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberTests.swift; sourceTree = "<group>"; };
+		C58FD9C12B2449B6002E1E41 /* FindNumberSlowTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindNumberSlowTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C58FD9C32B2449B6002E1E41 /* FindNumberSlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberSlowTest.swift; sourceTree = "<group>"; };
 		C5BFBF7A2B207C270058B281 /* FindNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BFBF7D2B207C270058B281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5BFBF7F2B207C270058B281 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C5BFBF812B207C270058B281 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C5BFBF812B207C270058B281 /* FindNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberViewController.swift; sourceTree = "<group>"; };
 		C5BFBF862B207C280058B281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5BFBF892B207C280058B281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5BFBF8B2B207C280058B281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5BFBF922B2087DE0058B281 /* FindNumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberModel.swift; sourceTree = "<group>"; };
+		C5BFBF922B2087DE0058B281 /* FindNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberViewModel.swift; sourceTree = "<group>"; };
 		C5BFBF942B2088610058B281 /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
 		C5BFBF962B20886A0058B281 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
-		C5BFBFA72B209E8E0058B281 /* FindNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5BFBFA92B209E8E0058B281 /* FindNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberTests.swift; sourceTree = "<group>"; };
-		C5BFBFB42B209E970058B281 /* FindNumberSlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindNumberSlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5BFBFB62B209E970058B281 /* FindNumberSlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberSlowTests.swift; sourceTree = "<group>"; };
-		C5BFBFC12B209E9B0058B281 /* FindNumberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindNumberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5BFBFC32B209E9B0058B281 /* FindNumberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumberUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C58FD9A82B234BFA002E1E41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58FD9BC2B234FBF002E1E41 /* RxTest in Frameworks */,
+				C58FD9BA2B234FBF002E1E41 /* RxSwift in Frameworks */,
+				C58FD9B82B234FBF002E1E41 /* RxCocoa in Frameworks */,
+				C58FD9B62B234FBF002E1E41 /* RxBlocking in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C58FD9BE2B2449B6002E1E41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5D654F72B259ACF00A04F4F /* RxTest in Frameworks */,
+				C5D654F52B259ACF00A04F4F /* RxSwift in Frameworks */,
+				C5D654F32B259ACF00A04F4F /* RxCocoa in Frameworks */,
+				C5D654F12B259ACF00A04F4F /* RxBlocking in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5BFBF772B207C270058B281 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5BFBFA42B209E8E0058B281 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5BFBFB12B209E970058B281 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5BFBFBE2B209E9B0058B281 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C58FD9982B231726002E1E41 /* RxCocoa in Frameworks */,
+				C58FD9A02B231726002E1E41 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C58FD9AC2B234BFA002E1E41 /* FindNumberTests */ = {
+			isa = PBXGroup;
+			children = (
+				C58FD9AD2B234BFA002E1E41 /* FindNumberTests.swift */,
+			);
+			path = FindNumberTests;
+			sourceTree = "<group>";
+		};
+		C58FD9B42B234FBF002E1E41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C58FD9C22B2449B6002E1E41 /* FindNumberSlowTest */ = {
+			isa = PBXGroup;
+			children = (
+				C58FD9C32B2449B6002E1E41 /* FindNumberSlowTest.swift */,
+			);
+			path = FindNumberSlowTest;
+			sourceTree = "<group>";
+		};
 		C5BFBF712B207C270058B281 = {
 			isa = PBXGroup;
 			children = (
 				C5BFBF7C2B207C270058B281 /* FindNumber */,
-				C5BFBFA82B209E8E0058B281 /* FindNumberTests */,
-				C5BFBFB52B209E970058B281 /* FindNumberSlowTests */,
-				C5BFBFC22B209E9B0058B281 /* FindNumberUITests */,
+				C58FD9AC2B234BFA002E1E41 /* FindNumberTests */,
+				C58FD9C22B2449B6002E1E41 /* FindNumberSlowTest */,
 				C5BFBF7B2B207C270058B281 /* Products */,
+				C58FD9B42B234FBF002E1E41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				C5BFBF7A2B207C270058B281 /* FindNumber.app */,
-				C5BFBFA72B209E8E0058B281 /* FindNumberTests.xctest */,
-				C5BFBFB42B209E970058B281 /* FindNumberSlowTests.xctest */,
-				C5BFBFC12B209E9B0058B281 /* FindNumberUITests.xctest */,
+				C58FD9AB2B234BFA002E1E41 /* FindNumberTests.xctest */,
+				C58FD9C12B2449B6002E1E41 /* FindNumberSlowTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,8 +147,8 @@
 			children = (
 				C5BFBF7D2B207C270058B281 /* AppDelegate.swift */,
 				C5BFBF7F2B207C270058B281 /* SceneDelegate.swift */,
-				C5BFBF922B2087DE0058B281 /* FindNumberModel.swift */,
-				C5BFBF812B207C270058B281 /* ViewController.swift */,
+				C5BFBF922B2087DE0058B281 /* FindNumberViewModel.swift */,
+				C5BFBF812B207C270058B281 /* FindNumberViewController.swift */,
 				C5BFBF912B2087C80058B281 /* Utils */,
 				C5BFBF862B207C280058B281 /* Assets.xcassets */,
 				C5BFBF882B207C280058B281 /* LaunchScreen.storyboard */,
@@ -141,33 +166,57 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		C5BFBFA82B209E8E0058B281 /* FindNumberTests */ = {
-			isa = PBXGroup;
-			children = (
-				C5BFBFA92B209E8E0058B281 /* FindNumberTests.swift */,
-			);
-			path = FindNumberTests;
-			sourceTree = "<group>";
-		};
-		C5BFBFB52B209E970058B281 /* FindNumberSlowTests */ = {
-			isa = PBXGroup;
-			children = (
-				C5BFBFB62B209E970058B281 /* FindNumberSlowTests.swift */,
-			);
-			path = FindNumberSlowTests;
-			sourceTree = "<group>";
-		};
-		C5BFBFC22B209E9B0058B281 /* FindNumberUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C5BFBFC32B209E9B0058B281 /* FindNumberUITests.swift */,
-			);
-			path = FindNumberUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C58FD9AA2B234BFA002E1E41 /* FindNumberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C58FD9B12B234BFA002E1E41 /* Build configuration list for PBXNativeTarget "FindNumberTests" */;
+			buildPhases = (
+				C58FD9A72B234BFA002E1E41 /* Sources */,
+				C58FD9A82B234BFA002E1E41 /* Frameworks */,
+				C58FD9A92B234BFA002E1E41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C58FD9B02B234BFA002E1E41 /* PBXTargetDependency */,
+			);
+			name = FindNumberTests;
+			packageProductDependencies = (
+				C58FD9B52B234FBF002E1E41 /* RxBlocking */,
+				C58FD9B72B234FBF002E1E41 /* RxCocoa */,
+				C58FD9B92B234FBF002E1E41 /* RxSwift */,
+				C58FD9BB2B234FBF002E1E41 /* RxTest */,
+			);
+			productName = FindNumberTests;
+			productReference = C58FD9AB2B234BFA002E1E41 /* FindNumberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C58FD9C02B2449B6002E1E41 /* FindNumberSlowTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C58FD9C72B2449B6002E1E41 /* Build configuration list for PBXNativeTarget "FindNumberSlowTest" */;
+			buildPhases = (
+				C58FD9BD2B2449B6002E1E41 /* Sources */,
+				C58FD9BE2B2449B6002E1E41 /* Frameworks */,
+				C58FD9BF2B2449B6002E1E41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C58FD9C62B2449B6002E1E41 /* PBXTargetDependency */,
+			);
+			name = FindNumberSlowTest;
+			packageProductDependencies = (
+				C5D654F02B259ACF00A04F4F /* RxBlocking */,
+				C5D654F22B259ACF00A04F4F /* RxCocoa */,
+				C5D654F42B259ACF00A04F4F /* RxSwift */,
+				C5D654F62B259ACF00A04F4F /* RxTest */,
+			);
+			productName = FindNumberSlowTest;
+			productReference = C58FD9C12B2449B6002E1E41 /* FindNumberSlowTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C5BFBF792B207C270058B281 /* FindNumber */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5BFBF8E2B207C280058B281 /* Build configuration list for PBXNativeTarget "FindNumber" */;
@@ -182,64 +231,12 @@
 			);
 			name = FindNumber;
 			packageProductDependencies = (
+				C58FD9972B231726002E1E41 /* RxCocoa */,
+				C58FD99F2B231726002E1E41 /* RxSwift */,
 			);
 			productName = FineNumber;
 			productReference = C5BFBF7A2B207C270058B281 /* FindNumber.app */;
 			productType = "com.apple.product-type.application";
-		};
-		C5BFBFA62B209E8E0058B281 /* FindNumberTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C5BFBFAD2B209E8E0058B281 /* Build configuration list for PBXNativeTarget "FindNumberTests" */;
-			buildPhases = (
-				C5BFBFA32B209E8E0058B281 /* Sources */,
-				C5BFBFA42B209E8E0058B281 /* Frameworks */,
-				C5BFBFA52B209E8E0058B281 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C5BFBFAC2B209E8E0058B281 /* PBXTargetDependency */,
-			);
-			name = FindNumberTests;
-			productName = FineNumberTests;
-			productReference = C5BFBFA72B209E8E0058B281 /* FindNumberTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C5BFBFB32B209E970058B281 /* FindNumberSlowTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C5BFBFBA2B209E970058B281 /* Build configuration list for PBXNativeTarget "FindNumberSlowTests" */;
-			buildPhases = (
-				C5BFBFB02B209E970058B281 /* Sources */,
-				C5BFBFB12B209E970058B281 /* Frameworks */,
-				C5BFBFB22B209E970058B281 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C5BFBFB92B209E970058B281 /* PBXTargetDependency */,
-			);
-			name = FindNumberSlowTests;
-			productName = FineNumberSlowTests;
-			productReference = C5BFBFB42B209E970058B281 /* FindNumberSlowTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C5BFBFC02B209E9B0058B281 /* FindNumberUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C5BFBFC92B209E9C0058B281 /* Build configuration list for PBXNativeTarget "FindNumberUITests" */;
-			buildPhases = (
-				C5BFBFBD2B209E9B0058B281 /* Sources */,
-				C5BFBFBE2B209E9B0058B281 /* Frameworks */,
-				C5BFBFBF2B209E9B0058B281 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C5BFBFC82B209E9C0058B281 /* PBXTargetDependency */,
-			);
-			name = FindNumberUITests;
-			productName = FineNumberUITests;
-			productReference = C5BFBFC12B209E9B0058B281 /* FindNumberUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -251,20 +248,16 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					C58FD9AA2B234BFA002E1E41 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = C5BFBF792B207C270058B281;
+					};
+					C58FD9C02B2449B6002E1E41 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = C5BFBF792B207C270058B281;
+					};
 					C5BFBF792B207C270058B281 = {
 						CreatedOnToolsVersion = 15.0.1;
-					};
-					C5BFBFA62B209E8E0058B281 = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = C5BFBF792B207C270058B281;
-					};
-					C5BFBFB32B209E970058B281 = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = C5BFBF792B207C270058B281;
-					};
-					C5BFBFC02B209E9B0058B281 = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = C5BFBF792B207C270058B281;
 					};
 				};
 			};
@@ -278,20 +271,34 @@
 			);
 			mainGroup = C5BFBF712B207C270058B281;
 			packageReferences = (
+				C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = C5BFBF7B2B207C270058B281 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C5BFBF792B207C270058B281 /* FindNumber */,
-				C5BFBFA62B209E8E0058B281 /* FindNumberTests */,
-				C5BFBFB32B209E970058B281 /* FindNumberSlowTests */,
-				C5BFBFC02B209E9B0058B281 /* FindNumberUITests */,
+				C58FD9AA2B234BFA002E1E41 /* FindNumberTests */,
+				C58FD9C02B2449B6002E1E41 /* FindNumberSlowTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C58FD9A92B234BFA002E1E41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C58FD9BF2B2449B6002E1E41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5BFBF782B207C270058B281 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,84 +308,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C5BFBFA52B209E8E0058B281 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5BFBFB22B209E970058B281 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5BFBFBF2B209E9B0058B281 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C58FD9A72B234BFA002E1E41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58FD9AE2B234BFA002E1E41 /* FindNumberTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C58FD9BD2B2449B6002E1E41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58FD9C42B2449B6002E1E41 /* FindNumberSlowTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5BFBF762B207C270058B281 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5BFBF822B207C270058B281 /* ViewController.swift in Sources */,
+				C5BFBF822B207C270058B281 /* FindNumberViewController.swift in Sources */,
 				C5BFBF972B20886A0058B281 /* NetworkMonitor.swift in Sources */,
 				C5BFBF952B2088610058B281 /* URLSessionStub.swift in Sources */,
 				C5BFBF7E2B207C270058B281 /* AppDelegate.swift in Sources */,
 				C5BFBF802B207C270058B281 /* SceneDelegate.swift in Sources */,
-				C5BFBF932B2087DE0058B281 /* FindNumberModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5BFBFA32B209E8E0058B281 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5BFBFAA2B209E8E0058B281 /* FindNumberTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5BFBFB02B209E970058B281 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5BFBFB72B209E970058B281 /* FindNumberSlowTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5BFBFBD2B209E9B0058B281 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5BFBFC42B209E9B0058B281 /* FindNumberUITests.swift in Sources */,
+				C5BFBF932B2087DE0058B281 /* FindNumberViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C5BFBFAC2B209E8E0058B281 /* PBXTargetDependency */ = {
+		C58FD9B02B234BFA002E1E41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C5BFBF792B207C270058B281 /* FindNumber */;
-			targetProxy = C5BFBFAB2B209E8E0058B281 /* PBXContainerItemProxy */;
+			targetProxy = C58FD9AF2B234BFA002E1E41 /* PBXContainerItemProxy */;
 		};
-		C5BFBFB92B209E970058B281 /* PBXTargetDependency */ = {
+		C58FD9C62B2449B6002E1E41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C5BFBF792B207C270058B281 /* FindNumber */;
-			targetProxy = C5BFBFB82B209E970058B281 /* PBXContainerItemProxy */;
-		};
-		C5BFBFC82B209E9C0058B281 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C5BFBF792B207C270058B281 /* FindNumber */;
-			targetProxy = C5BFBFC72B209E9C0058B281 /* PBXContainerItemProxy */;
+			targetProxy = C58FD9C52B2449B6002E1E41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -394,6 +367,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C58FD9B22B234BFA002E1E41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4K2HXA435;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SeonghunJeon.FindNumberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindNumber.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindNumber";
+			};
+			name = Debug;
+		};
+		C58FD9B32B234BFA002E1E41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4K2HXA435;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SeonghunJeon.FindNumberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindNumber.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindNumber";
+			};
+			name = Release;
+		};
+		C58FD9C82B2449B6002E1E41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4K2HXA435;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SeonghunJeon.FindNumberSlowTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindNumber.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindNumber";
+			};
+			name = Debug;
+		};
+		C58FD9C92B2449B6002E1E41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4K2HXA435;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SeonghunJeon.FindNumberSlowTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindNumber.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindNumber";
+			};
+			name = Release;
+		};
 		C5BFBF8C2B207C280058B281 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -567,133 +628,27 @@
 			};
 			name = Release;
 		};
-		C5BFBFAE2B209E8E0058B281 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C4K2HXA435;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SeonghunJeon.FindNumberTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindNumber.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindNumber";
-			};
-			name = Debug;
-		};
-		C5BFBFAF2B209E8E0058B281 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C4K2HXA435;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SeonghunJeon.FindNumberTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindNumber.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindNumber";
-			};
-			name = Release;
-		};
-		C5BFBFBB2B209E970058B281 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C4K2HXA435;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SeonghunJeon.FindNumberSlowTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindNumber.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindNumber";
-			};
-			name = Debug;
-		};
-		C5BFBFBC2B209E970058B281 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C4K2HXA435;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SeonghunJeon.FindNumberSlowTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindNumber.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindNumber";
-			};
-			name = Release;
-		};
-		C5BFBFCA2B209E9C0058B281 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C4K2HXA435;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SeonghunJeon.FindNumberUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FindNumber;
-			};
-			name = Debug;
-		};
-		C5BFBFCB2B209E9C0058B281 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C4K2HXA435;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SeonghunJeon.FindNumberUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FindNumber;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C58FD9B12B234BFA002E1E41 /* Build configuration list for PBXNativeTarget "FindNumberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C58FD9B22B234BFA002E1E41 /* Debug */,
+				C58FD9B32B234BFA002E1E41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C58FD9C72B2449B6002E1E41 /* Build configuration list for PBXNativeTarget "FindNumberSlowTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C58FD9C82B2449B6002E1E41 /* Debug */,
+				C58FD9C92B2449B6002E1E41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C5BFBF752B207C270058B281 /* Build configuration list for PBXProject "FindNumber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -712,34 +667,71 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C5BFBFAD2B209E8E0058B281 /* Build configuration list for PBXNativeTarget "FindNumberTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C5BFBFAE2B209E8E0058B281 /* Debug */,
-				C5BFBFAF2B209E8E0058B281 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C5BFBFBA2B209E970058B281 /* Build configuration list for PBXNativeTarget "FindNumberSlowTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C5BFBFBB2B209E970058B281 /* Debug */,
-				C5BFBFBC2B209E970058B281 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C5BFBFC92B209E9C0058B281 /* Build configuration list for PBXNativeTarget "FindNumberUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C5BFBFCA2B209E9C0058B281 /* Debug */,
-				C5BFBFCB2B209E9C0058B281 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C58FD9972B231726002E1E41 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		C58FD99F2B231726002E1E41 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		C58FD9B52B234FBF002E1E41 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		C58FD9B72B234FBF002E1E41 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		C58FD9B92B234FBF002E1E41 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		C58FD9BB2B234FBF002E1E41 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		C5D654F02B259ACF00A04F4F /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		C5D654F22B259ACF00A04F4F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		C5D654F42B259ACF00A04F4F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		C5D654F62B259ACF00A04F4F /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C58FD9922B231726002E1E41 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C5BFBF722B207C270058B281 /* Project object */;
 }
