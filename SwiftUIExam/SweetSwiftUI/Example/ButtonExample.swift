@@ -35,6 +35,7 @@ struct ButtonExample: View {
                             print("Tap")
                         }
                 }
+                .tint(.blue)
             }
             HStack(spacing: 20) {
                 Button(action: {print("Button1") }) {

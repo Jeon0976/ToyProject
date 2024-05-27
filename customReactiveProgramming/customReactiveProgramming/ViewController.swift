@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import SpeechBubble
 
 final class MainViewController: UIViewController, Alertable {
     
     private var viewModel: MainViewModelProtocol? = MainViewModel()
     
     private let textField = UITextField()
-    private let label = UILabel()
+    private let label = SpeechBubbleView(text: "test", style: .fill, arrowPosition: .top)
     private let button = UIButton()
     
     private var disposeBag = DisposeBag()

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vJh-lt-gbU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kanji list-->
+        <scene sceneID="66J-ZW-1KE">
+            <objects>
+                <viewController id="0n3-Eh-Puu" customClass="KanjiListViewController" customModule="KanjiList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="edA-qm-k6i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hdP-mS-L0B">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hdP-mS-L0B" firstAttribute="leading" secondItem="lGd-QV-zSd" secondAttribute="leading" id="CYc-83-QM5"/>
+                            <constraint firstItem="hdP-mS-L0B" firstAttribute="top" secondItem="edA-qm-k6i" secondAttribute="top" id="MPA-3i-r36"/>
+                            <constraint firstItem="lGd-QV-zSd" firstAttribute="bottom" secondItem="hdP-mS-L0B" secondAttribute="bottom" id="pOu-pa-oP7"/>
+                            <constraint firstItem="hdP-mS-L0B" firstAttribute="trailing" secondItem="lGd-QV-zSd" secondAttribute="trailing" id="yE0-Kw-ZLE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lGd-QV-zSd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kanji list" id="Syd-hU-p7I"/>
+                    <connections>
+                        <outlet property="kanjiListTableView" destination="hdP-mS-L0B" id="WhD-PT-fkd"/>
+                        <segue destination="JxZ-cB-Y1p" kind="show" identifier="KanjiDetail" id="cMc-DD-xmD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fhh-sT-pZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110" y="-43"/>
+        </scene>
+        <!--Kanji detail-->
+        <scene sceneID="fEk-48-euE">
+            <objects>
+                <viewController id="JxZ-cB-Y1p" customClass="KanjiDetailViewController" customModule="KanjiList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BLQ-gl-7Vx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yp0-s4-3xG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rGe-P3-XUu" firstAttribute="bottom" secondItem="yp0-s4-3xG" secondAttribute="bottom" id="0xb-1H-b3K"/>
+                            <constraint firstItem="yp0-s4-3xG" firstAttribute="bottom" secondItem="rGe-P3-XUu" secondAttribute="bottom" id="C5Q-pC-KeE"/>
+                            <constraint firstItem="yp0-s4-3xG" firstAttribute="top" secondItem="rGe-P3-XUu" secondAttribute="top" id="YRF-Mg-VKA"/>
+                            <constraint firstItem="rGe-P3-XUu" firstAttribute="trailing" secondItem="yp0-s4-3xG" secondAttribute="trailing" id="Zz5-Pc-nJy"/>
+                            <constraint firstItem="yp0-s4-3xG" firstAttribute="leading" secondItem="rGe-P3-XUu" secondAttribute="leading" id="gbf-pz-Yx6"/>
+                            <constraint firstItem="yp0-s4-3xG" firstAttribute="top" secondItem="rGe-P3-XUu" secondAttribute="top" id="hfj-em-SXA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rGe-P3-XUu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kanji detail" largeTitleDisplayMode="always" id="wZ7-8r-138"/>
+                    <connections>
+                        <outlet property="detailTableView" destination="yp0-s4-3xG" id="0Yc-T0-C4M"/>
+                        <segue destination="0n3-Eh-Puu" kind="show" identifier="exampleKanjiList" id="dep-ia-cpY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEU-hI-rAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="-43"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xTx-gA-EG8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vJh-lt-gbU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="hba-GU-rsy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0n3-Eh-Puu" kind="relationship" relationship="rootViewController" id="I2J-S8-v64"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xB-5J-xex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-866" y="-42"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cMc-DD-xmD"/>
+        <segue reference="dep-ia-cpY"/>
+    </inferredMetricsTieBreakers>
+</document>

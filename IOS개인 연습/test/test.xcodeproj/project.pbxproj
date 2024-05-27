@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C50865F8299A19C000AAF82B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C50865F7299A19C000AAF82B /* RxCocoa */; };
 		C50865FA299A19C000AAF82B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C50865F9299A19C000AAF82B /* RxSwift */; };
+		C54B765F2B88AA6E0095E110 /* CustomToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54B765E2B88AA6E0095E110 /* CustomToggleButton.swift */; };
 		C595ACD32A85070B00D35123 /* UnderlineSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C595ACD22A85070B00D35123 /* UnderlineSegmentedControl.swift */; };
 		C5A1B72A2993524300892872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1B7292993524300892872 /* AppDelegate.swift */; };
 		C5A1B72C2993524300892872 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1B72B2993524300892872 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 		C5A1B74B2993524400892872 /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1B74A2993524400892872 /* testUITests.swift */; };
 		C5A1B74D2993524400892872 /* testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1B74C2993524400892872 /* testUITestsLaunchTests.swift */; };
 		C5E306E52A6FB0A000C11CF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E306E42A6FB0A000C11CF7 /* ViewController.swift */; };
+		C5E9F8492BA6D8C40088FDBC /* tesTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E9F8482BA6D8C40088FDBC /* tesTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C54B765E2B88AA6E0095E110 /* CustomToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggleButton.swift; sourceTree = "<group>"; };
 		C5681DBA2AA1805900BA4FDC /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C595ACD22A85070B00D35123 /* UnderlineSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineSegmentedControl.swift; sourceTree = "<group>"; };
 		C5A1B7262993524300892872 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +59,7 @@
 		C5A1B74A2993524400892872 /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		C5A1B74C2993524400892872 /* testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C5E306E42A6FB0A000C11CF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C5E9F8482BA6D8C40088FDBC /* tesTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tesTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +114,10 @@
 			children = (
 				C5A1B7292993524300892872 /* AppDelegate.swift */,
 				C5A1B72B2993524300892872 /* SceneDelegate.swift */,
+				C5E9F8482BA6D8C40088FDBC /* tesTabBar.swift */,
 				C5E306E42A6FB0A000C11CF7 /* ViewController.swift */,
 				C595ACD22A85070B00D35123 /* UnderlineSegmentedControl.swift */,
+				C54B765E2B88AA6E0095E110 /* CustomToggleButton.swift */,
 				C5A1B7372993524400892872 /* Info.plist */,
 				C5A1B72D2993524300892872 /* FrameAnctor.swift */,
 				C5A1B72F2993524300892872 /* Main.storyboard */,
@@ -277,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54B765F2B88AA6E0095E110 /* CustomToggleButton.swift in Sources */,
 				C5A1B72E2993524300892872 /* FrameAnctor.swift in Sources */,
 				C595ACD32A85070B00D35123 /* UnderlineSegmentedControl.swift in Sources */,
+				C5E9F8492BA6D8C40088FDBC /* tesTabBar.swift in Sources */,
 				C5A1B72A2993524300892872 /* AppDelegate.swift in Sources */,
 				C5E306E52A6FB0A000C11CF7 /* ViewController.swift in Sources */,
 				C5A1B72C2993524300892872 /* SceneDelegate.swift in Sources */,

@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("ViewDidLoad")
         view.backgroundColor = .systemBackground
         
         datePicker1.datePickerMode = .dateAndTime
@@ -55,6 +56,12 @@ class ViewController: UIViewController {
             textField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             textField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 10)
         ])
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("ViewWillAppear")
     }
     
     @objc func didChanged(_ sender: UIDatePicker) {

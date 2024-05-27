@@ -11,6 +11,7 @@
 		C54561702A31C28C006E76F3 /* CustomStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545616F2A31C28C006E76F3 /* CustomStyle.swift */; };
 		C57CF2BA2A261CF500F4FBDD /* ImageExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57CF2B92A261CF500F4FBDD /* ImageExam.swift */; };
 		C57D9D892A2B083C00343F4B /* StackExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D9D882A2B083C00343F4B /* StackExam.swift */; };
+		C5A6C4D32C047E980093418D /* NavigationViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C4D22C047E980093418D /* NavigationViewTest.swift */; };
 		C5C82A2B2A2D8B5E00F24332 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A2A2A2D8B5E00F24332 /* SwiftUIView.swift */; };
 		C5C82A2D2A2D937E00F24332 /* ButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A2C2A2D937E00F24332 /* ButtonExample.swift */; };
 		C5C82A2F2A2D938C00F24332 /* NavigationViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A2E2A2D938C00F24332 /* NavigationViewExample.swift */; };
@@ -56,6 +57,7 @@
 		C545616F2A31C28C006E76F3 /* CustomStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyle.swift; sourceTree = "<group>"; };
 		C57CF2B92A261CF500F4FBDD /* ImageExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExam.swift; sourceTree = "<group>"; };
 		C57D9D882A2B083C00343F4B /* StackExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackExam.swift; sourceTree = "<group>"; };
+		C5A6C4D22C047E980093418D /* NavigationViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewTest.swift; sourceTree = "<group>"; };
 		C5C82A2A2A2D8B5E00F24332 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		C5C82A2C2A2D937E00F24332 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
 		C5C82A2E2A2D938C00F24332 /* NavigationViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewExample.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				C5C82A2E2A2D938C00F24332 /* NavigationViewExample.swift */,
 				C5C82A312A2DABB500F24332 /* ColorDetail.swift */,
+				C5A6C4D22C047E980093418D /* NavigationViewTest.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				C5FFB4AD2A2F49CC005F2E51 /* Preview.swift in Sources */,
 				C5D745A82A25CA52006F9F31 /* TextExam.swift in Sources */,
 				C5C82A2B2A2D8B5E00F24332 /* SwiftUIView.swift in Sources */,
+				C5A6C4D32C047E980093418D /* NavigationViewTest.swift in Sources */,
 				C545616E2A31B7F8006E76F3 /* VIewModifierExample.swift in Sources */,
 				C54561702A31C28C006E76F3 /* CustomStyle.swift in Sources */,
 				C57CF2BA2A261CF500F4FBDD /* ImageExam.swift in Sources */,

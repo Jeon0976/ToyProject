@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08FAE42AABB0013D3C5D7E21CB8588A9 /* SpeechBubbleArrowPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA5E2F83CEE037D89C241EC5F35B004 /* SpeechBubbleArrowPosition.swift */; };
+		1DEFDB72C7411798F9D0626E630F31D0 /* SpeechBubbleStyleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37783EDA457357346FBF10A1FD38654 /* SpeechBubbleStyleOptions.swift */; };
+		324E431A065511F39AC4785073BF0679 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619DC57FA039D084CF81ECFE4FF93D3 /* UIView+Extension.swift */; };
+		4007FE3052BB7D45171C5F26D8B7A9A8 /* Pods-customTabBarController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F17E0CA1875639E560DF2C2D34993B1C /* Pods-customTabBarController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4605BC130E54611EA8DA7E22C7985543 /* TextLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FE71D560525D6A384D7E794F890E9 /* TextLabelView.swift */; };
+		56C7315D80BBAAEC3BEDEF811D428C43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		63EF8544115FF1FE71DE548BE3F15B47 /* SpeechBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC442658F4199BA016A974DDB9654501 /* SpeechBubbleView.swift */; };
+		6AC0029C0802214DF0E84827C06C6778 /* Pods-customTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4300CBAF21F08B6A7746C1C43F05FEB7 /* Pods-customTabBarController-dummy.m */; };
+		7B60D5436812939F46618FA9DD4A1116 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		818340931336A59CCA40079D02CC4E7B /* SpeechBubble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 136B3BD57C44CE12FFF28E6D3773D48F /* SpeechBubble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		846CDC9FF2DE053E96BA003AF888FDCB /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6166EAB0B19F6C000BCDE66168169F68 /* ArrowView.swift */; };
+		8C56D824FE46F4E33A32AA64CD89B754 /* SpeechBubble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 868FF449D114CA1F384728EE52F6780A /* SpeechBubble-dummy.m */; };
+		EF6465C502F369BAA35F0878609791EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68487722ABE6E0D4709650E909C358A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB35771DC1E8A8CAE8BD2CE291C2693E;
+			remoteInfo = SpeechBubble;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		030D2CF6AF640923E9D09A6CA13E1350 /* Pods-customTabBarController-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-customTabBarController-acknowledgements.markdown"; sourceTree = "<group>"; };
+		053E53A3B211010CA097A90D22461A4C /* SpeechBubble */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SpeechBubble; path = SpeechBubble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		136B3BD57C44CE12FFF28E6D3773D48F /* SpeechBubble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpeechBubble-umbrella.h"; sourceTree = "<group>"; };
+		3FF75550214F17845B4C29663B5EE5BA /* Pods-customTabBarController-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-customTabBarController-acknowledgements.plist"; sourceTree = "<group>"; };
+		4300CBAF21F08B6A7746C1C43F05FEB7 /* Pods-customTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-customTabBarController-dummy.m"; sourceTree = "<group>"; };
+		4E75FC1045ED011E79CAE6EBCAF3C254 /* Pods-customTabBarController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-customTabBarController.modulemap"; sourceTree = "<group>"; };
+		5FA2FD1657849C3425940522D189A9B6 /* SpeechBubble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpeechBubble-prefix.pch"; sourceTree = "<group>"; };
+		6166EAB0B19F6C000BCDE66168169F68 /* ArrowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrowView.swift; path = SpeechBubble/Classes/Subviews/ArrowView.swift; sourceTree = "<group>"; };
+		6620CA6CC45360589E40FA790526EDEB /* Pods-customTabBarController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-customTabBarController.debug.xcconfig"; sourceTree = "<group>"; };
+		78C80D9F73762C8B994E484A9D6805B2 /* SpeechBubble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SpeechBubble.release.xcconfig; sourceTree = "<group>"; };
+		868FF449D114CA1F384728EE52F6780A /* SpeechBubble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SpeechBubble-dummy.m"; sourceTree = "<group>"; };
+		86BEAC6B9B56A1E1928A38EE43D6CEFF /* Pods-customTabBarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-customTabBarController.release.xcconfig"; sourceTree = "<group>"; };
+		878A1879DEA59031E98485ED3AE42D5B /* SpeechBubble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SpeechBubble.modulemap; sourceTree = "<group>"; };
+		9619DC57FA039D084CF81ECFE4FF93D3 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "SpeechBubble/Classes/Extension/UIView+Extension.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A20FE71D560525D6A384D7E794F890E9 /* TextLabelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextLabelView.swift; path = SpeechBubble/Classes/Subviews/TextLabelView.swift; sourceTree = "<group>"; };
+		AC442658F4199BA016A974DDB9654501 /* SpeechBubbleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpeechBubbleView.swift; path = SpeechBubble/Classes/SpeechBubbleView.swift; sourceTree = "<group>"; };
+		BEF4D4BC0F4B6407EA33B228FAF50F6C /* Pods-customTabBarController */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-customTabBarController"; path = Pods_customTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C82CFE55F2BB0B0879EE1039492EFF68 /* SpeechBubble-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SpeechBubble-Info.plist"; sourceTree = "<group>"; };
+		C9D329BAC13C0DE5FB9BA5C765164CA4 /* SpeechBubble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SpeechBubble.debug.xcconfig; sourceTree = "<group>"; };
+		CAA5E2F83CEE037D89C241EC5F35B004 /* SpeechBubbleArrowPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpeechBubbleArrowPosition.swift; path = SpeechBubble/Classes/Component/SpeechBubbleArrowPosition.swift; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DB5FF8C6A9A0C758D101BDABE5B035F8 /* Pods-customTabBarController-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-customTabBarController-frameworks.sh"; sourceTree = "<group>"; };
+		E37783EDA457357346FBF10A1FD38654 /* SpeechBubbleStyleOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpeechBubbleStyleOptions.swift; path = SpeechBubble/Classes/Component/SpeechBubbleStyleOptions.swift; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F17E0CA1875639E560DF2C2D34993B1C /* Pods-customTabBarController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-customTabBarController-umbrella.h"; sourceTree = "<group>"; };
+		FA50D16F76CC3B8BD2C6C5B493F4ECFC /* Pods-customTabBarController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-customTabBarController-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82128FBE71018FB7CE2E54B11F83DCF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF6465C502F369BAA35F0878609791EE /* Foundation.framework in Frameworks */,
+				7B60D5436812939F46618FA9DD4A1116 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A57CCB43204C71C704D5BE4ECBDEEB3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C7315D80BBAAEC3BEDEF811D428C43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16EE22C57D997AE56B11CD8C94EA7F6D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				878A1879DEA59031E98485ED3AE42D5B /* SpeechBubble.modulemap */,
+				868FF449D114CA1F384728EE52F6780A /* SpeechBubble-dummy.m */,
+				C82CFE55F2BB0B0879EE1039492EFF68 /* SpeechBubble-Info.plist */,
+				5FA2FD1657849C3425940522D189A9B6 /* SpeechBubble-prefix.pch */,
+				136B3BD57C44CE12FFF28E6D3773D48F /* SpeechBubble-umbrella.h */,
+				C9D329BAC13C0DE5FB9BA5C765164CA4 /* SpeechBubble.debug.xcconfig */,
+				78C80D9F73762C8B994E484A9D6805B2 /* SpeechBubble.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SpeechBubble";
+			sourceTree = "<group>";
+		};
+		27FCA0C1F61971128A0B4BFD407E21AD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6957489382D301537517F615A4B1AB97 /* Pods-customTabBarController */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		31EF2734217F61957A260698EC71EC99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEF4D4BC0F4B6407EA33B228FAF50F6C /* Pods-customTabBarController */,
+				053E53A3B211010CA097A90D22461A4C /* SpeechBubble */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6957489382D301537517F615A4B1AB97 /* Pods-customTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				4E75FC1045ED011E79CAE6EBCAF3C254 /* Pods-customTabBarController.modulemap */,
+				030D2CF6AF640923E9D09A6CA13E1350 /* Pods-customTabBarController-acknowledgements.markdown */,
+				3FF75550214F17845B4C29663B5EE5BA /* Pods-customTabBarController-acknowledgements.plist */,
+				4300CBAF21F08B6A7746C1C43F05FEB7 /* Pods-customTabBarController-dummy.m */,
+				DB5FF8C6A9A0C758D101BDABE5B035F8 /* Pods-customTabBarController-frameworks.sh */,
+				FA50D16F76CC3B8BD2C6C5B493F4ECFC /* Pods-customTabBarController-Info.plist */,
+				F17E0CA1875639E560DF2C2D34993B1C /* Pods-customTabBarController-umbrella.h */,
+				6620CA6CC45360589E40FA790526EDEB /* Pods-customTabBarController.debug.xcconfig */,
+				86BEAC6B9B56A1E1928A38EE43D6CEFF /* Pods-customTabBarController.release.xcconfig */,
+			);
+			name = "Pods-customTabBarController";
+			path = "Target Support Files/Pods-customTabBarController";
+			sourceTree = "<group>";
+		};
+		BAE507BD4BA05C06282EAF5BE87D404C /* SpeechBubble */ = {
+			isa = PBXGroup;
+			children = (
+				6166EAB0B19F6C000BCDE66168169F68 /* ArrowView.swift */,
+				CAA5E2F83CEE037D89C241EC5F35B004 /* SpeechBubbleArrowPosition.swift */,
+				E37783EDA457357346FBF10A1FD38654 /* SpeechBubbleStyleOptions.swift */,
+				AC442658F4199BA016A974DDB9654501 /* SpeechBubbleView.swift */,
+				A20FE71D560525D6A384D7E794F890E9 /* TextLabelView.swift */,
+				9619DC57FA039D084CF81ECFE4FF93D3 /* UIView+Extension.swift */,
+				16EE22C57D997AE56B11CD8C94EA7F6D /* Support Files */,
+			);
+			name = SpeechBubble;
+			path = SpeechBubble;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				E71286FF7F374091CC948CC06F6FB67A /* Pods */,
+				31EF2734217F61957A260698EC71EC99 /* Products */,
+				27FCA0C1F61971128A0B4BFD407E21AD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E71286FF7F374091CC948CC06F6FB67A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAE507BD4BA05C06282EAF5BE87D404C /* SpeechBubble */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2DF5663D53EBF8C88033F970D6E332FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818340931336A59CCA40079D02CC4E7B /* SpeechBubble-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E8EF68DA8F3E5409B7761ADC813CE31 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4007FE3052BB7D45171C5F26D8B7A9A8 /* Pods-customTabBarController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5BAE886D1E4AFBD8CA678B89C2BA4E1E /* Pods-customTabBarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 061ED18C92AE41987626A99A82BD1A34 /* Build configuration list for PBXNativeTarget "Pods-customTabBarController" */;
+			buildPhases = (
+				3E8EF68DA8F3E5409B7761ADC813CE31 /* Headers */,
+				52088A9903FF48A4BADC3C81E3D3FDE7 /* Sources */,
+				A57CCB43204C71C704D5BE4ECBDEEB3F /* Frameworks */,
+				C03ABDB5678856825207A07D0EFF4B97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C0F810A7AB9A7B735D25855649E1619 /* PBXTargetDependency */,
+			);
+			name = "Pods-customTabBarController";
+			productName = Pods_customTabBarController;
+			productReference = BEF4D4BC0F4B6407EA33B228FAF50F6C /* Pods-customTabBarController */;
+			productType = "com.apple.product-type.framework";
+		};
+		AB35771DC1E8A8CAE8BD2CE291C2693E /* SpeechBubble */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD8F2116073D4A2E20928C11AE75879 /* Build configuration list for PBXNativeTarget "SpeechBubble" */;
+			buildPhases = (
+				2DF5663D53EBF8C88033F970D6E332FB /* Headers */,
+				6FD7438735D7F81AC9D2A2B7A358DF16 /* Sources */,
+				82128FBE71018FB7CE2E54B11F83DCF4 /* Frameworks */,
+				A492DEBB40279A763BF9125FC2B5E05A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeechBubble;
+			productName = SpeechBubble;
+			productReference = 053E53A3B211010CA097A90D22461A4C /* SpeechBubble */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 31EF2734217F61957A260698EC71EC99 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BAE886D1E4AFBD8CA678B89C2BA4E1E /* Pods-customTabBarController */,
+				AB35771DC1E8A8CAE8BD2CE291C2693E /* SpeechBubble */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A492DEBB40279A763BF9125FC2B5E05A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C03ABDB5678856825207A07D0EFF4B97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52088A9903FF48A4BADC3C81E3D3FDE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC0029C0802214DF0E84827C06C6778 /* Pods-customTabBarController-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD7438735D7F81AC9D2A2B7A358DF16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846CDC9FF2DE053E96BA003AF888FDCB /* ArrowView.swift in Sources */,
+				8C56D824FE46F4E33A32AA64CD89B754 /* SpeechBubble-dummy.m in Sources */,
+				08FAE42AABB0013D3C5D7E21CB8588A9 /* SpeechBubbleArrowPosition.swift in Sources */,
+				1DEFDB72C7411798F9D0626E630F31D0 /* SpeechBubbleStyleOptions.swift in Sources */,
+				63EF8544115FF1FE71DE548BE3F15B47 /* SpeechBubbleView.swift in Sources */,
+				4605BC130E54611EA8DA7E22C7985543 /* TextLabelView.swift in Sources */,
+				324E431A065511F39AC4785073BF0679 /* UIView+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C0F810A7AB9A7B735D25855649E1619 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SpeechBubble;
+			target = AB35771DC1E8A8CAE8BD2CE291C2693E /* SpeechBubble */;
+			targetProxy = 68487722ABE6E0D4709650E909C358A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		013013111909BAF907C3A30F9DD0EC23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78C80D9F73762C8B994E484A9D6805B2 /* SpeechBubble.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SpeechBubble/SpeechBubble-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SpeechBubble/SpeechBubble-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SpeechBubble/SpeechBubble.modulemap";
+				PRODUCT_MODULE_NAME = SpeechBubble;
+				PRODUCT_NAME = SpeechBubble;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1F99480940E5BCE0D29AB0AB46736732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6620CA6CC45360589E40FA790526EDEB /* Pods-customTabBarController.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-customTabBarController/Pods-customTabBarController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-customTabBarController/Pods-customTabBarController.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		62638166B986D9FCABB1AFD9685A66B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86BEAC6B9B56A1E1928A38EE43D6CEFF /* Pods-customTabBarController.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-customTabBarController/Pods-customTabBarController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-customTabBarController/Pods-customTabBarController.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F32CD4C88A7E79AE56D305920621EDF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9D329BAC13C0DE5FB9BA5C765164CA4 /* SpeechBubble.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SpeechBubble/SpeechBubble-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SpeechBubble/SpeechBubble-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SpeechBubble/SpeechBubble.modulemap";
+				PRODUCT_MODULE_NAME = SpeechBubble;
+				PRODUCT_NAME = SpeechBubble;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		061ED18C92AE41987626A99A82BD1A34 /* Build configuration list for PBXNativeTarget "Pods-customTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F99480940E5BCE0D29AB0AB46736732 /* Debug */,
+				62638166B986D9FCABB1AFD9685A66B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFD8F2116073D4A2E20928C11AE75879 /* Build configuration list for PBXNativeTarget "SpeechBubble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F32CD4C88A7E79AE56D305920621EDF7 /* Debug */,
+				013013111909BAF907C3A30F9DD0EC23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

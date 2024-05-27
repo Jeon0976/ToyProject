@@ -1,0 +1,16 @@
+PODS:
+  - SpeechBubble (0.1.1)
+
+DEPENDENCIES:
+  - SpeechBubble (~> 0.1.1)
+
+SPEC REPOS:
+  trunk:
+    - SpeechBubble
+
+SPEC CHECKSUMS:
+  SpeechBubble: 78bcb705530d14aae34cfe7b1733bc7a47c3836a
+
+PODFILE CHECKSUM: 55763bf6307539d6df2bf77379ef8b4faca63791
+
+COCOAPODS: 1.15.2

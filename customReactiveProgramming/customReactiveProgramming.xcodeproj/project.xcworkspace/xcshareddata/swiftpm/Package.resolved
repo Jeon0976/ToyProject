@@ -1,0 +1,15 @@
+{
+  "originHash" : "a59f09f561e855f78e674e36fd2dc5b2ef39d17838552c98ecab643a5fe2605d",
+  "pins" : [
+    {
+      "identity" : "speechbubble",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Jeon0976/SpeechBubble",
+      "state" : {
+        "revision" : "b18af0095238c854212ff7ac742f7bd2b049e2b1",
+        "version" : "0.1.4"
+      }
+    }
+  ],
+  "version" : 3
+}

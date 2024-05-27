@@ -6,11 +6,26 @@
 //
 
 import UIKit
+import SpeechBubble
 
 final class TestViewController: UIViewController {
     var number = ""
+    
+    private lazy var test: SpeechBubbleView = SpeechBubbleView(text: "Test", style: .fill, arrowPosition: .left)
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        [
+            test
+        ].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            self.view.addSubview($0)
+        }
+        
+        NSLayoutConstraint.activate([
+            test.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            test.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
         
         print("\(number): ViewDidLoad")
     }
