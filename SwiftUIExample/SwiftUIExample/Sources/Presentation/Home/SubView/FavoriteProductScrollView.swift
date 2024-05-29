@@ -61,7 +61,7 @@ extension FavoriteProductScrollView {
         .animation(.spring(dampingFraction: 0.78), value: UUID())
     }
     
-    private func eachProduct(_ product: Product) -> some View {
+    func eachProduct(_ product: Product) -> some View {
         GeometryReader {
             ResizedImage(product.imageName, renderingMode: .original)
                 .clipShape(Circle())
@@ -71,7 +71,7 @@ extension FavoriteProductScrollView {
         .frame(width: 105, height: 105)
     }
     
-    private func scaledValue(from geometry: GeometryProxy) -> CGFloat {
+    func scaledValue(from geometry: GeometryProxy) -> CGFloat {
         let xOffset = geometry.frame(in: .global).minX - 16
         let minSize: CGFloat = 0.9
         let maxSize: CGFloat = 1.0

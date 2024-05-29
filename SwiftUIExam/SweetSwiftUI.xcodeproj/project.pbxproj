@@ -18,6 +18,7 @@
 		C5A6C5082C06F0530093418D /* AnimationExample1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C5072C06F0530093418D /* AnimationExample1.swift */; };
 		C5A6C50A2C06F5B80093418D /* AnimationExample2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C5092C06F5B80093418D /* AnimationExample2.swift */; };
 		C5A6C50C2C06F7F60093418D /* AnimationExample3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C50B2C06F7F60093418D /* AnimationExample3.swift */; };
+		C5A6C51E2C075D040093418D /* GestureExample1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C51D2C075D040093418D /* GestureExample1.swift */; };
 		C5C82A2B2A2D8B5E00F24332 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A2A2A2D8B5E00F24332 /* SwiftUIView.swift */; };
 		C5C82A2D2A2D937E00F24332 /* ButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A2C2A2D937E00F24332 /* ButtonExample.swift */; };
 		C5C82A2F2A2D938C00F24332 /* NavigationViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A2E2A2D938C00F24332 /* NavigationViewExample.swift */; };
@@ -70,6 +71,7 @@
 		C5A6C5072C06F0530093418D /* AnimationExample1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExample1.swift; sourceTree = "<group>"; };
 		C5A6C5092C06F5B80093418D /* AnimationExample2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExample2.swift; sourceTree = "<group>"; };
 		C5A6C50B2C06F7F60093418D /* AnimationExample3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExample3.swift; sourceTree = "<group>"; };
+		C5A6C51D2C075D040093418D /* GestureExample1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureExample1.swift; sourceTree = "<group>"; };
 		C5C82A2A2A2D8B5E00F24332 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		C5C82A2C2A2D937E00F24332 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
 		C5C82A2E2A2D938C00F24332 /* NavigationViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewExample.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		C57CF2BB2A261CFE00F4FBDD /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				C5A6C51C2C075CED0093418D /* Gesture */,
 				C5D745A72A25CA52006F9F31 /* TextExam.swift */,
 				C57CF2B92A261CF500F4FBDD /* ImageExam.swift */,
 				C57D9D882A2B083C00343F4B /* StackExam.swift */,
@@ -178,6 +181,14 @@
 				C5A6C50B2C06F7F60093418D /* AnimationExample3.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		C5A6C51C2C075CED0093418D /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				C5A6C51D2C075D040093418D /* GestureExample1.swift */,
+			);
+			path = Gesture;
 			sourceTree = "<group>";
 		};
 		C5C82A302A2DABA000F24332 /* Navigation */ = {
@@ -428,6 +439,7 @@
 				C5C82A322A2DABB500F24332 /* ColorDetail.swift in Sources */,
 				C5FFB5172A303560005F2E51 /* StateBinding.swift in Sources */,
 				C5A6C50A2C06F5B80093418D /* AnimationExample2.swift in Sources */,
+				C5A6C51E2C075D040093418D /* GestureExample1.swift in Sources */,
 				C5FFB5192A303868005F2E51 /* ObservableObjectTest.swift in Sources */,
 				C5C82A392A2DDE5B00F24332 /* GeometryReaderExample2.swift in Sources */,
 				C5C82A2F2A2D938C00F24332 /* NavigationViewExample.swift in Sources */,

@@ -32,11 +32,12 @@ struct ProductRow: View {
         .opacity(willAppear ? 1 : 0)
         .animation(.easeInOut(duration: 0.4), value: willAppear)
         .onAppear { self.willAppear = true }
+        .contextMenu { contextMenu }
     }
 }
 
 private extension ProductRow {
-    private var productImage: some View {
+    var productImage: some View {
         Image(product.imageName)
             .resizable()
             .scaledToFill()
@@ -44,7 +45,7 @@ private extension ProductRow {
             .clipped()
     }
     
-    private var productDescrpition: some View {
+    var productDescrpition: some View {
         VStack(alignment: .leading) {
             Text(product.name)
                 .font(.headline)
@@ -65,7 +66,7 @@ private extension ProductRow {
         .padding([.top, .trailing])
     }
     
-    private var footerView: some View {
+    var footerView: some View {
         HStack(spacing: 0) {
             Text("₩").font(.footnote) +
             Text("\(product.price)").font(.headline)
@@ -79,11 +80,28 @@ private extension ProductRow {
                 .onTapGesture { self.orderProduct() }
         }
     }
+    
+    var contextMenu: some View {
+        VStack {
+            Button(action: { self.toggleFavorite() }) {
+                Text("Toggle Favorite")
+                Symbol(self.product.isFavorite ? "heart.fill" : "heart")
+            }
+            Button(action: { self.orderProduct()}) {
+                Text("Order Product")
+                Symbol("cart")
+            }
+        }
+    }
 
-    private func orderProduct() {
+    func orderProduct() {
         quickOrder = product
         
         store.placeOrder(product: product, quantity: 1)
+    }
+    
+    func toggleFavorite() {
+        store.toggleFavorite(of: product)
     }
 }
 

@@ -46,8 +46,10 @@ struct MyCircle: Shape {
         
         let center = CGPoint(x: rect.midX, y: rect.midY)
         let radious = rect.width / 2
-        let start = Angle(radians: .pi / -2) // 원을 그리는 시작 시점
-        let end = Angle(radians: .pi / 2 * 3) // 원을 그리는 종료 시점
+
+        // 시작 각도에서 종료 각도 원 그릴려면 2파이 플러스
+        let start = Angle(radians: .pi) // 원을 그리는 시작 시점
+        let end = Angle(radians: .pi * 3) // 원을 그리는 종료 시점
         
         path.addArc(
             center: center, 
