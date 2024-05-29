@@ -29,5 +29,13 @@ struct ObservableObjectTest_Previews: PreviewProvider {
 
 class User: ObservableObject {
     @Published var name = "User Name"
-    @Published var score = 0
+    @Published var score = 0 {
+        willSet {
+            if newValue % 2 == 0 {
+                objectWillChange.send()
+            } 
+        }
+    }
+    
+    let objectWillChange = ObjectWillChangePublisher()
 }

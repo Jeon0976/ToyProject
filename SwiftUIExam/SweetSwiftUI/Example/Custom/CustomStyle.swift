@@ -17,7 +17,7 @@ struct CustomStyle: View {
             Button("커스텀 버튼 스타일2") { }
                 .buttonStyle(CustomButtonStyle(backgroundColor: .brown,cornerRadius: 20))
             Button("커스텀 버튼 스타일3") { print("ACtion!")}
-                .buttonStyle(CustomPrimitiveButtonStyle(minimumDuration: 1))
+                .buttonStyle(CustomPrimitiveButtonStyle())
             Toggle("기본", isOn: $isOn)
             Toggle("custom", isOn: $isOn)
                 .toggleStyle(CustomToggleStyle())
@@ -30,6 +30,13 @@ struct CustomStyle_Previews: PreviewProvider {
         CustomStyle()
     }
 }
+
+//struct ExamButtonStyle: ButtonStyle {
+//    func makeBody(configuration: Configuration) -> some View {
+//        configuration
+//        
+//    }
+//}
 
 struct CustomButtonStyle: ButtonStyle {
     var backgroundColor: Color = .blue

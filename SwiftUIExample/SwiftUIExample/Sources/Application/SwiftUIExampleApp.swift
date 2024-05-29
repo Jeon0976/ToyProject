@@ -11,7 +11,21 @@ import SwiftUI
 struct SwiftUIExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            Home()
+//            ProductDetailView(product: productSamples[0])
+            configureAppearance()
+            
+            return MainTabView()
         }
     }
+    
+    private func configureAppearance() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .foregroundColor: UIColor(named: "peach")!
+        ]
+        
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor(named: "peach")!
+        ]
+    }
 }
+

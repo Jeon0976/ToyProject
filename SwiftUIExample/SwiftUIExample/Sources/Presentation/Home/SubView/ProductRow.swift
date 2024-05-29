@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ProductRow: View {
+    @EnvironmentObject var store: Store
+    
+    @Binding var quickOrder: Product?
+    
+    @State private var willAppear: Bool = false
+    
     let product: Product
     
     /// UIKit에서는 뷰의 설정을 바꾸거나 자식 뷰를 추가한다고 그 자신의 타입이 바뀌는 것은 아니었지만, 구조체를 사용하고 제네릭을 적극적으로 활용하는 SwiftUI의 구현 방식에서는
@@ -23,7 +29,9 @@ struct ProductRow: View {
         .background(Color.primary.colorInvert())
         .clipShape(.rect(cornerRadius: 6))
         .shadow(color: Color.primaryShadow,radius: 1, x: 2, y: 2)
-        .padding(.vertical, 8)
+        .opacity(willAppear ? 1 : 0)
+        .animation(.easeInOut(duration: 0.4), value: willAppear)
+        .onAppear { self.willAppear = true }
     }
 }
 
@@ -41,12 +49,14 @@ private extension ProductRow {
             Text(product.name)
                 .font(.headline)
                 .fontWeight(.medium)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 6)
-            
+
             Text(product.description)
                 .font(.footnote)
                 .foregroundStyle(Color.secondaryText)
-            
+                .frame(maxWidth: .infinity, alignment: .leading)
+
             Spacer()
             
             footerView
@@ -62,20 +72,24 @@ private extension ProductRow {
             
             Spacer()
             
-            Image(systemName: "heart")
-                .imageScale(.large)
-                .foregroundStyle(.peach)
-                .frame(width: 32, height: 32)
+            FavoriteButton(product: product)
             
-            Image(systemName: "cart")
-                .imageScale(.large)
-                .foregroundStyle(.peach)
+            Symbol("cart", color: .peach)
                 .frame(width: 32, height: 32)
+                .onTapGesture { self.orderProduct() }
         }
     }
 
+    private func orderProduct() {
+        quickOrder = product
+        
+        store.placeOrder(product: product, quantity: 1)
+    }
 }
 
 #Preview {
-    ProductRow(product: productSamples[0])
+    ProductRow(
+        quickOrder: .constant(nil),
+        product: productSamples[0]
+    ).environmentObject(Store())
 }

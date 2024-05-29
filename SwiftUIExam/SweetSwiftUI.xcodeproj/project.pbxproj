@@ -12,6 +12,12 @@
 		C57CF2BA2A261CF500F4FBDD /* ImageExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57CF2B92A261CF500F4FBDD /* ImageExam.swift */; };
 		C57D9D892A2B083C00343F4B /* StackExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D9D882A2B083C00343F4B /* StackExam.swift */; };
 		C5A6C4D32C047E980093418D /* NavigationViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C4D22C047E980093418D /* NavigationViewTest.swift */; };
+		C5A6C4FA2C05C4F90093418D /* ScrollViewExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C4F92C05C4F90093418D /* ScrollViewExam.swift */; };
+		C5A6C4FC2C05D4890093418D /* ScrollViewExam2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C4FB2C05D4890093418D /* ScrollViewExam2.swift */; };
+		C5A6C4FF2C05D6EA0093418D /* TabViewExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C4FE2C05D6EA0093418D /* TabViewExam.swift */; };
+		C5A6C5082C06F0530093418D /* AnimationExample1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C5072C06F0530093418D /* AnimationExample1.swift */; };
+		C5A6C50A2C06F5B80093418D /* AnimationExample2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C5092C06F5B80093418D /* AnimationExample2.swift */; };
+		C5A6C50C2C06F7F60093418D /* AnimationExample3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6C50B2C06F7F60093418D /* AnimationExample3.swift */; };
 		C5C82A2B2A2D8B5E00F24332 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A2A2A2D8B5E00F24332 /* SwiftUIView.swift */; };
 		C5C82A2D2A2D937E00F24332 /* ButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A2C2A2D937E00F24332 /* ButtonExample.swift */; };
 		C5C82A2F2A2D938C00F24332 /* NavigationViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C82A2E2A2D938C00F24332 /* NavigationViewExample.swift */; };
@@ -58,6 +64,12 @@
 		C57CF2B92A261CF500F4FBDD /* ImageExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExam.swift; sourceTree = "<group>"; };
 		C57D9D882A2B083C00343F4B /* StackExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackExam.swift; sourceTree = "<group>"; };
 		C5A6C4D22C047E980093418D /* NavigationViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewTest.swift; sourceTree = "<group>"; };
+		C5A6C4F92C05C4F90093418D /* ScrollViewExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewExam.swift; sourceTree = "<group>"; };
+		C5A6C4FB2C05D4890093418D /* ScrollViewExam2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewExam2.swift; sourceTree = "<group>"; };
+		C5A6C4FE2C05D6EA0093418D /* TabViewExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewExam.swift; sourceTree = "<group>"; };
+		C5A6C5072C06F0530093418D /* AnimationExample1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExample1.swift; sourceTree = "<group>"; };
+		C5A6C5092C06F5B80093418D /* AnimationExample2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExample2.swift; sourceTree = "<group>"; };
+		C5A6C50B2C06F7F60093418D /* AnimationExample3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExample3.swift; sourceTree = "<group>"; };
 		C5C82A2A2A2D8B5E00F24332 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		C5C82A2C2A2D937E00F24332 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
 		C5C82A2E2A2D938C00F24332 /* NavigationViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewExample.swift; sourceTree = "<group>"; };
@@ -134,8 +146,38 @@
 				C5FFB5152A303451005F2E51 /* DataFlow */,
 				C5FFB51E2A3042BE005F2E51 /* AlertAndSheet */,
 				C545616A2A31B7CB006E76F3 /* Custom */,
+				C5A6C4F82C05C4E70093418D /* ScrollView */,
+				C5A6C4FD2C05D6D70093418D /* TabView */,
+				C5A6C5062C06F0420093418D /* Animation */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		C5A6C4F82C05C4E70093418D /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				C5A6C4F92C05C4F90093418D /* ScrollViewExam.swift */,
+				C5A6C4FB2C05D4890093418D /* ScrollViewExam2.swift */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		C5A6C4FD2C05D6D70093418D /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				C5A6C4FE2C05D6EA0093418D /* TabViewExam.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		C5A6C5062C06F0420093418D /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				C5A6C5072C06F0530093418D /* AnimationExample1.swift */,
+				C5A6C5092C06F5B80093418D /* AnimationExample2.swift */,
+				C5A6C50B2C06F7F60093418D /* AnimationExample3.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		C5C82A302A2DABA000F24332 /* Navigation */ = {
@@ -367,19 +409,25 @@
 				C5FFB4AB2A2F404D005F2E51 /* CustomFunctionBuilders.swift in Sources */,
 				C5C82A3B2A2DF03400F24332 /* GeometryReaderExample3.swift in Sources */,
 				C5FFB4AD2A2F49CC005F2E51 /* Preview.swift in Sources */,
+				C5A6C4FA2C05C4F90093418D /* ScrollViewExam.swift in Sources */,
 				C5D745A82A25CA52006F9F31 /* TextExam.swift in Sources */,
 				C5C82A2B2A2D8B5E00F24332 /* SwiftUIView.swift in Sources */,
 				C5A6C4D32C047E980093418D /* NavigationViewTest.swift in Sources */,
 				C545616E2A31B7F8006E76F3 /* VIewModifierExample.swift in Sources */,
 				C54561702A31C28C006E76F3 /* CustomStyle.swift in Sources */,
 				C57CF2BA2A261CF500F4FBDD /* ImageExam.swift in Sources */,
+				C5A6C50C2C06F7F60093418D /* AnimationExample3.swift in Sources */,
 				C5C82A362A2DD67700F24332 /* GeometryReaderExample.swift in Sources */,
 				C5FFB51B2A303B0E005F2E51 /* AlertAndSheetExample.swift in Sources */,
+				C5A6C5082C06F0530093418D /* AnimationExample1.swift in Sources */,
 				C5FFB51D2A3042B0005F2E51 /* PresentView.swift in Sources */,
 				C5C82A3F2A2E1FD000F24332 /* UsePriority.swift in Sources */,
+				C5A6C4FC2C05D4890093418D /* ScrollViewExam2.swift in Sources */,
+				C5A6C4FF2C05D6EA0093418D /* TabViewExam.swift in Sources */,
 				C5C82A342A2DB2BB00F24332 /* ListDetailExample.swift in Sources */,
 				C5C82A322A2DABB500F24332 /* ColorDetail.swift in Sources */,
 				C5FFB5172A303560005F2E51 /* StateBinding.swift in Sources */,
+				C5A6C50A2C06F5B80093418D /* AnimationExample2.swift in Sources */,
 				C5FFB5192A303868005F2E51 /* ObservableObjectTest.swift in Sources */,
 				C5C82A392A2DDE5B00F24332 /* GeometryReaderExample2.swift in Sources */,
 				C5C82A2F2A2D938C00F24332 /* NavigationViewExample.swift in Sources */,
