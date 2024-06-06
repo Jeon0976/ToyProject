@@ -34,6 +34,7 @@
 		C5D745B72A25CA53006F9F31 /* SweetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D745B62A25CA53006F9F31 /* SweetSwiftUITests.swift */; };
 		C5D745C12A25CA53006F9F31 /* SweetSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D745C02A25CA53006F9F31 /* SweetSwiftUIUITests.swift */; };
 		C5D745C32A25CA53006F9F31 /* SweetSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D745C22A25CA53006F9F31 /* SweetSwiftUIUITestsLaunchTests.swift */; };
+		C5ED99BC2C0DB7D10077B2F9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ED99BB2C0DB7D10077B2F9 /* MapView.swift */; };
 		C5FFB4AB2A2F404D005F2E51 /* CustomFunctionBuilders.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4AA2A2F404D005F2E51 /* CustomFunctionBuilders.swift */; };
 		C5FFB4AD2A2F49CC005F2E51 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB4AC2A2F49CC005F2E51 /* Preview.swift */; };
 		C5FFB5172A303560005F2E51 /* StateBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFB5162A303560005F2E51 /* StateBinding.swift */; };
@@ -90,6 +91,7 @@
 		C5D745BC2A25CA53006F9F31 /* SweetSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D745C02A25CA53006F9F31 /* SweetSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetSwiftUIUITests.swift; sourceTree = "<group>"; };
 		C5D745C22A25CA53006F9F31 /* SweetSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C5ED99BB2C0DB7D10077B2F9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		C5FFB4AA2A2F404D005F2E51 /* CustomFunctionBuilders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFunctionBuilders.swift; sourceTree = "<group>"; };
 		C5FFB4AC2A2F49CC005F2E51 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		C5FFB5162A303560005F2E51 /* StateBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBinding.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		C57CF2BB2A261CFE00F4FBDD /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				C5ED99BA2C0DB7C60077B2F9 /* MKMapView */,
 				C5A6C51C2C075CED0093418D /* Gesture */,
 				C5D745A72A25CA52006F9F31 /* TextExam.swift */,
 				C57CF2B92A261CF500F4FBDD /* ImageExam.swift */,
@@ -265,6 +268,14 @@
 				C5D745C22A25CA53006F9F31 /* SweetSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = SweetSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		C5ED99BA2C0DB7C60077B2F9 /* MKMapView */ = {
+			isa = PBXGroup;
+			children = (
+				C5ED99BB2C0DB7D10077B2F9 /* MapView.swift */,
+			);
+			path = MKMapView;
 			sourceTree = "<group>";
 		};
 		C5FFB5152A303451005F2E51 /* DataFlow */ = {
@@ -429,6 +440,7 @@
 				C57CF2BA2A261CF500F4FBDD /* ImageExam.swift in Sources */,
 				C5A6C50C2C06F7F60093418D /* AnimationExample3.swift in Sources */,
 				C5C82A362A2DD67700F24332 /* GeometryReaderExample.swift in Sources */,
+				C5ED99BC2C0DB7D10077B2F9 /* MapView.swift in Sources */,
 				C5FFB51B2A303B0E005F2E51 /* AlertAndSheetExample.swift in Sources */,
 				C5A6C5082C06F0530093418D /* AnimationExample1.swift in Sources */,
 				C5FFB51D2A3042B0005F2E51 /* PresentView.swift in Sources */,

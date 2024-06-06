@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainTabView: View {
+    let store = Store()
+    
     private enum Tabs {
         case home, recipe, gallery, myPage
     }
@@ -34,7 +36,7 @@ private extension MainTabView {
         Home()
             .tag(Tabs.home)
             .tabItem(image: "house", text: "홈")
-            .environmentObject(Store())
+            .environmentObject(store)
 
     }
     
@@ -51,9 +53,10 @@ private extension MainTabView {
     }
     
     var myPage: some View {
-        Text("마이페이지")
+        MyPage()
             .tag(Tabs.myPage)
             .tabItem(image: "person", text: "마이페이지")
+            .environmentObject(store)
     }
 }
 

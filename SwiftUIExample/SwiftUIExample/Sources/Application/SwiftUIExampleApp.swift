@@ -11,8 +11,8 @@ import SwiftUI
 struct SwiftUIExampleApp: App {
     var body: some Scene {
         WindowGroup {
-//            ProductDetailView(product: productSamples[0])
             configureAppearance()
+            
             
             return MainTabView()
         }

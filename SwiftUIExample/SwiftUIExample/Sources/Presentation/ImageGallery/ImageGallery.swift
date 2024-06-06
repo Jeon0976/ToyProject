@@ -32,6 +32,7 @@ struct ImageGallery: View {
         }
         .background(backgroundGradient)
         .ignoresSafeArea(edges: .top)
+        .onAppear { self.position = .zero }
     }
 }
 

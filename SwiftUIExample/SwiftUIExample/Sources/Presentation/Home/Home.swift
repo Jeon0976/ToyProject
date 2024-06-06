@@ -20,6 +20,10 @@ struct Home: View {
     @State private var quickOrder: Product?
     @State private var showingFavoriteImage: Bool = true
     
+    var showFavorite: Bool {
+        !store.products.filter { $0.isFavorite }.isEmpty && store.appSetting.showFavoriteList
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -68,10 +72,6 @@ private extension Home {
         }
         .background(Color.background)
         .padding(.top, -8)
-    }
-    
-    var showFavorite: Bool {
-        !store.products.filter { $0.isFavorite }.isEmpty
     }
     
     func popupMessage(product: Product) -> some View {

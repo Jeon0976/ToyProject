@@ -25,7 +25,7 @@ struct ProductRow: View {
             productImage
             productDescrpition
         }
-        .frame(height: 150)
+        .frame(height: store.appSetting.productRowHeight)
         .background(Color.primary.colorInvert())
         .clipShape(.rect(cornerRadius: 6))
         .shadow(color: Color.primaryShadow,radius: 1, x: 2, y: 2)
